@@ -1,0 +1,12 @@
+__t0 = [conv_5x3_fully(sig):1, conv_5x3_fully(sig):2, conv_5x3_fully(sig):0, conv_5x3_fully(sig):3, conv_5x3_fully(sig):1, conv_5x3_fully(sig):2, conv_5x3_fully(sig):4, conv_5x3_fully(sig):2, conv_5x3_fully(sig):3]
+__v0 = load(__t0)
+__t1 = [conv_5x3_fully(ker):1, conv_5x3_fully(ker):2, conv_5x3_fully(ker):0, conv_5x3_fully(ker):2, conv_5x3_fully(ker):0, conv_5x3_fully(ker):1, conv_5x3_fully(ker):2, conv_5x3_fully(ker):0, conv_5x3_fully(ker):1]
+__v1 = load(__t1)
+__v2 = __v0 * __v1
+__s0 = __v2 >> 1
+__s1 = __v2 >> 8
+__t2 = blend(__s0@010000000, __s1@000010010)
+__t3 = blend(__v2@010000000, __s0@000010010)
+__v3 = __t2 + __t3
+__t4 = blend(__s1@010000000, __v2@000010010)
+__v4 = __t4 + __v3

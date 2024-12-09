@@ -38,7 +38,7 @@ class copy_matrix:
     def __init__(self, rows, cols, name, var_conv='{name}:{i},{j}'):
         self.name = name
         self.rows = rows
-        self.cols = cols
+        self.cols = cols 
         self.var_conv = var_conv
 
     def __getitem__(self, i):

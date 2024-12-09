@@ -4,7 +4,7 @@ from sys import argv
 
 def compile_scalar(lines):
 
-    vars_used = set()
+    vars_used = set() 
 
     def convert(arg):
         if arg.startswith('%'):
@@ -182,7 +182,6 @@ def get_lines(filename):
 
 
 if __name__ == '__main__':
-
     if len(argv) != 2:
         print(f'Usage: {argv[0]} [program_name]')
         raise SystemExit()
@@ -194,12 +193,12 @@ if __name__ == '__main__':
 
     scalar_cpp = compile_scalar(scalar_lines)
     vector_cpp = compile_vector(vector_lines)
-
     try:
         os.makedirs(f'bfv_backend/coyote_out/{program_name}')
     except FileExistsError:
         pass
-
+        
+    print(f"welcome in compile_to_bfv {program_name}")
     open(f'bfv_backend/coyote_out/{program_name}/scalar.cpp', 'w').write(scalar_cpp)
     open(f'bfv_backend/coyote_out/{program_name}/vector.cpp', 'w').write(vector_cpp)
 

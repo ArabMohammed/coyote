@@ -8,7 +8,7 @@ from compile_to_bfv import compile_scalar, compile_vector
 
 
 def get_coyote(path: str) -> coyote_compiler:
-    module_name = pathlib.Path(path).stem
+    module_name = pathlib.Path(path).stem 
     module = importlib.import_module(module_name)
 
     coyotes = []

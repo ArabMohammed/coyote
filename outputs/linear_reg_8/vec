@@ -1,0 +1,17 @@
+__t0 = [linear_reg_8(c0):3, 0, 0, 0, 0, linear_reg_8(c0):0, 0, 0, 0, linear_reg_8(c0):6, linear_reg_8(c0):1, 0, linear_reg_8(c0):5, linear_reg_8(c0):2, linear_reg_8(c0):4, linear_reg_8(c0):7, 0, 0, 0, 0, 0]
+__v0 = load(__t0)
+__t1 = [linear_reg_8(c1):3, 0, 0, 0, 0, linear_reg_8(c1):0, 0, linear_reg_8(c1):1, 0, linear_reg_8(c1):6, 0, 0, 0, 0, linear_reg_8(c1):4, linear_reg_8(c1):5, linear_reg_8(c1):2, 0, linear_reg_8(c1):7, 0, 0]
+__v1 = load(__t1)
+__s0 = __v1 >> 3
+__t2 = [linear_reg_8(c2):3, 0, 0, 0, 0, linear_reg_8(c2):0, 0, 0, 0, linear_reg_8(c2):6, linear_reg_8(c2):1, 0, linear_reg_8(c2):5, linear_reg_8(c2):2, linear_reg_8(c2):4, linear_reg_8(c2):7, 0, 0, 0, 0, 0]
+__v2 = load(__t2)
+__t3 = [0, 0, 0, 0, 0, 0, linear_reg_8(c3):3, 0, 0, linear_reg_8(c3):6, 0, linear_reg_8(c3):0, 0, linear_reg_8(c3):1, 0, linear_reg_8(c3):5, 0, 0, linear_reg_8(c3):7, linear_reg_8(c3):2, linear_reg_8(c3):4]
+__v3 = load(__t3)
+__v4 = __v2 * __v0
+__s1 = __v4 >> 3
+__t4 = blend(__s0@000100001010000001000, __v1@000000000100000110100)
+__t5 = blend(__s1@000100001000000111100, __v4@000000000110000000000)
+__v5 = __t4 - __t5
+__s2 = __v5 >> 3
+__t6 = blend(__s2@000000100001010000011, __v5@000000000100000100100)
+__v6 = __t6 - __v3
