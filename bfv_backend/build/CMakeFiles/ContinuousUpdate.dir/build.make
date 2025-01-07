@@ -53,10 +53,10 @@ RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ma9232/TestCoyote/bfv_backend
+CMAKE_SOURCE_DIR = /scratch/ma9232/coyote/bfv_backend
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ma9232/TestCoyote/bfv_backend/build
+CMAKE_BINARY_DIR = /scratch/ma9232/coyote/bfv_backend/build
 
 # Utility rule file for ContinuousUpdate.
 
@@ -82,6 +82,6 @@ CMakeFiles/ContinuousUpdate.dir/clean:
 .PHONY : CMakeFiles/ContinuousUpdate.dir/clean
 
 CMakeFiles/ContinuousUpdate.dir/depend:
-	cd /home/ma9232/TestCoyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /scratch/ma9232/coyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/ContinuousUpdate.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousUpdate.dir/depend
 

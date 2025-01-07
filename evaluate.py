@@ -48,6 +48,10 @@ def evaluate(cpp_code):
     add_pattern = re.compile(r'info\.eval->add\(([^,]+), ([^,]+), ([^)]+)\);')
     sub_pattern = re.compile(r'info\.eval->sub\(([^,]+), ([^,]+), ([^)]+)\);')
     rotate_pattern = re.compile(r'info\.eval->rotate_rows\(([^,]+), [^,]+, [^,]+, ([^)]+)\);')
+    # info.eval->multiply_plain(vs[3], bits["0000000000101000"], t5_3);
+    multiply_plain_pattern = re.compile(r'info\.eval->multiply_plain\(([^,]+), ([^,]+), ([^)]+)\);')
+    # info.eval->add_many({t5_1, t5_2, t5_3}, ts[5]);
+    add_many_pattern = re.compile(r'info\.eval->add_many\(\{([^}]+)\}, ([^)]+)\);')
 
     dependencies = defaultdict(list)
 
@@ -69,12 +73,24 @@ def evaluate(cpp_code):
     for match in sub_pattern.findall(cpp_code):
         var1, var2, result = match
         dependencies[result.strip()].extend([var1.strip(), var2.strip()])
-
+    
+    # Find all rotations operations
     for match in rotate_pattern.findall(cpp_code):
         var1, result = match
         dependencies[result.strip()].append(var1.strip())   
 
-
+    # Find all add_many operations
+    for match in add_many_pattern.findall(cpp_code):
+        var1, result = match
+        res = var1.split(",")
+        res = [info.strip() for info in res]
+        dependencies[result.strip()] = res
+    
+    # Find all multiply_plain operations
+    for match in multiply_plain_pattern.findall(cpp_code):
+        var1, var2, result = match
+        dependencies[result.strip()].extend([var1.strip(), var2.strip()])
+    
     # Function to calculate the depth of each variable
     def calculate_depth(var, memo):
         if var not in dependencies:
@@ -89,7 +105,7 @@ def evaluate(cpp_code):
     memo = {}
     max_depth = 0
     for var in dependencies:
-        depth = calculate_depth(var, memo)
+        depth = calculate_depth(var, memo) 
         max_depth = max(max_depth, depth)
 
     print(f'Depth of the circuit: {max_depth}')
@@ -99,18 +115,16 @@ def evaluate(cpp_code):
             return 0
         if var in memo:
             return memo[var]
-        
         # Calculate the depth of the dependencies
         depths = [calculate_multiplicative_depth(dep, memo) for dep in dependencies[var]]
         max_depth = max(depths) if depths else 0
-        
         # Increment depth if the current variable is a result of a multiply operation
         if var in multiply_results:
             max_depth += 1
         
         memo[var] = max_depth
         return max_depth
-
+    
 
 
     memo = {}
@@ -123,7 +137,7 @@ def evaluate(cpp_code):
 
     return num_multiplications, num_additions, num_substitutions, num_rotations, num_plain_multiplications, max_depth, max_multiplicative_depth
 
-# Set up command-line argument parsing
+
 # parser = argparse.ArgumentParser(description='Evaluate the depth of a vector program.')
 # parser.add_argument('benchmark', type=str, help='The name of the benchmark to evaluate')
 

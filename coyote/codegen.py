@@ -63,7 +63,10 @@ def build_vector_program(program: List[Instr],
     # print(lanes, schedule)
     vectorized_code = []
     warp = max(lanes) + 1
-
+    """
+    schedule = [0, 1, 1, 2, 0, 2] --> set(schedule) → {0, 1, 2}
+    inv_schedule = [[0, 4], [1, 2], [3, 5]]
+    """
     # schedule  :: inst -> slot, inv_schedule :: slot -> [inst]
     inv_schedule = [[i for i in range(len(schedule)) if schedule[i] == slot]
                     for slot in set(schedule)]
@@ -109,14 +112,22 @@ def remove_repeated_ops(generated_code: List[str]) -> List[str]:
             generated_code[i] = f'{lhs} = {rhs}'
 
     return list(filter(None, '\n'.join(generated_code).split('\n')))
-
+#####################################################################
+#####################################################################
 
 def codegen(vector_program: List[VecSchedule], graph: nx.DiGraph, lanes: List[int], schedule: List[int], warp_size: int):
     shift_amounts_needed: Dict[int, Dict[int, int]] = defaultdict(lambda: defaultdict(lambda: 0))
     # print('Raw program: ')
     # print('\n'.join(map(str, vector_program)))
     # print(f'Warp size: {warp_size}')
-
+    """
+    class VecSchedule:
+    def __init__(self, dest: List[int] | List[Atom], left: List[Atom], right: List[Atom], op: T_op):
+        self.dest = [Atom(d) if isinstance(d, int) else d for d in dest]
+        self.left = left
+        self.right = right
+        self.op = op
+    """
     for instr in vector_program:
         for c, p in zip(instr.dest * 2, instr.left + instr.right):
             if not (isinstance(p.val, int) and isinstance(c.val, int)):
@@ -159,8 +170,8 @@ def codegen(vector_program: List[VecSchedule], graph: nx.DiGraph, lanes: List[in
                     shift_temp += 1
                 # record which __s vector to use in order to access {dest.val} shifted by {shift}
                 shifted_vectors[dest.val, shift] = shifted_names[shift]
-
-        # which lanes to blend in constants
+        ####################################################################
+        # which lanes to blend in constants #################################
         def get_blends_and_constants(operands: List[Atom], dests: List[Atom]):
             # print(f'There are {len(operands)} operands and the warp size is {warp_size}')
             blend_masks: Dict[str, List[int]] = defaultdict(lambda: [0] * warp_size) # vector name -> bitvector mask needed for blends
@@ -210,7 +221,7 @@ def codegen(vector_program: List[VecSchedule], graph: nx.DiGraph, lanes: List[in
             # blend_line = ', '.join([f'{v}@{"".join(map(str, m))}' for v, m in left_blend.items()])
             # generated_code.append(f'__t{cur_temp} = blend({blend_line})')
             generated_code.append(VecBlendInstr(f'__t{cur_temp}', list(left_blend.keys()), list(left_blend.values())))
-            vec_left = f'__t{cur_temp}' 
+            vec_left = f'__t{cur_temp}'  
             cur_temp += 1
         elif len(left_blend.keys()) == 1:
             # no blend necessary, just grab it directly

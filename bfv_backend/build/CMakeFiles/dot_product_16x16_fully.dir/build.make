@@ -53,10 +53,10 @@ RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ma9232/TestCoyote/bfv_backend
+CMAKE_SOURCE_DIR = /scratch/ma9232/coyote/bfv_backend
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ma9232/TestCoyote/bfv_backend/build
+CMAKE_BINARY_DIR = /scratch/ma9232/coyote/bfv_backend/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/dot_product_16x16_fully.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/dot_product_16x16_fully.dir/progress.make
 include CMakeFiles/dot_product_16x16_fully.dir/flags.make
 
 CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/flags.make
-CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o: /home/ma9232/TestCoyote/bfv_backend/main.cpp
+CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o: /scratch/ma9232/coyote/bfv_backend/main.cpp
 CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/main.cpp.o -c /scratch/ma9232/coyote/bfv_backend/main.cpp
 
 CMakeFiles/dot_product_16x16_fully.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dot_product_16x16_fully.dir/main.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/main.cpp > CMakeFiles/dot_product_16x16_fully.dir/main.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/main.cpp > CMakeFiles/dot_product_16x16_fully.dir/main.cpp.i
 
 CMakeFiles/dot_product_16x16_fully.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dot_product_16x16_fully.dir/main.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/main.cpp -o CMakeFiles/dot_product_16x16_fully.dir/main.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/main.cpp -o CMakeFiles/dot_product_16x16_fully.dir/main.cpp.s
 
 CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/flags.make
-CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o: /home/ma9232/TestCoyote/bfv_backend/util.cpp
+CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o: /scratch/ma9232/coyote/bfv_backend/util.cpp
 CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/util.cpp.o -c /scratch/ma9232/coyote/bfv_backend/util.cpp
 
 CMakeFiles/dot_product_16x16_fully.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dot_product_16x16_fully.dir/util.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/util.cpp > CMakeFiles/dot_product_16x16_fully.dir/util.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/util.cpp > CMakeFiles/dot_product_16x16_fully.dir/util.cpp.i
 
 CMakeFiles/dot_product_16x16_fully.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dot_product_16x16_fully.dir/util.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/util.cpp -o CMakeFiles/dot_product_16x16_fully.dir/util.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/dot_product_16x16_fully.dir/util.cpp.s
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/flags.make
-CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o: /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp
+CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp > CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp > CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.i
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/scalar.cpp -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/scalar.cpp.s
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/flags.make
-CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o: /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp
+CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o: CMakeFiles/dot_product_16x16_fully.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o -MF CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o.d -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp > CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp > CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.i
 
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp -o CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.s
 
 # Object files for target dot_product_16x16_fully
 dot_product_16x16_fully_OBJECTS = \
@@ -142,7 +142,7 @@ dot_product_16x16_fully: CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_p
 dot_product_16x16_fully: CMakeFiles/dot_product_16x16_fully.dir/build.make
 dot_product_16x16_fully: /home/ma9232/.conda/envs/coyoteEnv/lib/libseal-3.7.a
 dot_product_16x16_fully: CMakeFiles/dot_product_16x16_fully.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable dot_product_16x16_fully"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable dot_product_16x16_fully"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/dot_product_16x16_fully.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/dot_product_16x16_fully.dir/clean:
 .PHONY : CMakeFiles/dot_product_16x16_fully.dir/clean
 
 CMakeFiles/dot_product_16x16_fully.dir/depend:
-	cd /home/ma9232/TestCoyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles/dot_product_16x16_fully.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /scratch/ma9232/coyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/dot_product_16x16_fully.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/dot_product_16x16_fully.dir/depend
 

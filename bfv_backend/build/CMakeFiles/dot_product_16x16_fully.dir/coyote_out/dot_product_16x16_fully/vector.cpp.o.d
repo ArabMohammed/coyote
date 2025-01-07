@@ -1,8 +1,8 @@
 CMakeFiles/dot_product_16x16_fully.dir/coyote_out/dot_product_16x16_fully/vector.cpp.o: \
- /home/ma9232/TestCoyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp \
+ /scratch/ma9232/coyote/bfv_backend/coyote_out/dot_product_16x16_fully/vector.cpp \
  /home/ma9232/.conda/envs/coyoteEnv/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
- /home/ma9232/TestCoyote/bfv_backend/vector.hpp \
- /home/ma9232/TestCoyote/bfv_backend/util.hpp \
+ /scratch/ma9232/coyote/bfv_backend/vector.hpp \
+ /scratch/ma9232/coyote/bfv_backend/util.hpp \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/chrono \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/requires_hosted.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/x86_64-conda-linux-gnu/bits/c++config.h \

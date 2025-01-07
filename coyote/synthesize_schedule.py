@@ -1,15 +1,11 @@
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Tuple, cast
-
 from .coyote_ast import *
 import z3 # type: ignore
 from sys import stderr
 from time import time
-
 # z3.set_option('parallel.enable', True)
-
-
 class VecSchedule:
     def __init__(self, dest: List[int] | List[Atom], left: List[Atom], right: List[Atom], op: T_op):
         self.dest = [Atom(d) if isinstance(d, int) else d for d in dest]
@@ -23,8 +19,10 @@ class VecSchedule:
     def copy(self):
         return VecSchedule(self.dest[:], self.left[:], self.right[:], self.op)
 
-
+# return the dependencies of each instruction according to 
+# their occurence order in the program 
 def dependency_graph(program: List[Instr]) -> List[List[int]]:
+    # return a list of indexes for instructions where dest.val = reg
     def lookup(reg: int) -> List[int]:
         # return next((i for i in range(len(program)) if program[i].dest.val == reg), -1)
         return list((i for i in range(len(program)) if program[i].dest.val == reg))
@@ -47,7 +45,8 @@ def dependency_graph(program: List[Instr]) -> List[List[int]]:
 
     return graph
 
-
+# return three lists containing indices of instructions 
+# with the same Op type (Add, Sub, Mul) 
 def split_types(program: List[Instr]) -> Tuple[List[int], List[int], List[int]]:
     add_instrs = []
     mul_instrs = []
@@ -92,18 +91,25 @@ class ScheduleSynthesizer:
             self.opt.add(self._lanes[i] < warp_size)
 
             for j in range(self.num_instr):
+                # If two instructions are scheduled at the same time (_schedule[i] == _schedule[j]), 
+                # they must perform the same operation.
                 self.opt.add(z3.Implies(self._schedule[i] == self._schedule[j], ops[i] == ops[j]))
+                # If two instructions share the same schedule and lane, 
+                # they must be the same instruction.
                 self.opt.add(z3.Implies(
                     z3.And(self._schedule[i] == self._schedule[j], self._lanes[i] == self._lanes[j]), i == j))
-                
+                # If disallow_same_vec_same_dep is True, instructions that 
+                # share dependencies cannot be scheduled in the same cycle
                 if i != j and disallow_same_vec_same_dep and len(set(dep_graph[i]).intersection(set(dep_graph[j]))) > 0:
                     # instructions i and j share a dependency
                     # print(f'Disallowing {i} and {j}')
                     self.opt.add(self._schedule[i] != self._schedule[j])
-
+            # Ensure that instructions are assigned to the lanes specified in lanes
             self.opt.add(self._lanes[i] == lanes[cast(int, program[i].dest.val)])
             for dep in dep_graph[i]:
+                # Ensure that instructions are scheduled after their dependencies
                 self.opt.add(self._schedule[i] > self._schedule[dep])
+                # Ensure dependent instructions are assigned to the same lane
                 self.opt.add(self._lanes[i] == self._lanes[dep])
                 
 
@@ -118,13 +124,15 @@ class ScheduleSynthesizer:
             return z3.unsat
 
         model = self.opt.model()
+        # schedule list contains the scheduled times for 
+        # all instructions in the program
         schedule: list[int] = [model[s].as_long() for s in self._schedule] # type: ignore
 
         # print(f'Current solution: {schedule}')
 
         return schedule
 
-
+"""
 def synthesize_schedule_bounded_consider_blends(program: List[Instr], max_len: int, log=stderr):
     timeout = 60
     num_instr = len(program)
@@ -171,8 +179,6 @@ def synthesize_schedule_bounded_consider_blends(program: List[Instr], max_len: i
     schedule = [model[s].as_long() for s in _schedule] # type: ignore
 
     return schedule, model.eval(blend_penalty).as_long() # type: ignore
-
-
 def synthesize_schedule_bounded(program: List[Instr], warp: int, max_len: int, log=stderr):
     dep_graph = dependency_graph(program)
     adds, subs, mults = split_types(program)
@@ -237,8 +243,6 @@ def synthesize_schedule_bounded(program: List[Instr], warp: int, max_len: int, l
     # types: List[T_op] = [('+' if model[_types][t] == itype.plus else '*') for t in range(num_instr)]
 
     return schedule
-
-
 def synthesize_schedule_iterative_refine(program: List[Instr], timeout=10, log=stderr) -> List[int]:
     num_instr = len(program)
     dep_graph = dependency_graph(program)
@@ -288,7 +292,7 @@ def synthesize_schedule_iterative_refine(program: List[Instr], timeout=10, log=s
             opt.pop()
             print('Cannot refine further')
             return schedule
-
+"""
 
 
 def synthesize_schedule(program: List[Instr], warp: int, lanes: List[int], log=stderr) -> List[int]:
@@ -306,6 +310,9 @@ def synthesize_schedule(program: List[Instr], warp: int, lanes: List[int], log=s
 
     synthesizer = ScheduleSynthesizer(program, warp, lanes, log=log)
     # synthesizer.add_bound(4 * max_height)
+    # add a constraint to z3 solver specifying that 
+    # all instructions must have an execution order smaller 
+    # than program length
     synthesizer.add_bound(len(program))
     best_so_far = None
     while True:

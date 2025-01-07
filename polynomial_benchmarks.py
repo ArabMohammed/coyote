@@ -8,7 +8,8 @@ from evaluate import evaluate_scalar , evaluate_vector
 
 depths = ['5', '10']
 regimes = ['50-50', '100-50', '100-100']
-
+depths = ['10']
+regimes = ['100-100']
 
 #parser = argparse.ArgumentParser()
 #parser.add_argument('-d', '--depths', nargs='+', choices=depths, required=True)
@@ -31,7 +32,7 @@ with open('polynomial_benchmarks_evaluation.csv', mode='a', newline='') as csvfi
                         ]) 
 ###################################################################################
 ###################################################################################
-iterations = 2
+iterations = 1 # 2
 for regime in regimes:
     for depth in depths:
         for i in range(iterations):

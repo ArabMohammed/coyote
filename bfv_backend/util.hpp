@@ -21,25 +21,25 @@ struct Keys
 struct RuntimeContext
 {
     std::unique_ptr<seal::BatchEncoder> batcher;
+    std::unique_ptr<seal::SEALContext> context ; 
     std::unique_ptr<seal::Encryptor> enc;
     std::unique_ptr<seal::Decryptor> dec;
-    std::unique_ptr<seal::Evaluator> eval;
+    std::unique_ptr<seal::Evaluator> eval; 
     std::unique_ptr<Keys> keys;
 
     RuntimeContext(seal::EncryptionParameters params)
     {
-        seal::SEALContext context(params);
-        seal::KeyGenerator keygen(context);
-
+        seal::SEALContext contexta(params,true, seal::sec_level_type::tc128);
+        seal::KeyGenerator keygen(contexta);
         seal::SecretKey sk = keygen.secret_key();
         seal::PublicKey pk;
         keygen.create_public_key(pk);
         keys = std::make_unique<Keys>(keygen);
-
-        enc = std::make_unique<seal::Encryptor>(context, pk);
-        dec = std::make_unique<seal::Decryptor>(context, sk);
-        eval = std::make_unique<seal::Evaluator>(context);
-        batcher = std::make_unique<seal::BatchEncoder>(context);
+        enc = std::make_unique<seal::Encryptor>(contexta, pk);
+        dec = std::make_unique<seal::Decryptor>(contexta, sk);
+        eval = std::make_unique<seal::Evaluator>(contexta);
+        batcher = std::make_unique<seal::BatchEncoder>(contexta);
+        context = std::make_unique<seal::SEALContext>(contexta);
     }
 };
 

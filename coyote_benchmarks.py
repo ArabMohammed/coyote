@@ -186,10 +186,7 @@ def max_5_packed_fully(cs, os):
 ########################################################################################
 #########################Additional CHIHAB Benchmarks###################################
 ########################################################################################
-@coyote.define_circuit(c1=vector(1,replicate=True), c2=vector(1,replicate=True), c3=vector(1,replicate=True), c4=vector(1,replicate=True) , 
-                        c5=vector(1,replicate=True),c6=vector(1,replicate=True),c7=vector(1,replicate=True),c8=vector(1,replicate=True))
-def test3(c1, c2, c3,c4,c5,c6,c7,c8):
-    return [((c1[i]+c2[i])*(c3[i]+c4[i]))+((c5[i]+c6[i])*(c7[i]+c8[i])) for i in range(1)]
+
 """
 @coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
 def l2_distance_4(a, b):
@@ -226,11 +223,11 @@ def linear_reg_8(c0, c1, c2, c3):
 def hamming_distance_4(a, b):
     return recursive_sum([x + y - Var('2')*(x * y) for x, y in zip(a, b)])
 ###############################
-"""
+
 @coyote.define_circuit(a=vector(16,replicate=True), b=vector(16,replicate=True))
 def hamming_distance_16(a, b):
     return recursive_sum([x + y - Var('2')*(x * y) for x, y in zip(a, b)])
-"""
+
 #########################################################################################
 #########################################################################################
 @coyote.define_circuit(image = matrix(4,4,replicate=True))
@@ -458,11 +455,46 @@ def sobel_8x8(image):
 ###########################################################################################
 ###########################################################################################
 ###########################################################################################
-"""
 @coyote.define_circuit(v1=vector(16, replicate=True), v2=vector(16, replicate=True))
 def dot_product_16x16_fully(v1, v2):
     return recursive_sum([a * b for a, b in zip(v1, v2)])
 
+@coyote.define_circuit(c1=vector(1,replicate=True), c2=vector(1,replicate=True), c3=vector(1,replicate=True), c4=vector(1,replicate=True) , 
+                        c5=vector(1,replicate=True),c6=vector(1,replicate=True),c7=vector(1,replicate=True),c8=vector(1,replicate=True),
+                        c9=vector(1,replicate=True), c10=vector(1,replicate=True), c11=vector(1,replicate=True), c12=vector(1,replicate=True) , 
+                        c13=vector(1,replicate=True),c14=vector(1,replicate=True),c15=vector(1,replicate=True),c16=vector(1,replicate=True)
+                        )
+def test5(c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16):
+    return [
+            
+                    (
+                        ((c1[i]*c2[i])+(c3[i]+c4[i]))
+                +
+                        ((c5[i]*c6[i])*(c7[i]*c8[i]))
+                    )
+            +
+                    (
+                        ((c9[i]+c10[i])*(c11[i]+c12[i]))
+                +
+                        ((c13[i]+c14[i])*(c15[i]*c16[i]))
+                    )
+            
+            for i in range(1)]
+"""
+###########################################################################################
+@coyote.define_circuit(c1=vector(1,replicate=True), c2=vector(1,replicate=True), 
+                        c3=vector(1,replicate=True), c4=vector(1,replicate=True))
+def test35(c1,c2,c3,c4):
+    return [
+            ((c1[i]*c2[i])+(c3[i]+c4[i]))
+            for i in range(1)
+        ]
+
+@coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
+def hamming_distance_4(a, b):
+    return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
+#########################################################################################
+########################################################################################
 with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     # Write the header

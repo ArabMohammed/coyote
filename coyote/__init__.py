@@ -52,17 +52,18 @@ class copy_matrix:
     
 class coyote_compiler:
     def __init__(self):
-        self.func_signatures = {}
+        self.func_signatures = {} 
         self.outputs = []
 
     def vectorize(self, lanes_out=[]):
         return vectorize(self.compiler, lanes_out)
 
-
+    # * funcs is a list of function names that we want to compile
     def instantiate(self, *funcs, _input_groups=None, _force_lanes=None):
         self.outputs = []
+        print(f"==> funcs in instantiate : {funcs}")
         input_groups, force_lanes, outputs = self.get_outputs(funcs)
-            
+    
         self.compiler = CompilerV2(input_groups, force_lanes=force_lanes)
 
         counter = 0
@@ -71,7 +72,18 @@ class coyote_compiler:
             print(counter)
             print(out)
             self.outputs.append(self.compiler.compile(out).val)
-
+        #print(f"==> {[' '.join(f'%{reg}' for reg in self.outputs)] + list(map(str, self.compiler.code))}")
+        """
+        ['%5 %11 %17 %23', '%0 = hamming_distance_4(a):0 ~ hamming_distance_4(a):0', 
+        '%1 = hamming_distance_4(b):0 ~ hamming_distance_4(b):0', '%2 = %0 + %1', '%3 = %0 * %1', '%4 = 2 * %3', 
+        '%5 = %2 - %4', 
+        '%6 = hamming_distance_4(a):1 ~ hamming_distance_4(a):1', '%7 = hamming_distance_4(b):1 ~ hamming_distance_4(b):1',
+        '%8 = %6 + %7', '%9 = %6 * %7', '%10 = 2 * %9', '%11 = %8 - %10', '%12 = hamming_distance_4(a):2 ~ hamming_distance_4(a):2', 
+        '%13 = hamming_distance_4(b):2 ~ hamming_distance_4(b):2', '%14 = %12 + %13', '%15 = %12 * %13', '%16 = 2 * %15',
+        '%17 = %14 - %16', '%18 = hamming_distance_4(a):3 ~ hamming_distance_4(a):3', 
+        '%19 = hamming_distance_4(b):3 ~ hamming_distance_4(b):3', '%20 = %18 + %19', '%21 = %18 * %19', 
+        '%22 = 2 * %21', '%23 = %20 - %22']
+        """
         return [' '.join(f'%{reg}' for reg in self.outputs)] + list(map(str, self.compiler.code))
 
 
@@ -79,19 +91,27 @@ class coyote_compiler:
         input_groups = []
         force_lanes = {}
         outputs = []
-
+        """
+        if funcs is an empty list, it uses self.func_signatures, 
+        which contains all the function signatures 
+        that were previously decorated with @coyote.define_circuit
+        """
         if len(funcs) == 0:
             funcs = self.func_signatures
         else:
             funcs = list(filter(lambda func: func.__name__ in funcs, self.func_signatures.keys()))
 
         for func in funcs:
+            # function inputs 
             signature = self.func_signatures[func]
             params = {}
             for _p, t in signature.items():
                 p = f'{func.__name__}({_p})'
+                # p : test(c1) , _p : c1 , t.pack : False, t.replicate : True
+                print(f"p : {p} , _p : {_p} , t.pack : {t.pack}, t.replicate : {t.replicate}")
                 if isinstance(t, matrix):
                     if t.replicate:
+                        print("=> replicate is true")
                         params[_p] = copy_matrix(t.rows, t.cols, p)
                     else:
                         params[_p] = [[Var(f'{p}:{i};{j}') for i in range(t.rows)] for j in range(t.cols)]
@@ -102,24 +122,48 @@ class coyote_compiler:
                         raise TypeError('replicate and pack options not allowed together!')
                     
                     if t.replicate:
+                        print("=> replicate is true")
                         params[_p] = copy_vector(t.size, p)
                     else:
                         params[_p] = [Var(f'{p}:{i}') for i in range(t.size)]
+                    ### input_groups.append([test(c1):0, test(c1):1, test(c1):2])
                     input_groups.append({f'{p}:{i}' for i in range(t.size)})
                     
                     if t.pack:
                         force_lanes.update({f'{p}:{i}': i for i in range(t.size)})
                 else:
                     params[_p] = Var(p)
-
+            #################################
+            print(f"func type : {type(func)}")
             out = func(**params)
+            print(f"function output : {out} \n")
+            # [Op("+", Op("*", Var("test1(c1):0"), Var("test1(c2):0")), Op("+", Var("test1(c3):0"), Var("test1(c4):0")))] 
+            
+            #  [ 
+            # 
+            #  Op("-", Op("+", Var("hamming_distance_4(a):0"), Var("hamming_distance_4(b):0")), 
+            #  Op("*", Var("2"), Op("*", Var("hamming_distance_4(a):0"), Var("hamming_distance_4(b):0")))), 
+            # 
+            # Op("-", Op("+", Var("hamming_distance_4(a):1"), Var("hamming_distance_4(b):1")), 
+            # Op("*", Var("2"), Op("*", Var("hamming_distance_4(a):1"), Var("hamming_distance_4(b):1")))), 
+            # 
+            # Op("-", Op("+", Var("hamming_distance_4(a):2"), Var("hamming_distance_4(b):2")), 
+            # Op("*", Var("2"), Op("*", Var("hamming_distance_4(a):2"), Var("hamming_distance_4(b):2")))),
+            # 
+            # Op("-", Op("+", Var("hamming_distance_4(a):3"), Var("hamming_distance_4(b):3")), 
+            # Op("*", Var("2"), Op("*", Var("hamming_distance_4(a):3"), Var("hamming_distance_4(b):3"))))
+            # 
+            # ]
+            
+            print(f"==> input_groups : {input_groups} \n")
+            [{'test1(c1):0','test1(c1):1'}, {'test1(c2):0','test1(c2):1'}, {'test1(c3):0'}, {'test1(c4):0'}]
             if isinstance(out, list) or isinstance(out, tuple):
                 outputs += out
             else:
                 outputs.append(out)
         return input_groups, force_lanes, outputs
-
-
+#######################################################################################################
+#######################################################################################################
     def define_circuit(self, **types):
         
         def wrapper(func):
@@ -132,7 +176,7 @@ class coyote_compiler:
             for p in types:
                 if p not in params:
                     raise TypeError(f'In function {name}: no such parameter {p}')
-                if not any(isinstance(types[p], t) for t in allowed_types):
+                if not any(isinstance(types[p], t) for t in allowed_types): 
                     raise TypeError(f'In function {name}: {types[p]} is not an allowed type')
 
 

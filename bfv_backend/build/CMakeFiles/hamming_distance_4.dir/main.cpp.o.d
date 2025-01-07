@@ -1,8 +1,8 @@
 CMakeFiles/hamming_distance_4.dir/main.cpp.o: \
- /home/ma9232/TestCoyote/bfv_backend/main.cpp \
+ /scratch/ma9232/coyote/bfv_backend/main.cpp \
  /home/ma9232/.conda/envs/coyoteEnv/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
- /home/ma9232/TestCoyote/bfv_backend/scalar.hpp \
- /home/ma9232/TestCoyote/bfv_backend/util.hpp \
+ /scratch/ma9232/coyote/bfv_backend/scalar.hpp \
+ /scratch/ma9232/coyote/bfv_backend/util.hpp \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/chrono \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/requires_hosted.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/x86_64-conda-linux-gnu/bits/c++config.h \
@@ -404,7 +404,7 @@ CMakeFiles/hamming_distance_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/relinkeys.h \
  /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/keygenerator.h \
  /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/randomtostd.h \
- /home/ma9232/TestCoyote/bfv_backend/vector.hpp \
+ /scratch/ma9232/coyote/bfv_backend/vector.hpp \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/fstream \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/codecvt.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/x86_64-conda-linux-gnu/bits/basic_file.h \

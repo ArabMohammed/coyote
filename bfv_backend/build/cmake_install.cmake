@@ -1,4 +1,4 @@
-# Install script for directory: /home/ma9232/TestCoyote/bfv_backend
+# Install script for directory: /scratch/ma9232/coyote/bfv_backend
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,6 +57,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/home/ma9232/TestCoyote/bfv_backend/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/scratch/ma9232/coyote/bfv_backend/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

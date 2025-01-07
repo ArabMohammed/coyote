@@ -53,10 +53,10 @@ RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ma9232/TestCoyote/bfv_backend
+CMAKE_SOURCE_DIR = /scratch/ma9232/coyote/bfv_backend
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ma9232/TestCoyote/bfv_backend/build
+CMAKE_BINARY_DIR = /scratch/ma9232/coyote/bfv_backend/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/hamming_distance_4.dir/depend.make
@@ -70,60 +70,60 @@ include CMakeFiles/hamming_distance_4.dir/progress.make
 include CMakeFiles/hamming_distance_4.dir/flags.make
 
 CMakeFiles/hamming_distance_4.dir/main.cpp.o: CMakeFiles/hamming_distance_4.dir/flags.make
-CMakeFiles/hamming_distance_4.dir/main.cpp.o: /home/ma9232/TestCoyote/bfv_backend/main.cpp
+CMakeFiles/hamming_distance_4.dir/main.cpp.o: /scratch/ma9232/coyote/bfv_backend/main.cpp
 CMakeFiles/hamming_distance_4.dir/main.cpp.o: CMakeFiles/hamming_distance_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hamming_distance_4.dir/main.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/main.cpp.o -MF CMakeFiles/hamming_distance_4.dir/main.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/main.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/hamming_distance_4.dir/main.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/main.cpp.o -MF CMakeFiles/hamming_distance_4.dir/main.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/main.cpp.o -c /scratch/ma9232/coyote/bfv_backend/main.cpp
 
 CMakeFiles/hamming_distance_4.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hamming_distance_4.dir/main.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/main.cpp > CMakeFiles/hamming_distance_4.dir/main.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/main.cpp > CMakeFiles/hamming_distance_4.dir/main.cpp.i
 
 CMakeFiles/hamming_distance_4.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hamming_distance_4.dir/main.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/main.cpp -o CMakeFiles/hamming_distance_4.dir/main.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/main.cpp -o CMakeFiles/hamming_distance_4.dir/main.cpp.s
 
 CMakeFiles/hamming_distance_4.dir/util.cpp.o: CMakeFiles/hamming_distance_4.dir/flags.make
-CMakeFiles/hamming_distance_4.dir/util.cpp.o: /home/ma9232/TestCoyote/bfv_backend/util.cpp
+CMakeFiles/hamming_distance_4.dir/util.cpp.o: /scratch/ma9232/coyote/bfv_backend/util.cpp
 CMakeFiles/hamming_distance_4.dir/util.cpp.o: CMakeFiles/hamming_distance_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hamming_distance_4.dir/util.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/util.cpp.o -MF CMakeFiles/hamming_distance_4.dir/util.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/util.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/hamming_distance_4.dir/util.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/util.cpp.o -MF CMakeFiles/hamming_distance_4.dir/util.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/util.cpp.o -c /scratch/ma9232/coyote/bfv_backend/util.cpp
 
 CMakeFiles/hamming_distance_4.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hamming_distance_4.dir/util.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/util.cpp > CMakeFiles/hamming_distance_4.dir/util.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/util.cpp > CMakeFiles/hamming_distance_4.dir/util.cpp.i
 
 CMakeFiles/hamming_distance_4.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hamming_distance_4.dir/util.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/util.cpp -o CMakeFiles/hamming_distance_4.dir/util.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/hamming_distance_4.dir/util.cpp.s
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o: CMakeFiles/hamming_distance_4.dir/flags.make
-CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o: /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp
+CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o: CMakeFiles/hamming_distance_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o -MF CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o -MF CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp > CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp > CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.i
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/scalar.cpp -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/scalar.cpp.s
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o: CMakeFiles/hamming_distance_4.dir/flags.make
-CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o: /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp
+CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o: CMakeFiles/hamming_distance_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o -MF CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o -c /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o"
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o -MF CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o.d -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp > CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp > CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.i
 
 CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ma9232/TestCoyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/hamming_distance_4/vector.cpp -o CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.s
 
 # Object files for target hamming_distance_4
 hamming_distance_4_OBJECTS = \
@@ -142,7 +142,7 @@ hamming_distance_4: CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distanc
 hamming_distance_4: CMakeFiles/hamming_distance_4.dir/build.make
 hamming_distance_4: /home/ma9232/.conda/envs/coyoteEnv/lib/libseal-3.7.a
 hamming_distance_4: CMakeFiles/hamming_distance_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hamming_distance_4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable hamming_distance_4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/hamming_distance_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +154,6 @@ CMakeFiles/hamming_distance_4.dir/clean:
 .PHONY : CMakeFiles/hamming_distance_4.dir/clean
 
 CMakeFiles/hamming_distance_4.dir/depend:
-	cd /home/ma9232/TestCoyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build /home/ma9232/TestCoyote/bfv_backend/build/CMakeFiles/hamming_distance_4.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /scratch/ma9232/coyote/bfv_backend/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/hamming_distance_4.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/hamming_distance_4.dir/depend
 

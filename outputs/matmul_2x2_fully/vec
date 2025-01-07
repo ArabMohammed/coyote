@@ -1,9 +1,0 @@
-__t0 = [matmul_2x2_fully(a):0;1, matmul_2x2_fully(a):1;1, matmul_2x2_fully(a):1;1, matmul_2x2_fully(a):0;0, matmul_2x2_fully(a):0;0, matmul_2x2_fully(a):1;0, matmul_2x2_fully(a):1;0, matmul_2x2_fully(a):0;1]
-__v0 = load(__t0)
-__t1 = [matmul_2x2_fully(b):1;1, matmul_2x2_fully(b):1;0, matmul_2x2_fully(b):1;1, matmul_2x2_fully(b):0;0, matmul_2x2_fully(b):0;1, matmul_2x2_fully(b):0;0, matmul_2x2_fully(b):0;1, matmul_2x2_fully(b):1;0]
-__v1 = load(__t1)
-__v2 = __v0 * __v1
-__s0 = __v2 >> 4
-__t2 = blend(__s0@11100000, __v2@00010000)
-__t3 = blend(__v2@11100000, __s0@00010000)
-__v3 = __t2 + __t3

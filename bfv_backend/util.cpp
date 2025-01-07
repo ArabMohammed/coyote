@@ -25,3 +25,4 @@ void add_bitstring(std::map<std::string, ptxt> &bits, std::string bitstring, Run
     ptxt encoded = encode_bits(bitstring, info);
     bits[bitstring] = encoded;
 }
+

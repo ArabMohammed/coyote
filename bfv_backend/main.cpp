@@ -7,11 +7,11 @@
 #endif
 
 #ifndef ITERATIONS
-#define ITERATIONS 50
+#define ITERATIONS 1
 #endif
 
 #ifndef RUNS
-#define RUNS 50
+#define RUNS 1
 #endif
 
 #include "scalar.hpp"

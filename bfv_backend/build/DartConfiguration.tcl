@@ -4,14 +4,14 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/ma9232/TestCoyote/bfv_backend
-BuildDirectory: /home/ma9232/TestCoyote/bfv_backend/build
+SourceDirectory: /scratch/ma9232/coyote/bfv_backend
+BuildDirectory: /scratch/ma9232/coyote/bfv_backend/build
 
 # Where to place the cost data store
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: cn076
+Site: cn021
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-x86_64-conda-linux-gnu-c++
@@ -27,7 +27,7 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/home/ma9232/.conda/envs/coyoteEnv/bin/cmake" "/home/ma9232/TestCoyote/bfv_backend"
+ConfigureCommand: "/home/ma9232/.conda/envs/coyoteEnv/bin/cmake" "/scratch/ma9232/coyote/bfv_backend"
 MakeCommand: /home/ma9232/.conda/envs/coyoteEnv/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 

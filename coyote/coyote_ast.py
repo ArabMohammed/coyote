@@ -15,7 +15,7 @@ class Var:
         self.name = name
         self.tag: Any = None
         self.subtags: List[Union[int, str]] = []
-
+    ## overloaded operators 
     def __add__(self, other):
         return Op('+', self, other)
 
@@ -37,7 +37,10 @@ class Var:
     def __hash__(self) -> int:
         return hash(self.name)
 
-
+# Represents an operation between two expressions 
+# op operation symbol 
+# lhs: The left-hand side operand.
+# rhs: The right-hand side operand.
 class Op:
     def __init__(self, op: str, lhs: Expression, rhs: Expression):
         self.op = op
@@ -63,7 +66,8 @@ class Op:
 
     def __eq__(self, o: object) -> bool:
         return isinstance(o, Op) and o.op == self.op and o.lhs == self.lhs and o.rhs == self.rhs
-
+# Wraps an expression (Var or Op) and provides operator 
+# overloads for convenience.
 class Tree:
     def __init__(self, a):
         if type(a) is str:
@@ -131,7 +135,7 @@ class Atom:
         """This function is dedicated to Vani, in loving memory RIP"""
         return self.reg == other.reg and self.val == other.val
 
-
+# Represents a low-level instruction.
 class Instr:
     def __init__(self, dest: int, lhs: Atom, rhs: Atom, op: str):
         self.dest = Atom(dest)
@@ -145,86 +149,17 @@ class Instr:
     def __str__(self) -> str:
         return f'{str(self.dest)} = {str(self.lhs)} {self.op} {str(self.rhs)}'
 
-
-class Compiler:
-    def __init__(self, tag_lookup: Dict[int, Expression], input_groups: List[Set[str]] = [], allow_replicating=[]):
-        self.code: List[Instr] = []
-        self.exprs: List[Expression] = []
-        self.target = -1
-        self.tag_lookup = tag_lookup
-        self.code_lookup: Dict[int, List[Instr]] = {}
-
-        self.loaded_regs: Dict[str, int] = {}
-        self.input_groups = input_groups
-        self.allow_duplicates: Set[str] = set()
-        if allow_replicating == 'all':
-            self.replicate_all = True
-        else:
-            self.replicate_all = False
-            for thing in allow_replicating:
-                if isinstance(thing, int):
-                    self.allow_duplicates |= self.input_groups[thing]
-                else:
-                    self.allow_duplicates.add(thing)
-
-    def compile(self, e: Expression, top=True) -> Atom:
-        if isinstance(e, Var):
-
-            if all(e.name not in group for group in self.input_groups):
-                return Atom(e.name)
-
-            # return Atom(e.name)
-
-            # if not self.allow_duplicates and (e.name in self.loaded_regs):
-            if not self.replicate_all and e.name not in self.allow_duplicates and e.name in self.loaded_regs:
-                # print(f'Reusing {self.loaded_regs[e.name]} instead of reloading {e.name}')
-                e.tag = self.loaded_regs[e.name]
-                return Atom(self.loaded_regs[e.name])
-
-            self.target += 1
-            e.tag = self.target
-            self.code.append(Instr(self.target, Atom(e.name), Atom(e.name), '~'))
-            self.tag_lookup[self.target] = e
-
-            self.loaded_regs[e.name] = self.target
-
-            return Atom(self.target)
-
-        assert isinstance(e, Op)
-
-        if top:
-            self.exprs.append(e)
-        lhs = self.compile(e.lhs, top=False)
-        rhs = self.compile(e.rhs, top=False)
-
-        self.target += 1
-        e.tag = self.target
-        e.subtags = e.lhs.subtags + e.rhs.subtags + [e.lhs.tag, e.rhs.tag] # type: ignore
-        self.tag_lookup[e.tag] = e
-
-        self.code.append(Instr(self.target, lhs, rhs, e.op))
-
-        self.code_lookup[e.tag] = []
-        if e.lhs.tag in self.code_lookup:
-            assert isinstance(e.lhs.tag, int)  # mypy
-            self.code_lookup[e.tag].extend(
-                self.code_lookup[e.lhs.tag])
-        if e.rhs.tag in self.code_lookup:
-            assert isinstance(e.rhs.tag, int)  # mypy
-            self.code_lookup[e.tag].extend(
-                self.code_lookup[e.rhs.tag])
-        self.code_lookup[e.tag].append(self.code[-1])
-
-        return Atom(self.target)
-
-
+ 
 class CompilerV2:
     def __init__(self, input_groups: List[Set[str]] = [], allow_replicating=[], force_lanes: Dict[str, int] = {}):
         self.code: List[Instr] = []
         self.tag_lookup: Dict[int, Expression] = {}
+        # Tracks dependencies between instructions.
         self.dependences: Dict[int, Set[int]] = defaultdict(set)
+        # Counter for generating unique register IDs.
         self.next_temp = -1
 
+        # Tracks which registers hold specific variables.
         self.loaded_regs: Dict[str, Set[int]] = defaultdict(set)
         self.input_groups = input_groups
         self.allow_duplicates: Set[str] = set()
@@ -262,6 +197,7 @@ class CompilerV2:
             e.tag = self.next_temp
             self.code.append(Instr(self.next_temp, Atom(e.name), Atom(e.name), '~'))
             self.tag_lookup[self.next_temp] = e
+            print(f"load in register {e.name} ==> {self.next_temp} \n")
             self.loaded_regs[e.name].add(self.next_temp)
 
             return Atom(self.next_temp)
@@ -285,7 +221,7 @@ class CompilerV2:
         e.tag = self.next_temp
         self.dependences[e.tag] = self.dependences[e.lhs.tag] | self.dependences[e.rhs.tag] | {e.lhs.tag, e.rhs.tag} # type: ignore
         self.tag_lookup[e.tag] = e
-
+        print(f"==>instruction : {Instr(self.next_temp, Atom(cast(int, e.lhs.tag)), Atom(cast(int, e.rhs.tag)), e.op)}")
         self.code.append(Instr(self.next_temp, Atom(cast(int, e.lhs.tag)), Atom(cast(int, e.rhs.tag)), e.op))
         return Atom(self.next_temp)
 
