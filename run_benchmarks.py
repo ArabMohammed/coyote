@@ -35,31 +35,31 @@ def all_numbers(lst):
 ###################################################################
 coyote = coyote_compiler()
 ## for comparaison with Coyote, all benchamrks are Fully replicated  
-@coyote.define_circuit(v1=vector(32, replicate=True), v2=vector(32, replicate=True))
-def dot_product_32x32_fully(v1, v2): 
+@coyote.define_circuit(v1=vector(4, replicate=True), v2=vector(4, replicate=True))
+def dot_product_4x4_fully(v1, v2):  
     return recursive_sum([a * b for a, b in zip(v1, v2)])
 #################################################################################
 #################################################################################
-@coyote.define_circuit(a=vector(32,replicate=True), b=vector(32,replicate=True))
-def l2_distance_32(a, b):
+@coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
+def l2_distance_4(a, b):
     return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
 
 #################################################################################
 #################################################################################
-@coyote.define_circuit(c0=vector(32,replicate=True), c1=vector(32,replicate=True), c2=vector(32,replicate=True), c3=vector(32,replicate=True), c4=vector(32,replicate=True))
-def poly_reg_32(c0, c1, c2, c3, c4):
-    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(32)]
+@coyote.define_circuit(c0=vector(4,replicate=True), c1=vector(4,replicate=True), c2=vector(4,replicate=True), c3=vector(4,replicate=True), c4=vector(4,replicate=True))
+def poly_reg_4(c0, c1, c2, c3, c4):
+    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(4)]
 
 #################################################################################
 #################################################################################
-@coyote.define_circuit(c0=vector(32,replicate=True), c1=vector(32,replicate=True), c2=vector(32,replicate=True), c3=vector(32,replicate=True))
-def linear_reg_32(c0, c1, c2, c3):
-    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(32)]
+@coyote.define_circuit(c0=vector(4,replicate=True), c1=vector(4,replicate=True), c2=vector(4,replicate=True), c3=vector(4,replicate=True))
+def linear_reg_4(c0, c1, c2, c3):
+    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(4)]
 
 #################################################################################
 #################################################################################
-@coyote.define_circuit(a=vector(32,replicate=True), b=vector(32,replicate=True))
-def hamming_distance_32(a, b):
+@coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
+def hamming_distance_4(a, b):
     return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
 
 #################################################################################
@@ -320,10 +320,8 @@ def max_5_packed_fully(cs, os):
 Execute_code = True 
 iterations = 3   
 poly_modulus_degres = 16384
-depths = ['5','10']
-regimes = ['50-50','100-50','100-100']
 #################################################################################
-#################################################################################
+###############################Prepare Evaluation CSV File##############################################
 operations = ["add", "sub", "multiply_plain", "rotate_rows", "multiply"]
 infos = ["benchmark"]
 additional_infos =["Depth", "Multplicative Depth","compile_time (s)", "execution_time (s)"]
@@ -337,6 +335,9 @@ with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
 ########################## Run General benchmarks########################
 #########################################################################
 directory_path = 'bfv_backend/coyote_out'
+functions_to_compile = [func.__name__ for func in coyote.func_signatures]
+benchmarks_str_argument = ','.join(functions_to_compile)
+print(f"||| General benchs ====> {benchmarks_str_argument} \n")
 for func in coyote.func_signatures: 
     print(f"Compile function : {func.__name__}")
     benchmark_name = func.__name__
@@ -406,6 +407,8 @@ for func in coyote.func_signatures:
 ##########################################################################
 ########################### Run polynomials ##############################
 ##########################################################################
+depths = ['5','10']
+regimes = ['50-50','100-50','100-100']
 for regime in regimes:
     for depth in depths:
         operation_stats = {
@@ -414,6 +417,7 @@ for regime in regimes:
             "compile_time (s)": [], "execution_time (s)": [], 
         } 
         bench_name = f'tree_{regime}-{depth}'
+        benchmarks_str_argument+=","+bench_name
         for i in range(iterations):
             cases = {
                 '50-50':'0',
@@ -460,8 +464,9 @@ for regime in regimes:
 
 #############################################################################
 #############################################################################
+print(f"||| Final ====> {benchmarks_str_argument} \n")
 if Execute_code : 
-    process = subprocess.Popen(['python3', 'build_and_run_all.py', f'--iters={iterations}', '--runs=1',f'--poly_modulus_degres={poly_modulus_degres}'])
+    process = subprocess.Popen(['python3', 'build_and_run_all.py', f'--iters={iterations}', '--runs=1',f'--poly_modulus_degres={poly_modulus_degres}',f'--benchmarks={benchmarks_str_argument}'])
     process.wait()
     csv_directory = 'bfv_backend/csvs'
     run_times = {} 

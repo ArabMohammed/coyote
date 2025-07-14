@@ -97,24 +97,10 @@ CMakeFiles/linear_reg_4.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear_reg_4.dir/util.cpp.s"
 	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/linear_reg_4.dir/util.cpp.s
 
-CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o: CMakeFiles/linear_reg_4.dir/flags.make
-CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/scalar.cpp
-CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o: CMakeFiles/linear_reg_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o -MF CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o.d -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/scalar.cpp
-
-CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/scalar.cpp > CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.i
-
-CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/scalar.cpp -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.s
-
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: CMakeFiles/linear_reg_4.dir/flags.make
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: CMakeFiles/linear_reg_4.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o"
 	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -MF CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o.d -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp
 
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i: cmake_force
@@ -129,7 +115,6 @@ CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s: cmake_force
 linear_reg_4_OBJECTS = \
 "CMakeFiles/linear_reg_4.dir/main.cpp.o" \
 "CMakeFiles/linear_reg_4.dir/util.cpp.o" \
-"CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o" \
 "CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o"
 
 # External object files for target linear_reg_4
@@ -137,12 +122,11 @@ linear_reg_4_EXTERNAL_OBJECTS =
 
 linear_reg_4: CMakeFiles/linear_reg_4.dir/main.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/util.cpp.o
-linear_reg_4: CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/build.make
-linear_reg_4: /home/ma9232/.conda/envs/coyoteEnv/lib/libseal-3.7.a
+linear_reg_4: /home/ma9232/.conda/envs/coyoteEnv/lib64/libseal-4.1.a
 linear_reg_4: CMakeFiles/linear_reg_4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable linear_reg_4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable linear_reg_4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linear_reg_4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

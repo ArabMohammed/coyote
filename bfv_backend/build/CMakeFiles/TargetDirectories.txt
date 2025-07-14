@@ -26,11 +26,7 @@
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/ContinuousCoverage.dir
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/ContinuousMemCheck.dir
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/ContinuousSubmit.dir
-/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_100-100-10.dir
-/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_100-100-5.dir
-/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_100-50-10.dir
-/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_100-50-5.dir
-/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_50-50-10.dir
+/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/linear_reg_4.dir
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/tree_50-50-5.dir
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/test.dir
 /scratch/ma9232/coyote/bfv_backend/build/CMakeFiles/edit_cache.dir

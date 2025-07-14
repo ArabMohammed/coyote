@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o"
-  "CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/scalar.cpp.o.d"
   "CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o"
   "CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o.d"
   "CMakeFiles/linear_reg_4.dir/main.cpp.o"

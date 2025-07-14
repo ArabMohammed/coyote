@@ -11,7 +11,7 @@ BuildDirectory: /scratch/ma9232/coyote/bfv_backend/build
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: cn091.fast
+Site: cn142
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-x86_64-conda-linux-gnu-c++

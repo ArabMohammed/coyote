@@ -1,7 +1,6 @@
 CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /scratch/ma9232/coyote/bfv_backend/main.cpp \
  /home/ma9232/.conda/envs/coyoteEnv/x86_64-conda-linux-gnu/sysroot/usr/include/stdc-predef.h \
- /scratch/ma9232/coyote/bfv_backend/scalar.hpp \
  /scratch/ma9232/coyote/bfv_backend/util.hpp \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/chrono \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/requires_hosted.h \
@@ -108,16 +107,16 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/backward/auto_ptr.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/pstl/glue_memory_defs.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/pstl/execution_defs.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/seal.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/batchencoder.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/context.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/encryptionparams.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/memorymanager.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/defines.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/msvc.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/clang.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/gcc.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/config.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/seal.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/batchencoder.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/context.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/encryptionparams.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/memorymanager.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/defines.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/msvc.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/clang.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/gcc.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/config.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/cstdlib \
  /home/ma9232/.conda/envs/coyoteEnv/x86_64-conda-linux-gnu/sysroot/usr/include/stdlib.h \
  /home/ma9232/.conda/envs/coyoteEnv/x86_64-conda-linux-gnu/sysroot/usr/include/bits/waitflags.h \
@@ -231,8 +230,8 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/ammintrin.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/xopintrin.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/cstddef \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/globals.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/hestdparms.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/globals.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/hestdparms.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/map \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_tree.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/node_handle.h \
@@ -247,8 +246,8 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_vector.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_bvector.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/vector.tcc \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/mempool.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/common.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/mempool.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/common.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/algorithm \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_algo.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/algorithmfwd.h \
@@ -311,7 +310,7 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/basic_string.tcc \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/utility \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_relops.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/locks.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/locks.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/mutex \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/x86_64-conda-linux-gnu/bits/error_constants.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/std_mutex.h \
@@ -328,9 +327,9 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/thread \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/std_thread.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/this_thread_sleep.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/modulus.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/serialization.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/version.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/modulus.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/serialization.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/version.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/functional \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/std_function.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/array \
@@ -356,54 +355,57 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/ostream.tcc \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/istream \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/istream.tcc \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/uintcore.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/pointer.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/uintcore.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/pointer.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/iterator \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stream_iterator.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/ztools.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/dynarray.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/gsl/span \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/gsl/gsl_assert \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/gsl/gsl_byte \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/randomgen.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/hash.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/blake2.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/ztools.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/dynarray.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/gsl/span \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/gsl/assert \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/gsl/byte \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/gsl/util \
+ /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/version \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/gsl/span_ext \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/randomgen.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/hash.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/blake2.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/numeric \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/stl_numeric.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/pstl/glue_numeric_defs.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/galois.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/iterator.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/ntt.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/dwthandler.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/uintarithsmallmod.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/numth.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/uintarith.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/rns.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/plaintext.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/valcheck.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/polycore.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/galois.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/iterator.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/ntt.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/dwthandler.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/uintarithsmallmod.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/numth.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/uintarith.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/rns.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/plaintext.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/valcheck.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/polycore.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/sstream \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/sstream.tcc \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/ciphertext.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/ckks.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/croots.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/ciphertext.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/ckks.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/croots.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/complex \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/decryptor.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/secretkey.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/decryptor.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/secretkey.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/random \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/random.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/x86_64-conda-linux-gnu/bits/opt_random.h \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/random.tcc \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/encryptor.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/publickey.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/serializable.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/util/streambuf.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/evaluator.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/galoiskeys.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/kswitchkeys.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/relinkeys.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/keygenerator.h \
- /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7/seal/randomtostd.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/encryptor.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/publickey.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/serializable.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/util/streambuf.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/evaluator.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/galoiskeys.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/kswitchkeys.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/relinkeys.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/keygenerator.h \
+ /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-4.1/seal/randomtostd.h \
  /scratch/ma9232/coyote/bfv_backend/vector.hpp \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/fstream \
  /home/ma9232/.conda/envs/coyoteEnv/lib/gcc/x86_64-conda-linux-gnu/13.3.0/include/c++/bits/codecvt.h \

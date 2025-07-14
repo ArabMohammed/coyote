@@ -491,69 +491,17 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
-# Target rules for targets named tree_100-100-10
+# Target rules for targets named linear_reg_4
 
 # Build rule for target.
-tree_100-100-10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-100-10
-.PHONY : tree_100-100-10
+linear_reg_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linear_reg_4
+.PHONY : linear_reg_4
 
 # fast build rule for target.
-tree_100-100-10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/build
-.PHONY : tree_100-100-10/fast
-
-#=============================================================================
-# Target rules for targets named tree_100-100-5
-
-# Build rule for target.
-tree_100-100-5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-100-5
-.PHONY : tree_100-100-5
-
-# fast build rule for target.
-tree_100-100-5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/build
-.PHONY : tree_100-100-5/fast
-
-#=============================================================================
-# Target rules for targets named tree_100-50-10
-
-# Build rule for target.
-tree_100-50-10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-50-10
-.PHONY : tree_100-50-10
-
-# fast build rule for target.
-tree_100-50-10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/build
-.PHONY : tree_100-50-10/fast
-
-#=============================================================================
-# Target rules for targets named tree_100-50-5
-
-# Build rule for target.
-tree_100-50-5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-50-5
-.PHONY : tree_100-50-5
-
-# fast build rule for target.
-tree_100-50-5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/build
-.PHONY : tree_100-50-5/fast
-
-#=============================================================================
-# Target rules for targets named tree_50-50-10
-
-# Build rule for target.
-tree_50-50-10: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_50-50-10
-.PHONY : tree_50-50-10
-
-# fast build rule for target.
-tree_50-50-10/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/build
-.PHONY : tree_50-50-10/fast
+linear_reg_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/build
+.PHONY : linear_reg_4/fast
 
 #=============================================================================
 # Target rules for targets named tree_50-50-5
@@ -568,269 +516,29 @@ tree_50-50-5/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/build
 .PHONY : tree_50-50-5/fast
 
-coyote_out/tree_100-100-10/scalar.o: coyote_out/tree_100-100-10/scalar.cpp.o
-.PHONY : coyote_out/tree_100-100-10/scalar.o
+coyote_out/linear_reg_4/vector.o: coyote_out/linear_reg_4/vector.cpp.o
+.PHONY : coyote_out/linear_reg_4/vector.o
 
 # target to build an object file
-coyote_out/tree_100-100-10/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/scalar.cpp.o
-.PHONY : coyote_out/tree_100-100-10/scalar.cpp.o
+coyote_out/linear_reg_4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o
+.PHONY : coyote_out/linear_reg_4/vector.cpp.o
 
-coyote_out/tree_100-100-10/scalar.i: coyote_out/tree_100-100-10/scalar.cpp.i
-.PHONY : coyote_out/tree_100-100-10/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_100-100-10/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/scalar.cpp.i
-.PHONY : coyote_out/tree_100-100-10/scalar.cpp.i
-
-coyote_out/tree_100-100-10/scalar.s: coyote_out/tree_100-100-10/scalar.cpp.s
-.PHONY : coyote_out/tree_100-100-10/scalar.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-100-10/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/scalar.cpp.s
-.PHONY : coyote_out/tree_100-100-10/scalar.cpp.s
-
-coyote_out/tree_100-100-10/vector.o: coyote_out/tree_100-100-10/vector.cpp.o
-.PHONY : coyote_out/tree_100-100-10/vector.o
-
-# target to build an object file
-coyote_out/tree_100-100-10/vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/vector.cpp.o
-.PHONY : coyote_out/tree_100-100-10/vector.cpp.o
-
-coyote_out/tree_100-100-10/vector.i: coyote_out/tree_100-100-10/vector.cpp.i
-.PHONY : coyote_out/tree_100-100-10/vector.i
+coyote_out/linear_reg_4/vector.i: coyote_out/linear_reg_4/vector.cpp.i
+.PHONY : coyote_out/linear_reg_4/vector.i
 
 # target to preprocess a source file
-coyote_out/tree_100-100-10/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/vector.cpp.i
-.PHONY : coyote_out/tree_100-100-10/vector.cpp.i
+coyote_out/linear_reg_4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i
+.PHONY : coyote_out/linear_reg_4/vector.cpp.i
 
-coyote_out/tree_100-100-10/vector.s: coyote_out/tree_100-100-10/vector.cpp.s
-.PHONY : coyote_out/tree_100-100-10/vector.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-100-10/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/coyote_out/tree_100-100-10/vector.cpp.s
-.PHONY : coyote_out/tree_100-100-10/vector.cpp.s
-
-coyote_out/tree_100-100-5/scalar.o: coyote_out/tree_100-100-5/scalar.cpp.o
-.PHONY : coyote_out/tree_100-100-5/scalar.o
-
-# target to build an object file
-coyote_out/tree_100-100-5/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/scalar.cpp.o
-.PHONY : coyote_out/tree_100-100-5/scalar.cpp.o
-
-coyote_out/tree_100-100-5/scalar.i: coyote_out/tree_100-100-5/scalar.cpp.i
-.PHONY : coyote_out/tree_100-100-5/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_100-100-5/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/scalar.cpp.i
-.PHONY : coyote_out/tree_100-100-5/scalar.cpp.i
-
-coyote_out/tree_100-100-5/scalar.s: coyote_out/tree_100-100-5/scalar.cpp.s
-.PHONY : coyote_out/tree_100-100-5/scalar.s
+coyote_out/linear_reg_4/vector.s: coyote_out/linear_reg_4/vector.cpp.s
+.PHONY : coyote_out/linear_reg_4/vector.s
 
 # target to generate assembly for a file
-coyote_out/tree_100-100-5/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/scalar.cpp.s
-.PHONY : coyote_out/tree_100-100-5/scalar.cpp.s
-
-coyote_out/tree_100-100-5/vector.o: coyote_out/tree_100-100-5/vector.cpp.o
-.PHONY : coyote_out/tree_100-100-5/vector.o
-
-# target to build an object file
-coyote_out/tree_100-100-5/vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/vector.cpp.o
-.PHONY : coyote_out/tree_100-100-5/vector.cpp.o
-
-coyote_out/tree_100-100-5/vector.i: coyote_out/tree_100-100-5/vector.cpp.i
-.PHONY : coyote_out/tree_100-100-5/vector.i
-
-# target to preprocess a source file
-coyote_out/tree_100-100-5/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/vector.cpp.i
-.PHONY : coyote_out/tree_100-100-5/vector.cpp.i
-
-coyote_out/tree_100-100-5/vector.s: coyote_out/tree_100-100-5/vector.cpp.s
-.PHONY : coyote_out/tree_100-100-5/vector.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-100-5/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/coyote_out/tree_100-100-5/vector.cpp.s
-.PHONY : coyote_out/tree_100-100-5/vector.cpp.s
-
-coyote_out/tree_100-50-10/scalar.o: coyote_out/tree_100-50-10/scalar.cpp.o
-.PHONY : coyote_out/tree_100-50-10/scalar.o
-
-# target to build an object file
-coyote_out/tree_100-50-10/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/scalar.cpp.o
-.PHONY : coyote_out/tree_100-50-10/scalar.cpp.o
-
-coyote_out/tree_100-50-10/scalar.i: coyote_out/tree_100-50-10/scalar.cpp.i
-.PHONY : coyote_out/tree_100-50-10/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_100-50-10/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/scalar.cpp.i
-.PHONY : coyote_out/tree_100-50-10/scalar.cpp.i
-
-coyote_out/tree_100-50-10/scalar.s: coyote_out/tree_100-50-10/scalar.cpp.s
-.PHONY : coyote_out/tree_100-50-10/scalar.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-50-10/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/scalar.cpp.s
-.PHONY : coyote_out/tree_100-50-10/scalar.cpp.s
-
-coyote_out/tree_100-50-10/vector.o: coyote_out/tree_100-50-10/vector.cpp.o
-.PHONY : coyote_out/tree_100-50-10/vector.o
-
-# target to build an object file
-coyote_out/tree_100-50-10/vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/vector.cpp.o
-.PHONY : coyote_out/tree_100-50-10/vector.cpp.o
-
-coyote_out/tree_100-50-10/vector.i: coyote_out/tree_100-50-10/vector.cpp.i
-.PHONY : coyote_out/tree_100-50-10/vector.i
-
-# target to preprocess a source file
-coyote_out/tree_100-50-10/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/vector.cpp.i
-.PHONY : coyote_out/tree_100-50-10/vector.cpp.i
-
-coyote_out/tree_100-50-10/vector.s: coyote_out/tree_100-50-10/vector.cpp.s
-.PHONY : coyote_out/tree_100-50-10/vector.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-50-10/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/coyote_out/tree_100-50-10/vector.cpp.s
-.PHONY : coyote_out/tree_100-50-10/vector.cpp.s
-
-coyote_out/tree_100-50-5/scalar.o: coyote_out/tree_100-50-5/scalar.cpp.o
-.PHONY : coyote_out/tree_100-50-5/scalar.o
-
-# target to build an object file
-coyote_out/tree_100-50-5/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/scalar.cpp.o
-.PHONY : coyote_out/tree_100-50-5/scalar.cpp.o
-
-coyote_out/tree_100-50-5/scalar.i: coyote_out/tree_100-50-5/scalar.cpp.i
-.PHONY : coyote_out/tree_100-50-5/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_100-50-5/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/scalar.cpp.i
-.PHONY : coyote_out/tree_100-50-5/scalar.cpp.i
-
-coyote_out/tree_100-50-5/scalar.s: coyote_out/tree_100-50-5/scalar.cpp.s
-.PHONY : coyote_out/tree_100-50-5/scalar.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-50-5/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/scalar.cpp.s
-.PHONY : coyote_out/tree_100-50-5/scalar.cpp.s
-
-coyote_out/tree_100-50-5/vector.o: coyote_out/tree_100-50-5/vector.cpp.o
-.PHONY : coyote_out/tree_100-50-5/vector.o
-
-# target to build an object file
-coyote_out/tree_100-50-5/vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/vector.cpp.o
-.PHONY : coyote_out/tree_100-50-5/vector.cpp.o
-
-coyote_out/tree_100-50-5/vector.i: coyote_out/tree_100-50-5/vector.cpp.i
-.PHONY : coyote_out/tree_100-50-5/vector.i
-
-# target to preprocess a source file
-coyote_out/tree_100-50-5/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/vector.cpp.i
-.PHONY : coyote_out/tree_100-50-5/vector.cpp.i
-
-coyote_out/tree_100-50-5/vector.s: coyote_out/tree_100-50-5/vector.cpp.s
-.PHONY : coyote_out/tree_100-50-5/vector.s
-
-# target to generate assembly for a file
-coyote_out/tree_100-50-5/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/coyote_out/tree_100-50-5/vector.cpp.s
-.PHONY : coyote_out/tree_100-50-5/vector.cpp.s
-
-coyote_out/tree_50-50-10/scalar.o: coyote_out/tree_50-50-10/scalar.cpp.o
-.PHONY : coyote_out/tree_50-50-10/scalar.o
-
-# target to build an object file
-coyote_out/tree_50-50-10/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/scalar.cpp.o
-.PHONY : coyote_out/tree_50-50-10/scalar.cpp.o
-
-coyote_out/tree_50-50-10/scalar.i: coyote_out/tree_50-50-10/scalar.cpp.i
-.PHONY : coyote_out/tree_50-50-10/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_50-50-10/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/scalar.cpp.i
-.PHONY : coyote_out/tree_50-50-10/scalar.cpp.i
-
-coyote_out/tree_50-50-10/scalar.s: coyote_out/tree_50-50-10/scalar.cpp.s
-.PHONY : coyote_out/tree_50-50-10/scalar.s
-
-# target to generate assembly for a file
-coyote_out/tree_50-50-10/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/scalar.cpp.s
-.PHONY : coyote_out/tree_50-50-10/scalar.cpp.s
-
-coyote_out/tree_50-50-10/vector.o: coyote_out/tree_50-50-10/vector.cpp.o
-.PHONY : coyote_out/tree_50-50-10/vector.o
-
-# target to build an object file
-coyote_out/tree_50-50-10/vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/vector.cpp.o
-.PHONY : coyote_out/tree_50-50-10/vector.cpp.o
-
-coyote_out/tree_50-50-10/vector.i: coyote_out/tree_50-50-10/vector.cpp.i
-.PHONY : coyote_out/tree_50-50-10/vector.i
-
-# target to preprocess a source file
-coyote_out/tree_50-50-10/vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/vector.cpp.i
-.PHONY : coyote_out/tree_50-50-10/vector.cpp.i
-
-coyote_out/tree_50-50-10/vector.s: coyote_out/tree_50-50-10/vector.cpp.s
-.PHONY : coyote_out/tree_50-50-10/vector.s
-
-# target to generate assembly for a file
-coyote_out/tree_50-50-10/vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/coyote_out/tree_50-50-10/vector.cpp.s
-.PHONY : coyote_out/tree_50-50-10/vector.cpp.s
-
-coyote_out/tree_50-50-5/scalar.o: coyote_out/tree_50-50-5/scalar.cpp.o
-.PHONY : coyote_out/tree_50-50-5/scalar.o
-
-# target to build an object file
-coyote_out/tree_50-50-5/scalar.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o
-.PHONY : coyote_out/tree_50-50-5/scalar.cpp.o
-
-coyote_out/tree_50-50-5/scalar.i: coyote_out/tree_50-50-5/scalar.cpp.i
-.PHONY : coyote_out/tree_50-50-5/scalar.i
-
-# target to preprocess a source file
-coyote_out/tree_50-50-5/scalar.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.i
-.PHONY : coyote_out/tree_50-50-5/scalar.cpp.i
-
-coyote_out/tree_50-50-5/scalar.s: coyote_out/tree_50-50-5/scalar.cpp.s
-.PHONY : coyote_out/tree_50-50-5/scalar.s
-
-# target to generate assembly for a file
-coyote_out/tree_50-50-5/scalar.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.s
-.PHONY : coyote_out/tree_50-50-5/scalar.cpp.s
+coyote_out/linear_reg_4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s
+.PHONY : coyote_out/linear_reg_4/vector.cpp.s
 
 coyote_out/tree_50-50-5/vector.o: coyote_out/tree_50-50-5/vector.cpp.o
 .PHONY : coyote_out/tree_50-50-5/vector.o
@@ -861,11 +569,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/main.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/main.cpp.o
 .PHONY : main.cpp.o
 
@@ -874,11 +578,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/main.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/main.cpp.i
 .PHONY : main.cpp.i
 
@@ -887,11 +587,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/main.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/main.cpp.s
 .PHONY : main.cpp.s
 
@@ -900,11 +596,7 @@ util.o: util.cpp.o
 
 # target to build an object file
 util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/util.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/util.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/util.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/util.cpp.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/util.cpp.o
 .PHONY : util.cpp.o
 
@@ -913,11 +605,7 @@ util.i: util.cpp.i
 
 # target to preprocess a source file
 util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/util.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/util.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/util.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/util.cpp.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/util.cpp.i
 .PHONY : util.cpp.i
 
@@ -926,11 +614,7 @@ util.s: util.cpp.s
 
 # target to generate assembly for a file
 util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-10.dir/build.make CMakeFiles/tree_100-100-10.dir/util.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100-5.dir/build.make CMakeFiles/tree_100-100-5.dir/util.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-10.dir/build.make CMakeFiles/tree_100-50-10.dir/util.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50-5.dir/build.make CMakeFiles/tree_100-50-5.dir/util.cpp.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-10.dir/build.make CMakeFiles/tree_50-50-10.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50-5.dir/build.make CMakeFiles/tree_50-50-5.dir/util.cpp.s
 .PHONY : util.cpp.s
 
@@ -971,45 +655,11 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
-	@echo "... tree_100-100-10"
-	@echo "... tree_100-100-5"
-	@echo "... tree_100-50-10"
-	@echo "... tree_100-50-5"
-	@echo "... tree_50-50-10"
+	@echo "... linear_reg_4"
 	@echo "... tree_50-50-5"
-	@echo "... coyote_out/tree_100-100-10/scalar.o"
-	@echo "... coyote_out/tree_100-100-10/scalar.i"
-	@echo "... coyote_out/tree_100-100-10/scalar.s"
-	@echo "... coyote_out/tree_100-100-10/vector.o"
-	@echo "... coyote_out/tree_100-100-10/vector.i"
-	@echo "... coyote_out/tree_100-100-10/vector.s"
-	@echo "... coyote_out/tree_100-100-5/scalar.o"
-	@echo "... coyote_out/tree_100-100-5/scalar.i"
-	@echo "... coyote_out/tree_100-100-5/scalar.s"
-	@echo "... coyote_out/tree_100-100-5/vector.o"
-	@echo "... coyote_out/tree_100-100-5/vector.i"
-	@echo "... coyote_out/tree_100-100-5/vector.s"
-	@echo "... coyote_out/tree_100-50-10/scalar.o"
-	@echo "... coyote_out/tree_100-50-10/scalar.i"
-	@echo "... coyote_out/tree_100-50-10/scalar.s"
-	@echo "... coyote_out/tree_100-50-10/vector.o"
-	@echo "... coyote_out/tree_100-50-10/vector.i"
-	@echo "... coyote_out/tree_100-50-10/vector.s"
-	@echo "... coyote_out/tree_100-50-5/scalar.o"
-	@echo "... coyote_out/tree_100-50-5/scalar.i"
-	@echo "... coyote_out/tree_100-50-5/scalar.s"
-	@echo "... coyote_out/tree_100-50-5/vector.o"
-	@echo "... coyote_out/tree_100-50-5/vector.i"
-	@echo "... coyote_out/tree_100-50-5/vector.s"
-	@echo "... coyote_out/tree_50-50-10/scalar.o"
-	@echo "... coyote_out/tree_50-50-10/scalar.i"
-	@echo "... coyote_out/tree_50-50-10/scalar.s"
-	@echo "... coyote_out/tree_50-50-10/vector.o"
-	@echo "... coyote_out/tree_50-50-10/vector.i"
-	@echo "... coyote_out/tree_50-50-10/vector.s"
-	@echo "... coyote_out/tree_50-50-5/scalar.o"
-	@echo "... coyote_out/tree_50-50-5/scalar.i"
-	@echo "... coyote_out/tree_50-50-5/scalar.s"
+	@echo "... coyote_out/linear_reg_4/vector.o"
+	@echo "... coyote_out/linear_reg_4/vector.i"
+	@echo "... coyote_out/linear_reg_4/vector.s"
 	@echo "... coyote_out/tree_50-50-5/vector.o"
 	@echo "... coyote_out/tree_50-50-5/vector.i"
 	@echo "... coyote_out/tree_50-50-5/vector.s"

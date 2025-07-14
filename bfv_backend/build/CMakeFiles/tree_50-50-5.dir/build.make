@@ -97,24 +97,10 @@ CMakeFiles/tree_50-50-5.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tree_50-50-5.dir/util.cpp.s"
 	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/tree_50-50-5.dir/util.cpp.s
 
-CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o: CMakeFiles/tree_50-50-5.dir/flags.make
-CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/scalar.cpp
-CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o: CMakeFiles/tree_50-50-5.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o -MF CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o.d -o CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/scalar.cpp
-
-CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/scalar.cpp > CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.i
-
-CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/scalar.cpp -o CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.s
-
 CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o: CMakeFiles/tree_50-50-5.dir/flags.make
 CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/vector.cpp
 CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o: CMakeFiles/tree_50-50-5.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o"
 	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o -MF CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o.d -o CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/tree_50-50-5/vector.cpp
 
 CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.i: cmake_force
@@ -129,7 +115,6 @@ CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.s: cmake_force
 tree_50__50__5_OBJECTS = \
 "CMakeFiles/tree_50-50-5.dir/main.cpp.o" \
 "CMakeFiles/tree_50-50-5.dir/util.cpp.o" \
-"CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o" \
 "CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o"
 
 # External object files for target tree_50-50-5
@@ -137,12 +122,11 @@ tree_50__50__5_EXTERNAL_OBJECTS =
 
 tree_50-50-5: CMakeFiles/tree_50-50-5.dir/main.cpp.o
 tree_50-50-5: CMakeFiles/tree_50-50-5.dir/util.cpp.o
-tree_50-50-5: CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o
 tree_50-50-5: CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o
 tree_50-50-5: CMakeFiles/tree_50-50-5.dir/build.make
 tree_50-50-5: /home/ma9232/.conda/envs/coyoteEnv/lib64/libseal-4.1.a
 tree_50-50-5: CMakeFiles/tree_50-50-5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable tree_50-50-5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable tree_50-50-5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tree_50-50-5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

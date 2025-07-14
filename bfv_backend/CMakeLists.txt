@@ -68,7 +68,7 @@ enable_testing()
 foreach(BENCHMARK ${BENCHMARKS})
 message("Configuring benchmark ${BENCHMARK}...")
 add_executable(${BENCHMARK} main.cpp util.cpp
-			coyote_out/${BENCHMARK}/scalar.cpp
+			#coyote_out/${BENCHMARK}/scalar.cpp
 			coyote_out/${BENCHMARK}/vector.cpp
 )
 target_include_directories(${BENCHMARK} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

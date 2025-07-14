@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o"
-  "CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/scalar.cpp.o.d"
   "CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o"
   "CMakeFiles/tree_50-50-5.dir/coyote_out/tree_50-50-5/vector.cpp.o.d"
   "CMakeFiles/tree_50-50-5.dir/main.cpp.o"
