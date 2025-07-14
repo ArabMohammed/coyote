@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake
+CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake
 
 # The command to remove a file.
-RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
+RM = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include CMakeFiles/ContinuousSubmit.dir/compiler_depend.make
 include CMakeFiles/ContinuousSubmit.dir/progress.make
 
 CMakeFiles/ContinuousSubmit:
-	/home/ma9232/.conda/envs/coyoteEnv/bin/ctest -D ContinuousSubmit
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/ctest -D ContinuousSubmit
 
 ContinuousSubmit: CMakeFiles/ContinuousSubmit
 ContinuousSubmit: CMakeFiles/ContinuousSubmit.dir/build.make

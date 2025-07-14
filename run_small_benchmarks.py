@@ -245,7 +245,7 @@ if Execute_code :
     with open('benchmarks_evaluation.csv', mode='w', newline='') as outfile:
         writer = csv.writer(outfile)
         writer.writerow(headers)
-        print(f"\n===> Obtained runtimes : {run_times}\n")
+        print(f"\n===> Obtained runtimes in seconds: {run_times}\n")
         for row in rows:
             benchmark_name = row[0]
             if benchmark_name in run_times:

@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake
+CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake
 
 # The command to remove a file.
-RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
+RM = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,43 +73,43 @@ CMakeFiles/linear_reg_4.dir/main.cpp.o: CMakeFiles/linear_reg_4.dir/flags.make
 CMakeFiles/linear_reg_4.dir/main.cpp.o: /scratch/ma9232/coyote/bfv_backend/main.cpp
 CMakeFiles/linear_reg_4.dir/main.cpp.o: CMakeFiles/linear_reg_4.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/linear_reg_4.dir/main.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/main.cpp.o -MF CMakeFiles/linear_reg_4.dir/main.cpp.o.d -o CMakeFiles/linear_reg_4.dir/main.cpp.o -c /scratch/ma9232/coyote/bfv_backend/main.cpp
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/main.cpp.o -MF CMakeFiles/linear_reg_4.dir/main.cpp.o.d -o CMakeFiles/linear_reg_4.dir/main.cpp.o -c /scratch/ma9232/coyote/bfv_backend/main.cpp
 
 CMakeFiles/linear_reg_4.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear_reg_4.dir/main.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/main.cpp > CMakeFiles/linear_reg_4.dir/main.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/main.cpp > CMakeFiles/linear_reg_4.dir/main.cpp.i
 
 CMakeFiles/linear_reg_4.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear_reg_4.dir/main.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/main.cpp -o CMakeFiles/linear_reg_4.dir/main.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/main.cpp -o CMakeFiles/linear_reg_4.dir/main.cpp.s
 
 CMakeFiles/linear_reg_4.dir/util.cpp.o: CMakeFiles/linear_reg_4.dir/flags.make
 CMakeFiles/linear_reg_4.dir/util.cpp.o: /scratch/ma9232/coyote/bfv_backend/util.cpp
 CMakeFiles/linear_reg_4.dir/util.cpp.o: CMakeFiles/linear_reg_4.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/linear_reg_4.dir/util.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/util.cpp.o -MF CMakeFiles/linear_reg_4.dir/util.cpp.o.d -o CMakeFiles/linear_reg_4.dir/util.cpp.o -c /scratch/ma9232/coyote/bfv_backend/util.cpp
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/util.cpp.o -MF CMakeFiles/linear_reg_4.dir/util.cpp.o.d -o CMakeFiles/linear_reg_4.dir/util.cpp.o -c /scratch/ma9232/coyote/bfv_backend/util.cpp
 
 CMakeFiles/linear_reg_4.dir/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear_reg_4.dir/util.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/util.cpp > CMakeFiles/linear_reg_4.dir/util.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/util.cpp > CMakeFiles/linear_reg_4.dir/util.cpp.i
 
 CMakeFiles/linear_reg_4.dir/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear_reg_4.dir/util.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/linear_reg_4.dir/util.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/util.cpp -o CMakeFiles/linear_reg_4.dir/util.cpp.s
 
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: CMakeFiles/linear_reg_4.dir/flags.make
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o: CMakeFiles/linear_reg_4.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -MF CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o.d -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -MF CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o.d -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o -c /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp
 
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp > CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp > CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i
 
 CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s"
-	/home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s
+	/home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /scratch/ma9232/coyote/bfv_backend/coyote_out/linear_reg_4/vector.cpp -o CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s
 
 # Object files for target linear_reg_4
 linear_reg_4_OBJECTS = \
@@ -124,7 +124,7 @@ linear_reg_4: CMakeFiles/linear_reg_4.dir/main.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/util.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o
 linear_reg_4: CMakeFiles/linear_reg_4.dir/build.make
-linear_reg_4: /home/ma9232/.conda/envs/coyoteEnv/lib64/libseal-4.1.a
+linear_reg_4: /home/ma9232/.conda/envs/coyoteEnv2/lib64/libseal-4.1.a
 linear_reg_4: CMakeFiles/linear_reg_4.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/scratch/ma9232/coyote/bfv_backend/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable linear_reg_4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/linear_reg_4.dir/link.txt --verbose=$(VERBOSE)
