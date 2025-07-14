@@ -10,14 +10,14 @@ ptxt encode_bits(std::string bitstring, RuntimeContext &info)
     ptxt dest;
     info.batcher->encode(vals, dest);
     return dest;
-}
+} 
 
 ctxt encrypt_input(std::string bitstring, RuntimeContext &info)
 {
     ptxt encoded = encode_bits(bitstring, info);
     ctxt encrypted;
     info.enc->encrypt(encoded, encrypted);
-    return encrypted;
+    return encrypted; 
 }
 
 void add_bitstring(std::map<std::string, ptxt> &bits, std::string bitstring, RuntimeContext &info)

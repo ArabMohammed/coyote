@@ -2,7 +2,7 @@ import os
 from sys import argv
 
 
-def compile_scalar(lines):
+def compile_scalar(lines): 
 
     vars_used = set() 
 
@@ -13,8 +13,8 @@ def compile_scalar(lines):
         vars_used.add(arg)
         return f'locs["{arg}"]'
 
-    output_regs = lines[0].split(' ')
-    computation_lines = []
+    output_regs = lines[0].split(' ') 
+    computation_lines = [] 
     for line in lines[1:]:
         dest, args = line.split(' = ')
         if '+' in args:
@@ -61,7 +61,6 @@ std::vector<ctxt> ScalarProgram::computation(std::map<std::string, ctxt> locs, R
 
 
 def compile_vector(lines):
-
     # v_lines = [line.split(' ')[0] for line in lines if line.startswith('__v')]
     # t_lines = [line.split(' ')[0] for line in lines if line.startswith('__t')]
     # s_lines = [line.split(' ')[0] for line in lines if line.startswith('__s')]
@@ -81,7 +80,6 @@ def compile_vector(lines):
     num_ts = max_index(lines, '__t')
     num_vs = max_index(lines, '__v')
     num_ss = max_index(lines, '__s')
-
     # num_ts = sum(map(lambda line: line.startswith('__t'), lines))
     # num_vs = sum(map(lambda line: line.startswith('__v'), lines))
     # num_ss = sum(map(lambda line: line.startswith('__s'), lines))
@@ -89,12 +87,9 @@ def compile_vector(lines):
     prep_temps = [f'std::vector<ctxt> ts({num_ts});']
     prep_masks = ['std::map<std::string, ptxt> bits;']
     compute = []
-
     for line in lines[0:]:
-        print(line)
         dest, args = line.split(' = ')
         if args.startswith('['):
-            print(line)
             input_num = int(dest[3:])
             input_liveness = '"' + ''.join([('1' if c != '0' else c) for c in args[1:-1].replace(', ', '')]) + '"'
             prep_temps.append(f'ts[{input_num}] = encrypt_input({input_liveness}, info);')
@@ -142,11 +137,9 @@ def compile_vector(lines):
             lhs, rhs = args.split(' >> ')
             compute.append(f'info.eval->rotate_rows({convert(lhs)}, -{rhs}, gk, {convert(dest)}); // {line}')
     compute.append(f'return vs[{num_vs - 1}];')
-
     for mask in mask_set:
         prep_masks.append(f'add_bitstring(bits, "{mask}", info);')
     prep_masks.append('return bits;')
-
     prep_temps.append('return ts;')
 
     program = """
@@ -182,25 +175,19 @@ def get_lines(filename):
 
 
 if __name__ == '__main__':
-    if len(argv) != 2:
+    if len(argv) != 2: 
         print(f'Usage: {argv[0]} [program_name]')
         raise SystemExit()
-
     program_name = argv[1]
-
     scalar_lines = get_lines(f'outputs/{program_name}/scal')
     vector_lines = get_lines(f'outputs/{program_name}/vec')
-
-    scalar_cpp = compile_scalar(scalar_lines)
+    #scalar_cpp = compile_scalar(scalar_lines)
     vector_cpp = compile_vector(vector_lines)
     try:
         os.makedirs(f'bfv_backend/coyote_out/{program_name}')
     except FileExistsError:
-        pass
-        
-    print(f"welcome in compile_to_bfv {program_name}")
-    open(f'bfv_backend/coyote_out/{program_name}/scalar.cpp', 'w').write(scalar_cpp)
+        pass 
+    #open(f'bfv_backend/coyote_out/{program_name}/scalar.cpp', 'w').write(scalar_cpp)
     open(f'bfv_backend/coyote_out/{program_name}/vector.cpp', 'w').write(vector_cpp)
-
     # lines = get_lines('outputs/small/vec')
     # print(compile_vector(lines))

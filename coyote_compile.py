@@ -11,7 +11,7 @@ def get_coyote(path: str) -> coyote_compiler:
     module_name = pathlib.Path(path).stem 
     module = importlib.import_module(module_name)
 
-    coyotes = []
+    coyotes = [] 
 
     for name, obj in module.__dict__.items():
         if name.startswith('__'): continue

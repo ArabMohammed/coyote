@@ -259,7 +259,7 @@ CoyoteBFVBackend_SOURCE_DIR:STATIC=/scratch/ma9232/coyote/bfv_backend
 DART_TESTING_TIMEOUT:STRING=1500
 
 //No help, variable specified on the command line.
-ITERATIONS:UNINITIALIZED=5
+ITERATIONS:UNINITIALIZED=3
 
 //Command to build the project
 MAKECOMMAND:STRING=/home/ma9232/.conda/envs/coyoteEnv/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
@@ -271,13 +271,16 @@ MEMORYCHECK_COMMAND:FILEPATH=MEMORYCHECK_COMMAND-NOTFOUND
 MEMORYCHECK_SUPPRESSIONS_FILE:FILEPATH=
 
 //No help, variable specified on the command line.
-RUNS:UNINITIALIZED=5
+POLY_MODULUS:UNINITIALIZED=2048
+
+//No help, variable specified on the command line.
+RUNS:UNINITIALIZED=1
 
 //The directory containing a CMake configuration file for SEAL.
-SEAL_DIR:PATH=/home/ma9232/.conda/envs/coyoteEnv/lib/cmake/SEAL-3.7
+SEAL_DIR:PATH=/home/ma9232/.conda/envs/coyoteEnv/lib64/cmake/SEAL-4.1
 
 //Name of the computer/site where compile is being run
-SITE:STRING=cn021
+SITE:STRING=cn091.fast
 
 
 ########################

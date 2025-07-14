@@ -8,7 +8,7 @@ Expression = Union['Var', 'Op']
 # T_op = Union[Literal['+'], Literal['*']]
 T_op = Any
 BLANK_SYMBOL = '_'
-
+ 
 
 class Var:
     def __init__(self, name: str):
@@ -197,11 +197,11 @@ class CompilerV2:
             e.tag = self.next_temp
             self.code.append(Instr(self.next_temp, Atom(e.name), Atom(e.name), '~'))
             self.tag_lookup[self.next_temp] = e
-            print(f"load in register {e.name} ==> {self.next_temp} \n")
+            #print(f"load in register {e.name} ==> {self.next_temp} \n")
             self.loaded_regs[e.name].add(self.next_temp)
 
             return Atom(self.next_temp)
-        print(e)
+        #print(e)
         assert isinstance(e, Op)
         if e.lhs.tag is None:
             self.compile(e.lhs)
@@ -221,7 +221,7 @@ class CompilerV2:
         e.tag = self.next_temp
         self.dependences[e.tag] = self.dependences[e.lhs.tag] | self.dependences[e.rhs.tag] | {e.lhs.tag, e.rhs.tag} # type: ignore
         self.tag_lookup[e.tag] = e
-        print(f"==>instruction : {Instr(self.next_temp, Atom(cast(int, e.lhs.tag)), Atom(cast(int, e.rhs.tag)), e.op)}")
+        #print(f"==>instruction : {Instr(self.next_temp, Atom(cast(int, e.lhs.tag)), Atom(cast(int, e.rhs.tag)), e.op)}")
         self.code.append(Instr(self.next_temp, Atom(cast(int, e.lhs.tag)), Atom(cast(int, e.rhs.tag)), e.op))
         return Atom(self.next_temp)
 

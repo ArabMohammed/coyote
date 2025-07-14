@@ -1,93 +1,110 @@
 
-#define _(x) #x
-#define __(x) _(x)
+    #define _(x) #x
+    #define __(x) _(x)
+  
+    #ifndef BENCHMARK_NAME
+    #define BENCHMARK_NAME aout 
+    #endif
 
-#ifndef BENCHMARK_NAME
-#define BENCHMARK_NAME aout
-#endif
+    #ifndef ITERATIONS
+    #define ITERATIONS 1
+    #endif
 
-#ifndef ITERATIONS
-#define ITERATIONS 1
-#endif
+    #ifndef RUNS
+    #define RUNS 1
+    #endif
 
-#ifndef RUNS
-#define RUNS 1
-#endif
+    #include "scalar.hpp"
+    #include "util.hpp"
+    #include "vector.hpp"
+    #include <chrono>
+    #include <iostream>
+    #include <fstream>
+    #include <string>
 
-#include "scalar.hpp"
-#include "util.hpp"
-#include "vector.hpp"
-#include <chrono>
-#include <iostream>
-#include <fstream>
-#include <string>
+    using _clock = std::chrono::high_resolution_clock;
+    using ms = std::chrono::milliseconds;
 
-using _clock = std::chrono::high_resolution_clock;
-using ms = std::chrono::milliseconds;
-// constexpr int ITERATIONS = 50;
-// constexpr int RUNS = 50;
+    int main(int argc, char** argv)
+    { 
+        std::string csv_filename = __(BENCHMARK_NAME);
+        csv_filename += ".csv";
+        std::cout << "Running benchmark " << __(BENCHMARK_NAME) << "..." << std::endl;
+        std::ofstream myfile(csv_filename);
+        myfile << "VEC,ENC,RUN,ENC + RUN,SCAL,ENC,RUN,ENC + RUN," << std::endl;
+        for (int runs = 0; runs < RUNS; runs++) {
 
-int main(int argc, char** argv)
-{ 
-    std::string csv_filename = __(BENCHMARK_NAME);
-    csv_filename += ".csv";
-    std::cout << "Running benchmark " << __(BENCHMARK_NAME) << "...\n";
-    std::ofstream myfile(csv_filename);
-    myfile << "VEC,ENC,RUN,ENC + RUN,SCAL,ENC,RUN,ENC + RUN,\n";
-    for (int runs = 0; runs < RUNS; runs++) {
-        seal::EncryptionParameters params(seal::scheme_type::bfv);
-        size_t poly_modulus_degree = 8192;
-        params.set_poly_modulus_degree(poly_modulus_degree);
-        params.set_coeff_modulus(seal::CoeffModulus::BFVDefault(poly_modulus_degree));
-        params.set_plain_modulus(seal::PlainModulus::Batching(poly_modulus_degree, 20));
+            size_t poly_modulus_degree = 16384;
 
-        RuntimeContext info(params);
+            seal::EncryptionParameters params(seal::scheme_type::bfv);
+            params.set_poly_modulus_degree(poly_modulus_degree);
+            params.set_coeff_modulus(seal::CoeffModulus::BFVDefault(poly_modulus_degree));
+            params.set_plain_modulus(seal::PlainModulus::Batching(poly_modulus_degree, 20));
 
-        ScalarProgram scal(info);
-        VectorProgram vec(info);
+            RuntimeContext info(params);
 
-        long long   vector_enc_time = 0,
-                    vector_run_time = 0,
-                    scalar_enc_time = 0,
-                    scalar_run_time = 0;
+            ScalarProgram scal(info);
+            VectorProgram vec(info);
+            long long   vector_enc_time = 0,
+                        vector_run_time = 0,
+                        scalar_enc_time = 0,
+                        scalar_run_time = 0;
+            auto chkpoint = _clock::now();
 
-        auto chkpoint = _clock::now();
-        for (int i = 0; i < ITERATIONS; i++)
-        {
-            chkpoint = _clock::now();
-            vec.setup();
-            vector_enc_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
-            chkpoint = _clock::now();
-            vec.run();
-            vector_run_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
-        }
+            /****************************************************************************************/
+            /****************************************************************************************/
             
-
-        // std::cout << "Vector took " << std::chrono::duration_cast<ms>(end - start).count() << "ms\n";
-        std::cout << "Vector took (enc, run, enc + run) = (" 
-                << vector_enc_time << ", " 
-                << vector_run_time << ", " 
-                << vector_enc_time + vector_run_time << ")\n";
-
-        // start = _clock::now();
-        for (int i = 0; i < ITERATIONS; i++)
-        {
-            chkpoint = _clock::now();
-            scal.setup();
-            scalar_enc_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
-            chkpoint = _clock::now();
-            scal.run();
-            scalar_run_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
+            bool vector_program_success = true ;
+            for (int i = 0; i < ITERATIONS; i++)
+            {
+                chkpoint = _clock::now(); 
+                vec.setup();
+                vector_enc_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
+                chkpoint = _clock::now();
+                vector_program_success = vector_program_success && vec.run();
+                vector_run_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
+            }
+            vector_run_time = vector_run_time / ITERATIONS ;
+            vector_enc_time = vector_enc_time / ITERATIONS ;
+            if(vector_program_success){
+                std::cout << "Vector took (enc, run, enc + run) = (" << vector_enc_time << ", " << vector_run_time << ", " << vector_enc_time + vector_run_time << ")" << std::endl;
+            }else{
+                std::cout << "Vector took (enc, run, enc + run) = (Error, Error, Error)" << std::endl;
+            }
+            
+            /******************************************************************************************/
+            /******************************************************************************************/
+            
+            bool scalar_program_success = true ;
+            for (int i = 0; i < ITERATIONS; i++)
+            {
+                chkpoint = _clock::now();
+                scal.setup();
+                scalar_enc_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
+                chkpoint = _clock::now();
+                scalar_program_success = scalar_program_success && scal.run();
+                scalar_run_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
+            }
+            scalar_run_time = scalar_run_time / ITERATIONS ;
+            scalar_enc_time = scalar_enc_time / ITERATIONS ;
+            if(scalar_program_success){
+                std::cout << "Scalar took (enc, run, enc + run) = (" << scalar_enc_time << ", " << scalar_run_time << ", "<< scalar_enc_time + scalar_run_time << ")" << std::endl;
+            }else{
+                std::cout << "Scalar took (enc, run, enc + run) = (Error, Error, Error)" << std::endl;
+            }
+            /***********************************************************************************************/
+            /***********************************************************************************************/
+            if (!scalar_program_success && !vector_program_success) {
+                myfile << "v,ErrorV,ErrorV,ErrorV,s,ErrorS,ErrorS,ErrorS," << std::endl;
+            } else if (!vector_program_success) {
+                myfile << "v,ErrorV,ErrorV,ErrorV,s,"<< scalar_enc_time << "," << scalar_run_time << ","<< scalar_enc_time + scalar_run_time << "," << std::endl;
+            } else if (!scalar_program_success) {
+                myfile<<"v," << vector_enc_time << "," << vector_run_time << ","<<vector_enc_time + vector_run_time<< ",s,ErrorS,ErrorS,ErrorS," << std::endl;
+            } else {
+                myfile << "v," << vector_enc_time << "," << vector_run_time << ","<< vector_enc_time + vector_run_time<< ",s," << scalar_enc_time << "," << scalar_run_time << ","<< scalar_enc_time + scalar_run_time << "," << std::endl;
+            }
         }
-        // end = _clock::now();
-        // std::cout << "Scalar took " << std::chrono::duration_cast<ms>(end - start).count() << "ms\n";
-        std::cout << "Scalar took (enc, run, enc + run) = (" 
-                << scalar_enc_time << ", " 
-                << scalar_run_time << ", " 
-                << scalar_enc_time + scalar_run_time << ")\n";
-        myfile << ("v," + std::to_string(vector_enc_time) + "," + std::to_string(vector_run_time) + "," + std::to_string(vector_run_time + vector_enc_time) + "," + "s," + std::to_string(scalar_enc_time) + "," + std::to_string(scalar_run_time) + "," + std::to_string(scalar_run_time + scalar_enc_time) + "," + "\n");
+        myfile.close();
+        return 0;
     }
-    myfile.close();
-    return 0;
-
-}
+    

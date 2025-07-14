@@ -4,7 +4,7 @@ project(CoyoteBFVBackend VERSION 0.1.0)
 # list(APPEND BENCHMARKS 
 # 	# add all the benchmarks you want to build here, one per line
 # 	sort_3
-# 	max_5
+# 	max_5 
 # 	distances_5x5_fully
 # 	distances_4x4_fully
 # 	distances_3x3_fully
@@ -64,7 +64,7 @@ if (NOT ITERATIONS)
 	set(ITERATIONS 50)
 endif()
 
-enable_testing()
+enable_testing() 
 foreach(BENCHMARK ${BENCHMARKS})
 message("Configuring benchmark ${BENCHMARK}...")
 add_executable(${BENCHMARK} main.cpp util.cpp
@@ -72,8 +72,8 @@ add_executable(${BENCHMARK} main.cpp util.cpp
 			coyote_out/${BENCHMARK}/vector.cpp
 )
 target_include_directories(${BENCHMARK} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
-set_target_properties(${BENCHMARK} PROPERTIES COMPILE_FLAGS "-DBENCHMARK_NAME=${BENCHMARK} -DRUNS=${RUNS} -DITERATIONS=${ITERATIONS}")
-message("Compile flags: -DBENCHMARK_NAME=${BENCHMARK} -DRUNS=${RUNS} -DITERATIONS=${ITERATIONS}")
-find_package(SEAL 3.7 REQUIRED)
+set_target_properties(${BENCHMARK} PROPERTIES COMPILE_FLAGS "-DBENCHMARK_NAME=${BENCHMARK} -DRUNS=${RUNS} -DITERATIONS=${ITERATIONS} ")
+message("Compile flags: -DBENCHMARK_NAME=${BENCHMARK} -DRUNS=${RUNS} -DITERATIONS=${ITERATIONS} ")
+find_package(SEAL 4.1 REQUIRED)
 target_link_libraries(${BENCHMARK} SEAL::seal)
 endforeach(BENCHMARK)

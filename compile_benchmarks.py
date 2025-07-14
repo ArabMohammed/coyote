@@ -8,7 +8,7 @@ circuit_presets = {
     'layouts': ['matmul_3x3_case*']
     # TODO: we can add some more groups here
 }
-
+ 
 parser = argparse.ArgumentParser()
 
 circuit_group = parser.add_mutually_exclusive_group(required=True)

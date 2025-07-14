@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/scratch/ma9232/coyote/bfv_backend -isystem /home/ma9232/.conda/envs/coyoteEnv/include/SEAL-3.7
 
-CXX_FLAGS = -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/ma9232/.conda/envs/coyoteEnv/include -O3 -DNDEBUG -DBENCHMARK_NAME=hamming_distance_16 -DRUNS=5 -DITERATIONS=5 -pthread
+CXX_FLAGS = -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/ma9232/.conda/envs/coyoteEnv/include -O3 -DNDEBUG -DBENCHMARK_NAME=hamming_distance_16 -DRUNS=1 -DITERATIONS=3  -pthread
 

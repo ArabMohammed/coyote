@@ -23,8 +23,9 @@ struct VectorProgram
         temps = initialize_temps(info);
     }
 
-    void run()
-    {
+    bool run()
+    { 
+        bool success = true ;
         ctxt result = computation(temps,bits,info);
         std::cout<<"Checking the integrity of result returned by vector code \n";
         int L = info.context->first_context_data()->parms().coeff_modulus().size();
@@ -38,8 +39,8 @@ struct VectorProgram
         int noise_upper_bound = init_noise_budget - remaining_noise_budget;
         std::cout<<"result : "<< level << ", " << remaining_noise_budget << ", " << noise_upper_bound << '\n';
         if(remaining_noise_budget<=0){
-            throw std::out_of_range("\n===>Remaining Noise budget for output is 0 !!\n");
-        }
-        
+           success = false ;
+        } 
+        return success ;
     }
 };

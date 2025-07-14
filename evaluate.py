@@ -6,64 +6,52 @@ import argparse
 def read_cpp_file(benchmark):
     with open(f'bfv_backend/coyote_out/{benchmark}', 'r') as file:
         return file.read()
-#################################
+################################# 
 def evaluate_vector(benchmark_name):
-    print("==> Results of evaluating vectorized code :")
+    print("==> Results of evaluating Vectorized code :")
     cpp_code = read_cpp_file(f'{benchmark_name}/vector.cpp')
     return evaluate(cpp_code)
 ################################ 
 def evaluate_scalar(benchmark_name):
+    print("==> Results of evaluating Scalar code :")
     cpp_code = read_cpp_file(f'{benchmark_name}/scalar.cpp')
     return evaluate(cpp_code)
-################################
-def evaluate(cpp_code):
-
-    multiply_pattern = re.compile(r'info\.eval->multiply\(')
-    add_pattern = re.compile(r'info\.eval->add\(')
-    sub_pattern = re.compile(r'info\.eval->sub\(')
-    rotate_pattern = re.compile(r'info\.eval->rotate_rows\(')
-    plain_multiply_pattern = re.compile(r'info\.eval->multiply_plain\(')
-
+################################ 
+def evaluate(cpp_code):    
+    multiply_pattern = re.compile(r'info\.eval->multiply\(([^,]+), ([^,]+), ([^)]+)\);')
+    add_pattern = re.compile(r'info\.eval->add\(([^,]+), ([^,]+), ([^)]+)\);')
+    sub_pattern = re.compile(r'info\.eval->sub\(([^,]+), ([^,]+), ([^)]+)\);')
+    rotate_pattern = re.compile(r'info\.eval->rotate_rows\(([^,]+), [^,]+, [^,]+, ([^)]+)\);')
+    plain_multiply_pattern = re.compile(r'info\.eval->multiply_plain\(([^,]+), ([^,]+), ([^)]+)\);')
+    add_many_pattern = re.compile(r'info\.eval->add_many\(\{([^}]+)\}, ([^)]+)\);')
     # Find all matches
-    multiplications = multiply_pattern.findall(cpp_code)
     additions = add_pattern.findall(cpp_code)
+    many_additions = add_many_pattern.findall(cpp_code)
     substitution = sub_pattern.findall(cpp_code)
     rotations = rotate_pattern.findall(cpp_code)
     plain_multiplications = plain_multiply_pattern.findall(cpp_code)
-
+    multiplications = multiply_pattern.findall(cpp_code)
     # Count the number of multiplications
-    num_multiplications = len(multiplications)
-    num_additions = len(additions)
+    num_additions = len(additions) + len(many_additions)
     num_substitutions = len(substitution)
     num_rotations = len(rotations)
     num_plain_multiplications = len(plain_multiplications)
-
+    num_multiplications = len(multiplications)
+    ##########################################
     print(f'Number of multiplications: {num_multiplications}')
     print(f'Number of additions: {num_additions}')
     print(f'Number of substitutions: {num_substitutions}')
     print(f'Number of rotations: {num_rotations}')
     print(f'Number of scalar/plain multiplications: {num_plain_multiplications}')
-
-    multiply_pattern = re.compile(r'info\.eval->multiply\(([^,]+), ([^,]+), ([^)]+)\);')
-    add_pattern = re.compile(r'info\.eval->add\(([^,]+), ([^,]+), ([^)]+)\);')
-    sub_pattern = re.compile(r'info\.eval->sub\(([^,]+), ([^,]+), ([^)]+)\);')
-    rotate_pattern = re.compile(r'info\.eval->rotate_rows\(([^,]+), [^,]+, [^,]+, ([^)]+)\);')
-    # info.eval->multiply_plain(vs[3], bits["0000000000101000"], t5_3);
-    multiply_plain_pattern = re.compile(r'info\.eval->multiply_plain\(([^,]+), ([^,]+), ([^)]+)\);')
-    # info.eval->add_many({t5_1, t5_2, t5_3}, ts[5]);
-    add_many_pattern = re.compile(r'info\.eval->add_many\(\{([^}]+)\}, ([^)]+)\);')
-
+    ###########################################
     dependencies = defaultdict(list)
-
     multiply_results = set()
-
     # Find all multiply operations
     for match in multiply_pattern.findall(cpp_code):
         var1, var2, result = match
         dependencies[result.strip()].extend([var1.strip(), var2.strip()])
         multiply_results.add(result.strip())
     
-
     # Find all add operations
     for match in add_pattern.findall(cpp_code):
         var1, var2, result = match
@@ -87,7 +75,7 @@ def evaluate(cpp_code):
         dependencies[result.strip()] = res
     
     # Find all multiply_plain operations
-    for match in multiply_plain_pattern.findall(cpp_code):
+    for match in plain_multiply_pattern.findall(cpp_code):
         var1, var2, result = match
         dependencies[result.strip()].extend([var1.strip(), var2.strip()])
     
@@ -124,9 +112,6 @@ def evaluate(cpp_code):
         
         memo[var] = max_depth
         return max_depth
-    
-
-
     memo = {}
     max_multiplicative_depth = 0
     for var in dependencies:
