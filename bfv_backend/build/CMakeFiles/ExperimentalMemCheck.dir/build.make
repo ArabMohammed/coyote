@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake
+CMAKE_COMMAND = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake
 
 # The command to remove a file.
-RM = /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake -E rm -f
+RM = /home/ma9232/.conda/envs/coyoteEnv/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -67,7 +67,7 @@ include CMakeFiles/ExperimentalMemCheck.dir/compiler_depend.make
 include CMakeFiles/ExperimentalMemCheck.dir/progress.make
 
 CMakeFiles/ExperimentalMemCheck:
-	/home/ma9232/.conda/envs/coyoteEnv2/bin/ctest -D ExperimentalMemCheck
+	/home/ma9232/.conda/envs/coyoteEnv/bin/ctest -D ExperimentalMemCheck
 
 ExperimentalMemCheck: CMakeFiles/ExperimentalMemCheck
 ExperimentalMemCheck: CMakeFiles/ExperimentalMemCheck.dir/build.make

@@ -11,7 +11,7 @@ BuildDirectory: /scratch/ma9232/coyote/bfv_backend/build
 CostDataFile: 
 
 # Site is something like machine.domain, i.e. pragmatic.crd
-Site: cn142
+Site: cn018
 
 # Build name is osname-revision-compiler, i.e. Linux-2.4.2-2smp-c++
 BuildName: Linux-x86_64-conda-linux-gnu-c++
@@ -27,8 +27,8 @@ SubmitInactivityTimeout:
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/home/ma9232/.conda/envs/coyoteEnv2/bin/cmake" "/scratch/ma9232/coyote/bfv_backend"
-MakeCommand: /home/ma9232/.conda/envs/coyoteEnv2/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
+ConfigureCommand: "/home/ma9232/.conda/envs/coyoteEnv/bin/cmake" "/scratch/ma9232/coyote/bfv_backend"
+MakeCommand: /home/ma9232/.conda/envs/coyoteEnv/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}"
 DefaultCTestConfigurationType: Release
 
 # version control
@@ -63,7 +63,7 @@ UpdateOptions:
 UpdateType: 
 
 # Compiler info
-Compiler: /home/ma9232/.conda/envs/coyoteEnv2/bin/x86_64-conda-linux-gnu-c++
+Compiler: /home/ma9232/.conda/envs/coyoteEnv/bin/x86_64-conda-linux-gnu-c++
 CompilerVersion: 13.3.0
 
 # Dynamic analysis (MemCheck)
@@ -81,7 +81,7 @@ MemoryCheckCommandOptions:
 MemoryCheckSuppressionFile: 
 
 # Coverage
-CoverageCommand: /home/ma9232/.conda/envs/coyoteEnv2/bin/gcov
+CoverageCommand: /home/ma9232/.conda/envs/coyoteEnv/bin/gcov
 CoverageExtraFlags: -l
 
 # Testing options

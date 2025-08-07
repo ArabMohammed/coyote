@@ -14,7 +14,7 @@ def compile_scalar(lines):
         return f'locs["{arg}"]'
 
     output_regs = lines[0].split(' ') 
-    computation_lines = [] 
+    computation_lines = []  
     for line in lines[1:]:
         dest, args = line.split(' = ')
         if '+' in args:
@@ -179,13 +179,12 @@ if __name__ == '__main__':
         print(f'Usage: {argv[0]} [program_name]')
         raise SystemExit()
     program_name = argv[1]
-    scalar_lines = get_lines(f'outputs/{program_name}/scal')
+    #scalar_lines = get_lines(f'outputs/{program_name}/scal')
     vector_lines = get_lines(f'outputs/{program_name}/vec')
-    #scalar_cpp = compile_scalar(scalar_lines)
     vector_cpp = compile_vector(vector_lines)
     try:
         os.makedirs(f'bfv_backend/coyote_out/{program_name}')
-    except FileExistsError:
+    except FileExistsError: 
         pass 
     #open(f'bfv_backend/coyote_out/{program_name}/scalar.cpp', 'w').write(scalar_cpp)
     open(f'bfv_backend/coyote_out/{program_name}/vector.cpp', 'w').write(vector_cpp)

@@ -10,7 +10,7 @@ def prepare_main_file(poly_modulus_degree):
     #define _(x) #x
     #define __(x) _(x)
 
-    #ifndef BENCHMARK_NAME 
+    #ifndef BENCHMARK_NAME  
     #define BENCHMARK_NAME aout 
     #endif
 
@@ -117,23 +117,24 @@ with open("bfv_backend/main.cpp","w") as f :
 ##########################
 if args.benchmarks:
     benchmarks = args.benchmarks.split(',')
-    print(f"==> build_run_all : benchmarks to run : {benchmarks}")
+    print(f"==> build_run_all : benchmarks to run : {benchmarks} \n\n")
 else:
     benchmarks = glob.glob('*', root_dir='bfv_backend/coyote_out')
     print(f"==> build_run_all : defaulted to run benchmarks  : {benchmarks}")
 
 ##############################
 ##############################
+ensure_exists('bfv_backend/build')
 subprocess.Popen(['cmake', '..', f'-DRUNS={args.runs}', f'-DITERATIONS={args.iters}'], cwd='bfv_backend/build', stdout=sys.stdout, stderr=sys.stderr).wait()
 subprocess.Popen('make', cwd='bfv_backend/build', stdout=sys.stdout, stderr=sys.stderr).wait()
-
-
+#################
+print("===> Run FHE code of the benchmakrs   ::")
 ensure_exists('bfv_backend/csvs')
-#benchmarks=['sort_3_packed_fully','max_5_packed_fully']
 for benchmark in benchmarks:
     subprocess.Popen(f'../build/{benchmark}', cwd='bfv_backend/csvs', stdout=sys.stdout, stderr=sys.stderr).wait()
     
 # TODO: clean these up by benchmark name and size
+"""
 csv_files = glob.glob('bfv_backend/csvs/*.csv')
 for csv in csv_files: 
     parts = os.path.splitext(os.path.basename(csv))[0].split('_')
@@ -143,4 +144,5 @@ for csv in csv_files:
         name = '_'.join(parts[:-2])
         ensure_exists(f'bfv_backend/csvs/{name}/{size}')
         shutil.copy(csv, f'bfv_backend/csvs/{name}/{size}/{"_".join(parts)}.csv')
-    # os.rename(csv, f'bfv_backend/csvs/{name}/{size}/{"_".join(parts)}.csv')
+    # os.rename(csv, f'bfv_backend/csvs/{name}/{size}/{"_".join(parts)}.csv')$
+"""

@@ -103,11 +103,11 @@ class coyote_compiler:
         return vectorize(self.compiler)
 
 
-    def instantiate(self,load_from_file,depth, seed, regime):
+    def instantiate(self,load_from_file,depth, seed, regime,nb_instance):
         outputs = []
         if load_from_file:
             def process_from_file(depth, regime):
-                filename = f"polynomial_trees/tree_{regime}_{depth}.txt"
+                filename = f"polynomial_trees/tree_{regime}_{depth}_{nb_instance}.txt"
                 try:
                     with open(filename, "r") as file:
                         polynomial_arithmetic_circuit = file.readline().strip()
@@ -150,49 +150,31 @@ def usage():
 ################################################################################
 if __name__ == '__main__':
     coyote = coyote_compiler()
-    if (int(argv[2][-3]) == 5):
-        depth = 5
-    else:
-        depth = 10
-    seed = 9100 + (int(argv[2][-1]) - 1) * 100 + (int(argv[2][-3]) * 100)
-    print(depth)
-    print(seed)
-    if len(argv) < 2:
+    if len(argv) != 2:
+        print(f'provide the benchmark name according to the required format')
         usage()
-    command = argv[1]
-    #############################################
-    ######################################################################
-    if command == 'list':
-        print('List of available benchmarks:')
-        for func in coyote.func_signatures:
-            print(f'* {func.__name__}')
-    elif command == 'build':
-        if len(argv) != 3:
-            print(f'Error: command "build" but no benchmark was specified (try `{argv[0]} list` to list available benchmarks)')
-            usage()
-        benchmark_name = argv[2]
-        regime_index = benchmark_name[5:6]
-        cases = {
-            '0' : '50-50',
-            '1' : '100-50',
-            '2' : '100-100'
-        }
-        regime = cases[regime_index]
-        print(regime)
-        load_from_file = True
-        scalar_code = coyote.instantiate(load_from_file,depth, seed + int(argv[2][-1]), regime)
-        vector_code = coyote.vectorize()
-        benchmark_name = f'tree_{regime}-{depth}'
-        try:
-            os.mkdir('outputs')
-        except FileExistsError:
-            pass
-        
-        try:
-            os.mkdir(f'outputs/{benchmark_name}')
-        except FileExistsError:
-            pass
+    benchmark_name = argv[1]
+    args = benchmark_name.split("_")
+    regime = args[1]
+    depth = int(args[2])
+    nb_instance = int(args[3])
+    seed = 9100 + (nb_instance - 1) * 100 + (depth * 100) + nb_instance
+    #####################
+    load_from_file = True
+    scalar_code = coyote.instantiate(load_from_file,depth, seed, regime, nb_instance)
+    vector_code = coyote.vectorize()
+    benchmark_name = f'tree_{regime}_{depth}_{nb_instance}'
+    try:
+        os.mkdir('outputs')
+    except FileExistsError:
+        pass
+    
+    try:
+        os.mkdir(f'outputs/{benchmark_name}')
+    except FileExistsError:
+        pass
 
-        open(f'outputs/{benchmark_name}/scal', 'w').write('\n'.join(scalar_code))
-        open(f'outputs/{benchmark_name}/vec', 'w').write('\n'.join(map(str, vector_code)))
-        print(f'Successfully compiled benchmark {benchmark_name}; outputs placed in "outputs/{benchmark_name}"!')
+    open(f'outputs/{benchmark_name}/vec', 'w').write('\n'.join(map(str, vector_code)))
+    open(f'outputs/{benchmark_name}/scal', 'w').write('\n'.join(map(str, scalar_code)))
+
+    print(f'Successfully compiled benchmark {benchmark_name}; outputs placed in "outputs/{benchmark_name}"!')

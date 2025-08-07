@@ -2,7 +2,7 @@
     #define _(x) #x
     #define __(x) _(x)
 
-    #ifndef BENCHMARK_NAME 
+    #ifndef BENCHMARK_NAME  
     #define BENCHMARK_NAME aout 
     #endif
 

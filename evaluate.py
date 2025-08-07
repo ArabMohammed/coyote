@@ -10,7 +10,7 @@ def read_cpp_file(benchmark):
 def evaluate_vector(benchmark_name):
     print("==> Results of evaluating Vectorized code :")
     cpp_code = read_cpp_file(f'{benchmark_name}/vector.cpp')
-    return evaluate(cpp_code)
+    return evaluate(cpp_code) 
 ################################ 
 def evaluate_scalar(benchmark_name):
     print("==> Results of evaluating Scalar code :")

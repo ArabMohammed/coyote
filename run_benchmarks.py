@@ -318,10 +318,10 @@ def max_5_packed_fully(cs, os):
 #################################################################################
 ########################## Configuration ########################################
 Execute_code = True 
-iterations = 3   
+iterations = 3
 poly_modulus_degres = 16384
 #################################################################################
-###############################Prepare Evaluation CSV File##############################################
+#######################Prepare Evaluation CSV File###############################
 operations = ["add", "sub", "multiply_plain", "rotate_rows", "multiply"]
 infos = ["benchmark"]
 additional_infos =["Depth", "Multplicative Depth","compile_time (s)", "execution_time (s)"]
@@ -334,6 +334,8 @@ with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
 #########################################################################
 ########################## Run General benchmarks########################
 #########################################################################
+benchmarks_str_argument=""
+
 directory_path = 'bfv_backend/coyote_out'
 functions_to_compile = [func.__name__ for func in coyote.func_signatures]
 benchmarks_str_argument = ','.join(functions_to_compile)
@@ -409,61 +411,60 @@ for func in coyote.func_signatures:
 ##########################################################################
 depths = ['5','10']
 regimes = ['50-50','100-50','100-100']
-for regime in regimes:
+number_instances_polynomial_configuration=2
+for regime in regimes: 
     for depth in depths:
-        operation_stats = {
-            "add": [], "sub": [], "multiply_plain": [], "rotate_rows": [],
-            "multiply": [], "Depth": [], "Multiplicative Depth": [],
-            "compile_time (s)": [], "execution_time (s)": [], 
-        } 
-        bench_name = f'tree_{regime}-{depth}'
-        benchmarks_str_argument+=","+bench_name
-        for i in range(iterations):
-            cases = {
-                '50-50':'0',
-                '100-50':'1',
-                '100-100':'2'
-            }
-            benchmark_name = f'tree_{cases[regime]}-{depth}_{i+1}'
-            print(f'Benchmark {benchmark_name}...')
-            ### start calculating compile time
-            start_time = time.time()
-            os.system(f'python3 numberTreeGenerator.py build {benchmark_name}')
-            end_time = time.time()
-            compilation_time = end_time - start_time
-            ## end 
-            benchmark_name = f'tree_{regime}-{depth}'
-            os.system(f'python3 compile_to_bfv.py {benchmark_name}')
-            
-            num_multiplications_vec, num_additions_vec, num_substitutions_vec, num_rotations_vec, num_plain_multiplications_vec, max_depth_vec, max_multiplicative_depth_vec = evaluate_vector(benchmark_name)
-            ################
-            operation_stats["add"].append(num_additions_vec)
-            operation_stats["sub"].append(num_substitutions_vec)
-            operation_stats["multiply_plain"].append(num_plain_multiplications_vec)
-            operation_stats["rotate_rows"].append(num_rotations_vec)
-            operation_stats["multiply"].append(num_multiplications_vec)
-            operation_stats["Depth"].append(max_depth_vec)
-            operation_stats["Multiplicative Depth"].append(max_multiplicative_depth_vec)
-            operation_stats["compile_time (s)"].append(compilation_time)
-        ################################################################
-        with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
-            csvwriter = csv.writer(csvfile)
-            row=[bench_name]
-            keys = list(operation_stats.keys())[:-1]
-            print(f"keys : {keys}")
-            for key in keys:
-                values = operation_stats[key]
-                if len(values) > 0 and all_numbers(values): 
-                    result = statistics.median(values)
-                    if key == "compile_time (s)" :
-                        result = format(result, ".3f") 
-                    row.append(str(result)) 
-                else : 
-                    row.append(" ") 
-            csvwriter.writerow(row)
+        for instance in range(1,number_instances_polynomial_configuration+1): 
+            operation_stats = {
+                "add": [], "sub": [], "multiply_plain": [], "rotate_rows": [],
+                "multiply": [], "Depth": [], "Multiplicative Depth": [],
+                "compile_time (s)": [], "execution_time (s)": [], 
+            } 
+            benchmark_name = f'tree_{regime}_{depth}_{instance}'
+            if benchmarks_str_argument=="" :
+                benchmarks_str_argument=benchmark_name
+            else : 
+                benchmarks_str_argument+=","+benchmark_name
+            for i in range(iterations):
+                print(f'Benchmark {benchmark_name}...')
+                ### start calculating compile time
+                start_time = time.time()
+                os.system(f'python3 numberTreeGenerator.py {benchmark_name}')
+                end_time = time.time()
+                compilation_time = end_time - start_time
+                ## end 
+                os.system(f'python3 compile_to_bfv.py {benchmark_name}')
+                
+                num_multiplications_vec, num_additions_vec, num_substitutions_vec, num_rotations_vec, num_plain_multiplications_vec, max_depth_vec, max_multiplicative_depth_vec = evaluate_vector(benchmark_name)
+                ################
+                operation_stats["add"].append(num_additions_vec)
+                operation_stats["sub"].append(num_substitutions_vec)
+                operation_stats["multiply_plain"].append(num_plain_multiplications_vec)
+                operation_stats["rotate_rows"].append(num_rotations_vec)
+                operation_stats["multiply"].append(num_multiplications_vec)
+                operation_stats["Depth"].append(max_depth_vec)
+                operation_stats["Multiplicative Depth"].append(max_multiplicative_depth_vec)
+                operation_stats["compile_time (s)"].append(compilation_time)
+            ################################################################
+            with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
+                csvwriter = csv.writer(csvfile)
+                row=[benchmark_name]
+                keys = list(operation_stats.keys())[:-1]
+                print(f"keys : {keys}")
+                for key in keys:
+                    values = operation_stats[key]
+                    if len(values) > 0 and all_numbers(values): 
+                        result = statistics.median(values)
+                        if key == "compile_time (s)" :
+                            result = format(result, ".3f") 
+                        row.append(str(result)) 
+                    else : 
+                        row.append(" ") 
+                csvwriter.writerow(row)
 
 #############################################################################
 #############################################################################
+benchmarks_str_argument=benchmarks_str_argument.strip()
 print(f"||| Final ====> {benchmarks_str_argument} \n")
 if Execute_code : 
     process = subprocess.Popen(['python3', 'build_and_run_all.py', f'--iters={iterations}', '--runs=1',f'--poly_modulus_degres={poly_modulus_degres}',f'--benchmarks={benchmarks_str_argument}'])
