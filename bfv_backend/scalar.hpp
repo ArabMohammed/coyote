@@ -34,9 +34,8 @@ struct ScalarProgram
         }
     }
  
-    bool run()
+    int run()
     {
-        bool success = true ;
         std::vector<ctxt> outputs = computation(locs, info);
         std::cout<<"Checking the integrity of result returned by scalar code \n";
         for(const auto &result : outputs) {
@@ -52,7 +51,7 @@ struct ScalarProgram
                 break;
             }
         }
-        return success ;
+        return remaining_noise_budget ;
         
     }
 };

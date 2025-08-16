@@ -38,7 +38,7 @@ def prepare_main_file(poly_modulus_degree):
         csv_filename += ".csv";
         std::cout << "Running benchmark " << __(BENCHMARK_NAME) << "..." << std::endl;
         std::ofstream myfile(csv_filename);
-        myfile << "VEC,ENC,RUN,ENC + RUN" << std::endl;
+        myfile << "VEC,ENC,RUN,ENC + RUN,Remaining_noise_budget" << std::endl;
         for (int runs = 0; runs < RUNS; runs++) {
     """
 
@@ -54,8 +54,9 @@ def prepare_main_file(poly_modulus_degree):
             RuntimeContext info(params);
 
             VectorProgram vec(info);
-            long long   vector_enc_time = 0,
-                        vector_run_time = 0;
+            long  vector_enc_time = 0;
+            long  vector_run_time = 0;
+            long  Remaining_noise_budget = 0;
                         
             auto chkpoint = _clock::now();
 
@@ -66,26 +67,27 @@ def prepare_main_file(poly_modulus_degree):
             for (int i = 0; i < ITERATIONS; i++)
             {
                 chkpoint = _clock::now(); 
-                vec.setup();
+                vec.setup(); 
                 vector_enc_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
                 chkpoint = _clock::now();
-                vector_program_success = vector_program_success && vec.run();
+                Remaining_noise_budget += vec.run();
                 vector_run_time += std::chrono::duration_cast<ms>(_clock::now() - chkpoint).count();
             }
             vector_run_time = vector_run_time / ITERATIONS;
             vector_enc_time = vector_enc_time / ITERATIONS;
-            if(vector_program_success){
-                std::cout << "Vector took (enc, run, enc + run) = (" << vector_enc_time << ", " << vector_run_time << ", " << vector_enc_time + vector_run_time << ")" << std::endl;
+            Remaining_noise_budget = Remaining_noise_budget / ITERATIONS;
+            if(Remaining_noise_budget>0){
+                std::cout << "Vector took (enc, run, enc + run, Remaining_noise_budget) = (" << vector_enc_time << ", " << vector_run_time << ", " << vector_enc_time + vector_run_time <<", "<<Remaining_noise_budget<<")" << std::endl;
             }else{
-                std::cout << "Vector took (enc, run, enc + run) = (Error, Error, Error)" << std::endl;
+                std::cout << "Vector took (enc, run, enc + run, Remaining_noise_budget) = (Error, Error, Error, 0)" << std::endl;
             }
 
             /***********************************************************************************************/
             /***********************************************************************************************/
-            if (!vector_program_success) {
-                myfile << "v,ErrorV,ErrorV,ErrorV" << std::endl;
+            if (Remaining_noise_budget<=0) {
+                myfile << "v,ErrorV,ErrorV,ErrorV,0" << std::endl;
             } else {
-                myfile << "v," << vector_enc_time << "," << vector_run_time << "," << vector_enc_time + vector_run_time << std::endl;
+                myfile << "v," << vector_enc_time << "," << vector_run_time << "," << vector_enc_time + vector_run_time << "," << Remaining_noise_budget << std::endl;
             }
         }
 

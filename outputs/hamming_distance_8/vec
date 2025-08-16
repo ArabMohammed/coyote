@@ -1,0 +1,12 @@
+__t0 = [0, 0, 0, 0, 0, 0, 0, 0, hamming_distance_8(a):0, hamming_distance_8(a):1, hamming_distance_8(a):2, hamming_distance_8(a):3, hamming_distance_8(a):4, hamming_distance_8(a):5, hamming_distance_8(a):6, hamming_distance_8(a):7]
+__v0 = load(__t0)
+__s0 = __v0 >> 8
+__t1 = [0, 0, 0, 0, 0, 0, 0, 0, hamming_distance_8(b):0, hamming_distance_8(b):1, hamming_distance_8(b):2, hamming_distance_8(b):3, hamming_distance_8(b):4, hamming_distance_8(b):5, hamming_distance_8(b):6, hamming_distance_8(b):7]
+__v1 = load(__t1)
+__s1 = __v1 >> 8
+__v2 = __v0 * __v1
+__v3 = __s0 + __s1
+__t2 = [0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2]
+__v4 = __t2 * __v2
+__s2 = __v4 >> 8
+__v5 = __v3 - __s2

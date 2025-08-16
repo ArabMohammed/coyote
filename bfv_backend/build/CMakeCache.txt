@@ -277,7 +277,7 @@ RUNS:UNINITIALIZED=1
 SEAL_DIR:PATH=/home/ma9232/.conda/envs/coyoteEnv/lib64/cmake/SEAL-4.1
 
 //Name of the computer/site where compile is being run
-SITE:STRING=cn018
+SITE:STRING=cn128
 
 
 ########################

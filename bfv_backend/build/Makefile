@@ -491,6 +491,292 @@ ContinuousSubmit/fast:
 .PHONY : ContinuousSubmit/fast
 
 #=============================================================================
+# Target rules for targets named box_blur_4x4
+
+# Build rule for target.
+box_blur_4x4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 box_blur_4x4
+.PHONY : box_blur_4x4
+
+# fast build rule for target.
+box_blur_4x4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/build
+.PHONY : box_blur_4x4/fast
+
+#=============================================================================
+# Target rules for targets named box_blur_8x8
+
+# Build rule for target.
+box_blur_8x8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 box_blur_8x8
+.PHONY : box_blur_8x8
+
+# fast build rule for target.
+box_blur_8x8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/build
+.PHONY : box_blur_8x8/fast
+
+#=============================================================================
+# Target rules for targets named dot_product_4x4_fully
+
+# Build rule for target.
+dot_product_4x4_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dot_product_4x4_fully
+.PHONY : dot_product_4x4_fully
+
+# fast build rule for target.
+dot_product_4x4_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/build
+.PHONY : dot_product_4x4_fully/fast
+
+#=============================================================================
+# Target rules for targets named dot_product_8x8_fully
+
+# Build rule for target.
+dot_product_8x8_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 dot_product_8x8_fully
+.PHONY : dot_product_8x8_fully
+
+# fast build rule for target.
+dot_product_8x8_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/build
+.PHONY : dot_product_8x8_fully/fast
+
+#=============================================================================
+# Target rules for targets named gx_kernel_4x4
+
+# Build rule for target.
+gx_kernel_4x4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gx_kernel_4x4
+.PHONY : gx_kernel_4x4
+
+# fast build rule for target.
+gx_kernel_4x4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/build
+.PHONY : gx_kernel_4x4/fast
+
+#=============================================================================
+# Target rules for targets named gx_kernel_8x8
+
+# Build rule for target.
+gx_kernel_8x8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gx_kernel_8x8
+.PHONY : gx_kernel_8x8
+
+# fast build rule for target.
+gx_kernel_8x8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/build
+.PHONY : gx_kernel_8x8/fast
+
+#=============================================================================
+# Target rules for targets named gy_kernel_4x4
+
+# Build rule for target.
+gy_kernel_4x4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gy_kernel_4x4
+.PHONY : gy_kernel_4x4
+
+# fast build rule for target.
+gy_kernel_4x4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/build
+.PHONY : gy_kernel_4x4/fast
+
+#=============================================================================
+# Target rules for targets named gy_kernel_8x8
+
+# Build rule for target.
+gy_kernel_8x8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gy_kernel_8x8
+.PHONY : gy_kernel_8x8
+
+# fast build rule for target.
+gy_kernel_8x8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/build
+.PHONY : gy_kernel_8x8/fast
+
+#=============================================================================
+# Target rules for targets named hamming_distance_4
+
+# Build rule for target.
+hamming_distance_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hamming_distance_4
+.PHONY : hamming_distance_4
+
+# fast build rule for target.
+hamming_distance_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/build
+.PHONY : hamming_distance_4/fast
+
+#=============================================================================
+# Target rules for targets named hamming_distance_8
+
+# Build rule for target.
+hamming_distance_8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 hamming_distance_8
+.PHONY : hamming_distance_8
+
+# fast build rule for target.
+hamming_distance_8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/build
+.PHONY : hamming_distance_8/fast
+
+#=============================================================================
+# Target rules for targets named l2_distance_4
+
+# Build rule for target.
+l2_distance_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 l2_distance_4
+.PHONY : l2_distance_4
+
+# fast build rule for target.
+l2_distance_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/build
+.PHONY : l2_distance_4/fast
+
+#=============================================================================
+# Target rules for targets named l2_distance_8
+
+# Build rule for target.
+l2_distance_8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 l2_distance_8
+.PHONY : l2_distance_8
+
+# fast build rule for target.
+l2_distance_8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/build
+.PHONY : l2_distance_8/fast
+
+#=============================================================================
+# Target rules for targets named linear_reg_4
+
+# Build rule for target.
+linear_reg_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linear_reg_4
+.PHONY : linear_reg_4
+
+# fast build rule for target.
+linear_reg_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/build
+.PHONY : linear_reg_4/fast
+
+#=============================================================================
+# Target rules for targets named linear_reg_8
+
+# Build rule for target.
+linear_reg_8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 linear_reg_8
+.PHONY : linear_reg_8
+
+# fast build rule for target.
+linear_reg_8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/build
+.PHONY : linear_reg_8/fast
+
+#=============================================================================
+# Target rules for targets named matmul_4x4_fully
+
+# Build rule for target.
+matmul_4x4_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matmul_4x4_fully
+.PHONY : matmul_4x4_fully
+
+# fast build rule for target.
+matmul_4x4_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/build
+.PHONY : matmul_4x4_fully/fast
+
+#=============================================================================
+# Target rules for targets named matmul_8x8_fully
+
+# Build rule for target.
+matmul_8x8_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 matmul_8x8_fully
+.PHONY : matmul_8x8_fully
+
+# fast build rule for target.
+matmul_8x8_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/build
+.PHONY : matmul_8x8_fully/fast
+
+#=============================================================================
+# Target rules for targets named max_5_packed_fully
+
+# Build rule for target.
+max_5_packed_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 max_5_packed_fully
+.PHONY : max_5_packed_fully
+
+# fast build rule for target.
+max_5_packed_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/build
+.PHONY : max_5_packed_fully/fast
+
+#=============================================================================
+# Target rules for targets named poly_reg_4
+
+# Build rule for target.
+poly_reg_4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poly_reg_4
+.PHONY : poly_reg_4
+
+# fast build rule for target.
+poly_reg_4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/build
+.PHONY : poly_reg_4/fast
+
+#=============================================================================
+# Target rules for targets named poly_reg_8
+
+# Build rule for target.
+poly_reg_8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 poly_reg_8
+.PHONY : poly_reg_8
+
+# fast build rule for target.
+poly_reg_8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/build
+.PHONY : poly_reg_8/fast
+
+#=============================================================================
+# Target rules for targets named roberts_cross_4x4
+
+# Build rule for target.
+roberts_cross_4x4: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 roberts_cross_4x4
+.PHONY : roberts_cross_4x4
+
+# fast build rule for target.
+roberts_cross_4x4/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/build
+.PHONY : roberts_cross_4x4/fast
+
+#=============================================================================
+# Target rules for targets named roberts_cross_8x8
+
+# Build rule for target.
+roberts_cross_8x8: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 roberts_cross_8x8
+.PHONY : roberts_cross_8x8
+
+# fast build rule for target.
+roberts_cross_8x8/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/build
+.PHONY : roberts_cross_8x8/fast
+
+#=============================================================================
+# Target rules for targets named sort_3_packed_fully
+
+# Build rule for target.
+sort_3_packed_fully: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sort_3_packed_fully
+.PHONY : sort_3_packed_fully
+
+# fast build rule for target.
+sort_3_packed_fully/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/build
+.PHONY : sort_3_packed_fully/fast
+
+#=============================================================================
 # Target rules for targets named tree_100-100_10_1
 
 # Build rule for target.
@@ -543,6 +829,32 @@ tree_100-100_5_2/fast:
 .PHONY : tree_100-100_5_2/fast
 
 #=============================================================================
+# Target rules for targets named tree_100-50_10_1
+
+# Build rule for target.
+tree_100-50_10_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-50_10_1
+.PHONY : tree_100-50_10_1
+
+# fast build rule for target.
+tree_100-50_10_1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/build
+.PHONY : tree_100-50_10_1/fast
+
+#=============================================================================
+# Target rules for targets named tree_100-50_10_2
+
+# Build rule for target.
+tree_100-50_10_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_100-50_10_2
+.PHONY : tree_100-50_10_2
+
+# fast build rule for target.
+tree_100-50_10_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/build
+.PHONY : tree_100-50_10_2/fast
+
+#=============================================================================
 # Target rules for targets named tree_100-50_5_1
 
 # Build rule for target.
@@ -569,6 +881,32 @@ tree_100-50_5_2/fast:
 .PHONY : tree_100-50_5_2/fast
 
 #=============================================================================
+# Target rules for targets named tree_50-50_10_1
+
+# Build rule for target.
+tree_50-50_10_1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_50-50_10_1
+.PHONY : tree_50-50_10_1
+
+# fast build rule for target.
+tree_50-50_10_1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/build
+.PHONY : tree_50-50_10_1/fast
+
+#=============================================================================
+# Target rules for targets named tree_50-50_10_2
+
+# Build rule for target.
+tree_50-50_10_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tree_50-50_10_2
+.PHONY : tree_50-50_10_2
+
+# fast build rule for target.
+tree_50-50_10_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/build
+.PHONY : tree_50-50_10_2/fast
+
+#=============================================================================
 # Target rules for targets named tree_50-50_5_1
 
 # Build rule for target.
@@ -593,6 +931,534 @@ tree_50-50_5_2: cmake_check_build_system
 tree_50-50_5_2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/build
 .PHONY : tree_50-50_5_2/fast
+
+coyote_out/box_blur_4x4/vector.o: coyote_out/box_blur_4x4/vector.cpp.o
+.PHONY : coyote_out/box_blur_4x4/vector.o
+
+# target to build an object file
+coyote_out/box_blur_4x4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/coyote_out/box_blur_4x4/vector.cpp.o
+.PHONY : coyote_out/box_blur_4x4/vector.cpp.o
+
+coyote_out/box_blur_4x4/vector.i: coyote_out/box_blur_4x4/vector.cpp.i
+.PHONY : coyote_out/box_blur_4x4/vector.i
+
+# target to preprocess a source file
+coyote_out/box_blur_4x4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/coyote_out/box_blur_4x4/vector.cpp.i
+.PHONY : coyote_out/box_blur_4x4/vector.cpp.i
+
+coyote_out/box_blur_4x4/vector.s: coyote_out/box_blur_4x4/vector.cpp.s
+.PHONY : coyote_out/box_blur_4x4/vector.s
+
+# target to generate assembly for a file
+coyote_out/box_blur_4x4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/coyote_out/box_blur_4x4/vector.cpp.s
+.PHONY : coyote_out/box_blur_4x4/vector.cpp.s
+
+coyote_out/box_blur_8x8/vector.o: coyote_out/box_blur_8x8/vector.cpp.o
+.PHONY : coyote_out/box_blur_8x8/vector.o
+
+# target to build an object file
+coyote_out/box_blur_8x8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/coyote_out/box_blur_8x8/vector.cpp.o
+.PHONY : coyote_out/box_blur_8x8/vector.cpp.o
+
+coyote_out/box_blur_8x8/vector.i: coyote_out/box_blur_8x8/vector.cpp.i
+.PHONY : coyote_out/box_blur_8x8/vector.i
+
+# target to preprocess a source file
+coyote_out/box_blur_8x8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/coyote_out/box_blur_8x8/vector.cpp.i
+.PHONY : coyote_out/box_blur_8x8/vector.cpp.i
+
+coyote_out/box_blur_8x8/vector.s: coyote_out/box_blur_8x8/vector.cpp.s
+.PHONY : coyote_out/box_blur_8x8/vector.s
+
+# target to generate assembly for a file
+coyote_out/box_blur_8x8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/coyote_out/box_blur_8x8/vector.cpp.s
+.PHONY : coyote_out/box_blur_8x8/vector.cpp.s
+
+coyote_out/dot_product_4x4_fully/vector.o: coyote_out/dot_product_4x4_fully/vector.cpp.o
+.PHONY : coyote_out/dot_product_4x4_fully/vector.o
+
+# target to build an object file
+coyote_out/dot_product_4x4_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/coyote_out/dot_product_4x4_fully/vector.cpp.o
+.PHONY : coyote_out/dot_product_4x4_fully/vector.cpp.o
+
+coyote_out/dot_product_4x4_fully/vector.i: coyote_out/dot_product_4x4_fully/vector.cpp.i
+.PHONY : coyote_out/dot_product_4x4_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/dot_product_4x4_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/coyote_out/dot_product_4x4_fully/vector.cpp.i
+.PHONY : coyote_out/dot_product_4x4_fully/vector.cpp.i
+
+coyote_out/dot_product_4x4_fully/vector.s: coyote_out/dot_product_4x4_fully/vector.cpp.s
+.PHONY : coyote_out/dot_product_4x4_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/dot_product_4x4_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/coyote_out/dot_product_4x4_fully/vector.cpp.s
+.PHONY : coyote_out/dot_product_4x4_fully/vector.cpp.s
+
+coyote_out/dot_product_8x8_fully/vector.o: coyote_out/dot_product_8x8_fully/vector.cpp.o
+.PHONY : coyote_out/dot_product_8x8_fully/vector.o
+
+# target to build an object file
+coyote_out/dot_product_8x8_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/coyote_out/dot_product_8x8_fully/vector.cpp.o
+.PHONY : coyote_out/dot_product_8x8_fully/vector.cpp.o
+
+coyote_out/dot_product_8x8_fully/vector.i: coyote_out/dot_product_8x8_fully/vector.cpp.i
+.PHONY : coyote_out/dot_product_8x8_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/dot_product_8x8_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/coyote_out/dot_product_8x8_fully/vector.cpp.i
+.PHONY : coyote_out/dot_product_8x8_fully/vector.cpp.i
+
+coyote_out/dot_product_8x8_fully/vector.s: coyote_out/dot_product_8x8_fully/vector.cpp.s
+.PHONY : coyote_out/dot_product_8x8_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/dot_product_8x8_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/coyote_out/dot_product_8x8_fully/vector.cpp.s
+.PHONY : coyote_out/dot_product_8x8_fully/vector.cpp.s
+
+coyote_out/gx_kernel_4x4/vector.o: coyote_out/gx_kernel_4x4/vector.cpp.o
+.PHONY : coyote_out/gx_kernel_4x4/vector.o
+
+# target to build an object file
+coyote_out/gx_kernel_4x4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/coyote_out/gx_kernel_4x4/vector.cpp.o
+.PHONY : coyote_out/gx_kernel_4x4/vector.cpp.o
+
+coyote_out/gx_kernel_4x4/vector.i: coyote_out/gx_kernel_4x4/vector.cpp.i
+.PHONY : coyote_out/gx_kernel_4x4/vector.i
+
+# target to preprocess a source file
+coyote_out/gx_kernel_4x4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/coyote_out/gx_kernel_4x4/vector.cpp.i
+.PHONY : coyote_out/gx_kernel_4x4/vector.cpp.i
+
+coyote_out/gx_kernel_4x4/vector.s: coyote_out/gx_kernel_4x4/vector.cpp.s
+.PHONY : coyote_out/gx_kernel_4x4/vector.s
+
+# target to generate assembly for a file
+coyote_out/gx_kernel_4x4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/coyote_out/gx_kernel_4x4/vector.cpp.s
+.PHONY : coyote_out/gx_kernel_4x4/vector.cpp.s
+
+coyote_out/gx_kernel_8x8/vector.o: coyote_out/gx_kernel_8x8/vector.cpp.o
+.PHONY : coyote_out/gx_kernel_8x8/vector.o
+
+# target to build an object file
+coyote_out/gx_kernel_8x8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/coyote_out/gx_kernel_8x8/vector.cpp.o
+.PHONY : coyote_out/gx_kernel_8x8/vector.cpp.o
+
+coyote_out/gx_kernel_8x8/vector.i: coyote_out/gx_kernel_8x8/vector.cpp.i
+.PHONY : coyote_out/gx_kernel_8x8/vector.i
+
+# target to preprocess a source file
+coyote_out/gx_kernel_8x8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/coyote_out/gx_kernel_8x8/vector.cpp.i
+.PHONY : coyote_out/gx_kernel_8x8/vector.cpp.i
+
+coyote_out/gx_kernel_8x8/vector.s: coyote_out/gx_kernel_8x8/vector.cpp.s
+.PHONY : coyote_out/gx_kernel_8x8/vector.s
+
+# target to generate assembly for a file
+coyote_out/gx_kernel_8x8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/coyote_out/gx_kernel_8x8/vector.cpp.s
+.PHONY : coyote_out/gx_kernel_8x8/vector.cpp.s
+
+coyote_out/gy_kernel_4x4/vector.o: coyote_out/gy_kernel_4x4/vector.cpp.o
+.PHONY : coyote_out/gy_kernel_4x4/vector.o
+
+# target to build an object file
+coyote_out/gy_kernel_4x4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/coyote_out/gy_kernel_4x4/vector.cpp.o
+.PHONY : coyote_out/gy_kernel_4x4/vector.cpp.o
+
+coyote_out/gy_kernel_4x4/vector.i: coyote_out/gy_kernel_4x4/vector.cpp.i
+.PHONY : coyote_out/gy_kernel_4x4/vector.i
+
+# target to preprocess a source file
+coyote_out/gy_kernel_4x4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/coyote_out/gy_kernel_4x4/vector.cpp.i
+.PHONY : coyote_out/gy_kernel_4x4/vector.cpp.i
+
+coyote_out/gy_kernel_4x4/vector.s: coyote_out/gy_kernel_4x4/vector.cpp.s
+.PHONY : coyote_out/gy_kernel_4x4/vector.s
+
+# target to generate assembly for a file
+coyote_out/gy_kernel_4x4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/coyote_out/gy_kernel_4x4/vector.cpp.s
+.PHONY : coyote_out/gy_kernel_4x4/vector.cpp.s
+
+coyote_out/gy_kernel_8x8/vector.o: coyote_out/gy_kernel_8x8/vector.cpp.o
+.PHONY : coyote_out/gy_kernel_8x8/vector.o
+
+# target to build an object file
+coyote_out/gy_kernel_8x8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/coyote_out/gy_kernel_8x8/vector.cpp.o
+.PHONY : coyote_out/gy_kernel_8x8/vector.cpp.o
+
+coyote_out/gy_kernel_8x8/vector.i: coyote_out/gy_kernel_8x8/vector.cpp.i
+.PHONY : coyote_out/gy_kernel_8x8/vector.i
+
+# target to preprocess a source file
+coyote_out/gy_kernel_8x8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/coyote_out/gy_kernel_8x8/vector.cpp.i
+.PHONY : coyote_out/gy_kernel_8x8/vector.cpp.i
+
+coyote_out/gy_kernel_8x8/vector.s: coyote_out/gy_kernel_8x8/vector.cpp.s
+.PHONY : coyote_out/gy_kernel_8x8/vector.s
+
+# target to generate assembly for a file
+coyote_out/gy_kernel_8x8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/coyote_out/gy_kernel_8x8/vector.cpp.s
+.PHONY : coyote_out/gy_kernel_8x8/vector.cpp.s
+
+coyote_out/hamming_distance_4/vector.o: coyote_out/hamming_distance_4/vector.cpp.o
+.PHONY : coyote_out/hamming_distance_4/vector.o
+
+# target to build an object file
+coyote_out/hamming_distance_4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.o
+.PHONY : coyote_out/hamming_distance_4/vector.cpp.o
+
+coyote_out/hamming_distance_4/vector.i: coyote_out/hamming_distance_4/vector.cpp.i
+.PHONY : coyote_out/hamming_distance_4/vector.i
+
+# target to preprocess a source file
+coyote_out/hamming_distance_4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.i
+.PHONY : coyote_out/hamming_distance_4/vector.cpp.i
+
+coyote_out/hamming_distance_4/vector.s: coyote_out/hamming_distance_4/vector.cpp.s
+.PHONY : coyote_out/hamming_distance_4/vector.s
+
+# target to generate assembly for a file
+coyote_out/hamming_distance_4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/coyote_out/hamming_distance_4/vector.cpp.s
+.PHONY : coyote_out/hamming_distance_4/vector.cpp.s
+
+coyote_out/hamming_distance_8/vector.o: coyote_out/hamming_distance_8/vector.cpp.o
+.PHONY : coyote_out/hamming_distance_8/vector.o
+
+# target to build an object file
+coyote_out/hamming_distance_8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/coyote_out/hamming_distance_8/vector.cpp.o
+.PHONY : coyote_out/hamming_distance_8/vector.cpp.o
+
+coyote_out/hamming_distance_8/vector.i: coyote_out/hamming_distance_8/vector.cpp.i
+.PHONY : coyote_out/hamming_distance_8/vector.i
+
+# target to preprocess a source file
+coyote_out/hamming_distance_8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/coyote_out/hamming_distance_8/vector.cpp.i
+.PHONY : coyote_out/hamming_distance_8/vector.cpp.i
+
+coyote_out/hamming_distance_8/vector.s: coyote_out/hamming_distance_8/vector.cpp.s
+.PHONY : coyote_out/hamming_distance_8/vector.s
+
+# target to generate assembly for a file
+coyote_out/hamming_distance_8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/coyote_out/hamming_distance_8/vector.cpp.s
+.PHONY : coyote_out/hamming_distance_8/vector.cpp.s
+
+coyote_out/l2_distance_4/vector.o: coyote_out/l2_distance_4/vector.cpp.o
+.PHONY : coyote_out/l2_distance_4/vector.o
+
+# target to build an object file
+coyote_out/l2_distance_4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/coyote_out/l2_distance_4/vector.cpp.o
+.PHONY : coyote_out/l2_distance_4/vector.cpp.o
+
+coyote_out/l2_distance_4/vector.i: coyote_out/l2_distance_4/vector.cpp.i
+.PHONY : coyote_out/l2_distance_4/vector.i
+
+# target to preprocess a source file
+coyote_out/l2_distance_4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/coyote_out/l2_distance_4/vector.cpp.i
+.PHONY : coyote_out/l2_distance_4/vector.cpp.i
+
+coyote_out/l2_distance_4/vector.s: coyote_out/l2_distance_4/vector.cpp.s
+.PHONY : coyote_out/l2_distance_4/vector.s
+
+# target to generate assembly for a file
+coyote_out/l2_distance_4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/coyote_out/l2_distance_4/vector.cpp.s
+.PHONY : coyote_out/l2_distance_4/vector.cpp.s
+
+coyote_out/l2_distance_8/vector.o: coyote_out/l2_distance_8/vector.cpp.o
+.PHONY : coyote_out/l2_distance_8/vector.o
+
+# target to build an object file
+coyote_out/l2_distance_8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/coyote_out/l2_distance_8/vector.cpp.o
+.PHONY : coyote_out/l2_distance_8/vector.cpp.o
+
+coyote_out/l2_distance_8/vector.i: coyote_out/l2_distance_8/vector.cpp.i
+.PHONY : coyote_out/l2_distance_8/vector.i
+
+# target to preprocess a source file
+coyote_out/l2_distance_8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/coyote_out/l2_distance_8/vector.cpp.i
+.PHONY : coyote_out/l2_distance_8/vector.cpp.i
+
+coyote_out/l2_distance_8/vector.s: coyote_out/l2_distance_8/vector.cpp.s
+.PHONY : coyote_out/l2_distance_8/vector.s
+
+# target to generate assembly for a file
+coyote_out/l2_distance_8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/coyote_out/l2_distance_8/vector.cpp.s
+.PHONY : coyote_out/l2_distance_8/vector.cpp.s
+
+coyote_out/linear_reg_4/vector.o: coyote_out/linear_reg_4/vector.cpp.o
+.PHONY : coyote_out/linear_reg_4/vector.o
+
+# target to build an object file
+coyote_out/linear_reg_4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.o
+.PHONY : coyote_out/linear_reg_4/vector.cpp.o
+
+coyote_out/linear_reg_4/vector.i: coyote_out/linear_reg_4/vector.cpp.i
+.PHONY : coyote_out/linear_reg_4/vector.i
+
+# target to preprocess a source file
+coyote_out/linear_reg_4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.i
+.PHONY : coyote_out/linear_reg_4/vector.cpp.i
+
+coyote_out/linear_reg_4/vector.s: coyote_out/linear_reg_4/vector.cpp.s
+.PHONY : coyote_out/linear_reg_4/vector.s
+
+# target to generate assembly for a file
+coyote_out/linear_reg_4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/coyote_out/linear_reg_4/vector.cpp.s
+.PHONY : coyote_out/linear_reg_4/vector.cpp.s
+
+coyote_out/linear_reg_8/vector.o: coyote_out/linear_reg_8/vector.cpp.o
+.PHONY : coyote_out/linear_reg_8/vector.o
+
+# target to build an object file
+coyote_out/linear_reg_8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/coyote_out/linear_reg_8/vector.cpp.o
+.PHONY : coyote_out/linear_reg_8/vector.cpp.o
+
+coyote_out/linear_reg_8/vector.i: coyote_out/linear_reg_8/vector.cpp.i
+.PHONY : coyote_out/linear_reg_8/vector.i
+
+# target to preprocess a source file
+coyote_out/linear_reg_8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/coyote_out/linear_reg_8/vector.cpp.i
+.PHONY : coyote_out/linear_reg_8/vector.cpp.i
+
+coyote_out/linear_reg_8/vector.s: coyote_out/linear_reg_8/vector.cpp.s
+.PHONY : coyote_out/linear_reg_8/vector.s
+
+# target to generate assembly for a file
+coyote_out/linear_reg_8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/coyote_out/linear_reg_8/vector.cpp.s
+.PHONY : coyote_out/linear_reg_8/vector.cpp.s
+
+coyote_out/matmul_4x4_fully/vector.o: coyote_out/matmul_4x4_fully/vector.cpp.o
+.PHONY : coyote_out/matmul_4x4_fully/vector.o
+
+# target to build an object file
+coyote_out/matmul_4x4_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/coyote_out/matmul_4x4_fully/vector.cpp.o
+.PHONY : coyote_out/matmul_4x4_fully/vector.cpp.o
+
+coyote_out/matmul_4x4_fully/vector.i: coyote_out/matmul_4x4_fully/vector.cpp.i
+.PHONY : coyote_out/matmul_4x4_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/matmul_4x4_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/coyote_out/matmul_4x4_fully/vector.cpp.i
+.PHONY : coyote_out/matmul_4x4_fully/vector.cpp.i
+
+coyote_out/matmul_4x4_fully/vector.s: coyote_out/matmul_4x4_fully/vector.cpp.s
+.PHONY : coyote_out/matmul_4x4_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/matmul_4x4_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/coyote_out/matmul_4x4_fully/vector.cpp.s
+.PHONY : coyote_out/matmul_4x4_fully/vector.cpp.s
+
+coyote_out/matmul_8x8_fully/vector.o: coyote_out/matmul_8x8_fully/vector.cpp.o
+.PHONY : coyote_out/matmul_8x8_fully/vector.o
+
+# target to build an object file
+coyote_out/matmul_8x8_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/coyote_out/matmul_8x8_fully/vector.cpp.o
+.PHONY : coyote_out/matmul_8x8_fully/vector.cpp.o
+
+coyote_out/matmul_8x8_fully/vector.i: coyote_out/matmul_8x8_fully/vector.cpp.i
+.PHONY : coyote_out/matmul_8x8_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/matmul_8x8_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/coyote_out/matmul_8x8_fully/vector.cpp.i
+.PHONY : coyote_out/matmul_8x8_fully/vector.cpp.i
+
+coyote_out/matmul_8x8_fully/vector.s: coyote_out/matmul_8x8_fully/vector.cpp.s
+.PHONY : coyote_out/matmul_8x8_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/matmul_8x8_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/coyote_out/matmul_8x8_fully/vector.cpp.s
+.PHONY : coyote_out/matmul_8x8_fully/vector.cpp.s
+
+coyote_out/max_5_packed_fully/vector.o: coyote_out/max_5_packed_fully/vector.cpp.o
+.PHONY : coyote_out/max_5_packed_fully/vector.o
+
+# target to build an object file
+coyote_out/max_5_packed_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/coyote_out/max_5_packed_fully/vector.cpp.o
+.PHONY : coyote_out/max_5_packed_fully/vector.cpp.o
+
+coyote_out/max_5_packed_fully/vector.i: coyote_out/max_5_packed_fully/vector.cpp.i
+.PHONY : coyote_out/max_5_packed_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/max_5_packed_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/coyote_out/max_5_packed_fully/vector.cpp.i
+.PHONY : coyote_out/max_5_packed_fully/vector.cpp.i
+
+coyote_out/max_5_packed_fully/vector.s: coyote_out/max_5_packed_fully/vector.cpp.s
+.PHONY : coyote_out/max_5_packed_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/max_5_packed_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/coyote_out/max_5_packed_fully/vector.cpp.s
+.PHONY : coyote_out/max_5_packed_fully/vector.cpp.s
+
+coyote_out/poly_reg_4/vector.o: coyote_out/poly_reg_4/vector.cpp.o
+.PHONY : coyote_out/poly_reg_4/vector.o
+
+# target to build an object file
+coyote_out/poly_reg_4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/coyote_out/poly_reg_4/vector.cpp.o
+.PHONY : coyote_out/poly_reg_4/vector.cpp.o
+
+coyote_out/poly_reg_4/vector.i: coyote_out/poly_reg_4/vector.cpp.i
+.PHONY : coyote_out/poly_reg_4/vector.i
+
+# target to preprocess a source file
+coyote_out/poly_reg_4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/coyote_out/poly_reg_4/vector.cpp.i
+.PHONY : coyote_out/poly_reg_4/vector.cpp.i
+
+coyote_out/poly_reg_4/vector.s: coyote_out/poly_reg_4/vector.cpp.s
+.PHONY : coyote_out/poly_reg_4/vector.s
+
+# target to generate assembly for a file
+coyote_out/poly_reg_4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/coyote_out/poly_reg_4/vector.cpp.s
+.PHONY : coyote_out/poly_reg_4/vector.cpp.s
+
+coyote_out/poly_reg_8/vector.o: coyote_out/poly_reg_8/vector.cpp.o
+.PHONY : coyote_out/poly_reg_8/vector.o
+
+# target to build an object file
+coyote_out/poly_reg_8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/coyote_out/poly_reg_8/vector.cpp.o
+.PHONY : coyote_out/poly_reg_8/vector.cpp.o
+
+coyote_out/poly_reg_8/vector.i: coyote_out/poly_reg_8/vector.cpp.i
+.PHONY : coyote_out/poly_reg_8/vector.i
+
+# target to preprocess a source file
+coyote_out/poly_reg_8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/coyote_out/poly_reg_8/vector.cpp.i
+.PHONY : coyote_out/poly_reg_8/vector.cpp.i
+
+coyote_out/poly_reg_8/vector.s: coyote_out/poly_reg_8/vector.cpp.s
+.PHONY : coyote_out/poly_reg_8/vector.s
+
+# target to generate assembly for a file
+coyote_out/poly_reg_8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/coyote_out/poly_reg_8/vector.cpp.s
+.PHONY : coyote_out/poly_reg_8/vector.cpp.s
+
+coyote_out/roberts_cross_4x4/vector.o: coyote_out/roberts_cross_4x4/vector.cpp.o
+.PHONY : coyote_out/roberts_cross_4x4/vector.o
+
+# target to build an object file
+coyote_out/roberts_cross_4x4/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/coyote_out/roberts_cross_4x4/vector.cpp.o
+.PHONY : coyote_out/roberts_cross_4x4/vector.cpp.o
+
+coyote_out/roberts_cross_4x4/vector.i: coyote_out/roberts_cross_4x4/vector.cpp.i
+.PHONY : coyote_out/roberts_cross_4x4/vector.i
+
+# target to preprocess a source file
+coyote_out/roberts_cross_4x4/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/coyote_out/roberts_cross_4x4/vector.cpp.i
+.PHONY : coyote_out/roberts_cross_4x4/vector.cpp.i
+
+coyote_out/roberts_cross_4x4/vector.s: coyote_out/roberts_cross_4x4/vector.cpp.s
+.PHONY : coyote_out/roberts_cross_4x4/vector.s
+
+# target to generate assembly for a file
+coyote_out/roberts_cross_4x4/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/coyote_out/roberts_cross_4x4/vector.cpp.s
+.PHONY : coyote_out/roberts_cross_4x4/vector.cpp.s
+
+coyote_out/roberts_cross_8x8/vector.o: coyote_out/roberts_cross_8x8/vector.cpp.o
+.PHONY : coyote_out/roberts_cross_8x8/vector.o
+
+# target to build an object file
+coyote_out/roberts_cross_8x8/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/coyote_out/roberts_cross_8x8/vector.cpp.o
+.PHONY : coyote_out/roberts_cross_8x8/vector.cpp.o
+
+coyote_out/roberts_cross_8x8/vector.i: coyote_out/roberts_cross_8x8/vector.cpp.i
+.PHONY : coyote_out/roberts_cross_8x8/vector.i
+
+# target to preprocess a source file
+coyote_out/roberts_cross_8x8/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/coyote_out/roberts_cross_8x8/vector.cpp.i
+.PHONY : coyote_out/roberts_cross_8x8/vector.cpp.i
+
+coyote_out/roberts_cross_8x8/vector.s: coyote_out/roberts_cross_8x8/vector.cpp.s
+.PHONY : coyote_out/roberts_cross_8x8/vector.s
+
+# target to generate assembly for a file
+coyote_out/roberts_cross_8x8/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/coyote_out/roberts_cross_8x8/vector.cpp.s
+.PHONY : coyote_out/roberts_cross_8x8/vector.cpp.s
+
+coyote_out/sort_3_packed_fully/vector.o: coyote_out/sort_3_packed_fully/vector.cpp.o
+.PHONY : coyote_out/sort_3_packed_fully/vector.o
+
+# target to build an object file
+coyote_out/sort_3_packed_fully/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/coyote_out/sort_3_packed_fully/vector.cpp.o
+.PHONY : coyote_out/sort_3_packed_fully/vector.cpp.o
+
+coyote_out/sort_3_packed_fully/vector.i: coyote_out/sort_3_packed_fully/vector.cpp.i
+.PHONY : coyote_out/sort_3_packed_fully/vector.i
+
+# target to preprocess a source file
+coyote_out/sort_3_packed_fully/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/coyote_out/sort_3_packed_fully/vector.cpp.i
+.PHONY : coyote_out/sort_3_packed_fully/vector.cpp.i
+
+coyote_out/sort_3_packed_fully/vector.s: coyote_out/sort_3_packed_fully/vector.cpp.s
+.PHONY : coyote_out/sort_3_packed_fully/vector.s
+
+# target to generate assembly for a file
+coyote_out/sort_3_packed_fully/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/coyote_out/sort_3_packed_fully/vector.cpp.s
+.PHONY : coyote_out/sort_3_packed_fully/vector.cpp.s
 
 coyote_out/tree_100-100_10_1/vector.o: coyote_out/tree_100-100_10_1/vector.cpp.o
 .PHONY : coyote_out/tree_100-100_10_1/vector.o
@@ -690,6 +1556,54 @@ coyote_out/tree_100-100_5_2/vector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/coyote_out/tree_100-100_5_2/vector.cpp.s
 .PHONY : coyote_out/tree_100-100_5_2/vector.cpp.s
 
+coyote_out/tree_100-50_10_1/vector.o: coyote_out/tree_100-50_10_1/vector.cpp.o
+.PHONY : coyote_out/tree_100-50_10_1/vector.o
+
+# target to build an object file
+coyote_out/tree_100-50_10_1/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/coyote_out/tree_100-50_10_1/vector.cpp.o
+.PHONY : coyote_out/tree_100-50_10_1/vector.cpp.o
+
+coyote_out/tree_100-50_10_1/vector.i: coyote_out/tree_100-50_10_1/vector.cpp.i
+.PHONY : coyote_out/tree_100-50_10_1/vector.i
+
+# target to preprocess a source file
+coyote_out/tree_100-50_10_1/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/coyote_out/tree_100-50_10_1/vector.cpp.i
+.PHONY : coyote_out/tree_100-50_10_1/vector.cpp.i
+
+coyote_out/tree_100-50_10_1/vector.s: coyote_out/tree_100-50_10_1/vector.cpp.s
+.PHONY : coyote_out/tree_100-50_10_1/vector.s
+
+# target to generate assembly for a file
+coyote_out/tree_100-50_10_1/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/coyote_out/tree_100-50_10_1/vector.cpp.s
+.PHONY : coyote_out/tree_100-50_10_1/vector.cpp.s
+
+coyote_out/tree_100-50_10_2/vector.o: coyote_out/tree_100-50_10_2/vector.cpp.o
+.PHONY : coyote_out/tree_100-50_10_2/vector.o
+
+# target to build an object file
+coyote_out/tree_100-50_10_2/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/coyote_out/tree_100-50_10_2/vector.cpp.o
+.PHONY : coyote_out/tree_100-50_10_2/vector.cpp.o
+
+coyote_out/tree_100-50_10_2/vector.i: coyote_out/tree_100-50_10_2/vector.cpp.i
+.PHONY : coyote_out/tree_100-50_10_2/vector.i
+
+# target to preprocess a source file
+coyote_out/tree_100-50_10_2/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/coyote_out/tree_100-50_10_2/vector.cpp.i
+.PHONY : coyote_out/tree_100-50_10_2/vector.cpp.i
+
+coyote_out/tree_100-50_10_2/vector.s: coyote_out/tree_100-50_10_2/vector.cpp.s
+.PHONY : coyote_out/tree_100-50_10_2/vector.s
+
+# target to generate assembly for a file
+coyote_out/tree_100-50_10_2/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/coyote_out/tree_100-50_10_2/vector.cpp.s
+.PHONY : coyote_out/tree_100-50_10_2/vector.cpp.s
+
 coyote_out/tree_100-50_5_1/vector.o: coyote_out/tree_100-50_5_1/vector.cpp.o
 .PHONY : coyote_out/tree_100-50_5_1/vector.o
 
@@ -737,6 +1651,54 @@ coyote_out/tree_100-50_5_2/vector.s: coyote_out/tree_100-50_5_2/vector.cpp.s
 coyote_out/tree_100-50_5_2/vector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/coyote_out/tree_100-50_5_2/vector.cpp.s
 .PHONY : coyote_out/tree_100-50_5_2/vector.cpp.s
+
+coyote_out/tree_50-50_10_1/vector.o: coyote_out/tree_50-50_10_1/vector.cpp.o
+.PHONY : coyote_out/tree_50-50_10_1/vector.o
+
+# target to build an object file
+coyote_out/tree_50-50_10_1/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/coyote_out/tree_50-50_10_1/vector.cpp.o
+.PHONY : coyote_out/tree_50-50_10_1/vector.cpp.o
+
+coyote_out/tree_50-50_10_1/vector.i: coyote_out/tree_50-50_10_1/vector.cpp.i
+.PHONY : coyote_out/tree_50-50_10_1/vector.i
+
+# target to preprocess a source file
+coyote_out/tree_50-50_10_1/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/coyote_out/tree_50-50_10_1/vector.cpp.i
+.PHONY : coyote_out/tree_50-50_10_1/vector.cpp.i
+
+coyote_out/tree_50-50_10_1/vector.s: coyote_out/tree_50-50_10_1/vector.cpp.s
+.PHONY : coyote_out/tree_50-50_10_1/vector.s
+
+# target to generate assembly for a file
+coyote_out/tree_50-50_10_1/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/coyote_out/tree_50-50_10_1/vector.cpp.s
+.PHONY : coyote_out/tree_50-50_10_1/vector.cpp.s
+
+coyote_out/tree_50-50_10_2/vector.o: coyote_out/tree_50-50_10_2/vector.cpp.o
+.PHONY : coyote_out/tree_50-50_10_2/vector.o
+
+# target to build an object file
+coyote_out/tree_50-50_10_2/vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/coyote_out/tree_50-50_10_2/vector.cpp.o
+.PHONY : coyote_out/tree_50-50_10_2/vector.cpp.o
+
+coyote_out/tree_50-50_10_2/vector.i: coyote_out/tree_50-50_10_2/vector.cpp.i
+.PHONY : coyote_out/tree_50-50_10_2/vector.i
+
+# target to preprocess a source file
+coyote_out/tree_50-50_10_2/vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/coyote_out/tree_50-50_10_2/vector.cpp.i
+.PHONY : coyote_out/tree_50-50_10_2/vector.cpp.i
+
+coyote_out/tree_50-50_10_2/vector.s: coyote_out/tree_50-50_10_2/vector.cpp.s
+.PHONY : coyote_out/tree_50-50_10_2/vector.s
+
+# target to generate assembly for a file
+coyote_out/tree_50-50_10_2/vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/coyote_out/tree_50-50_10_2/vector.cpp.s
+.PHONY : coyote_out/tree_50-50_10_2/vector.cpp.s
 
 coyote_out/tree_50-50_5_1/vector.o: coyote_out/tree_50-50_5_1/vector.cpp.o
 .PHONY : coyote_out/tree_50-50_5_1/vector.o
@@ -791,12 +1753,38 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/main.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/main.cpp.o
 .PHONY : main.cpp.o
@@ -806,12 +1794,38 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/main.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/main.cpp.i
 .PHONY : main.cpp.i
@@ -821,12 +1835,38 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/main.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/main.cpp.s
 .PHONY : main.cpp.s
@@ -836,12 +1876,38 @@ util.o: util.cpp.o
 
 # target to build an object file
 util.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/util.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/util.cpp.o
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/util.cpp.o
 .PHONY : util.cpp.o
@@ -851,12 +1917,38 @@ util.i: util.cpp.i
 
 # target to preprocess a source file
 util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/util.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/util.cpp.i
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/util.cpp.i
 .PHONY : util.cpp.i
@@ -866,12 +1958,38 @@ util.s: util.cpp.s
 
 # target to generate assembly for a file
 util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_4x4.dir/build.make CMakeFiles/box_blur_4x4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/box_blur_8x8.dir/build.make CMakeFiles/box_blur_8x8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_4x4_fully.dir/build.make CMakeFiles/dot_product_4x4_fully.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/dot_product_8x8_fully.dir/build.make CMakeFiles/dot_product_8x8_fully.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_4x4.dir/build.make CMakeFiles/gx_kernel_4x4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gx_kernel_8x8.dir/build.make CMakeFiles/gx_kernel_8x8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_4x4.dir/build.make CMakeFiles/gy_kernel_4x4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gy_kernel_8x8.dir/build.make CMakeFiles/gy_kernel_8x8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_4.dir/build.make CMakeFiles/hamming_distance_4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hamming_distance_8.dir/build.make CMakeFiles/hamming_distance_8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_4.dir/build.make CMakeFiles/l2_distance_4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/l2_distance_8.dir/build.make CMakeFiles/l2_distance_8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_4.dir/build.make CMakeFiles/linear_reg_4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/linear_reg_8.dir/build.make CMakeFiles/linear_reg_8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_4x4_fully.dir/build.make CMakeFiles/matmul_4x4_fully.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matmul_8x8_fully.dir/build.make CMakeFiles/matmul_8x8_fully.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/max_5_packed_fully.dir/build.make CMakeFiles/max_5_packed_fully.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_4.dir/build.make CMakeFiles/poly_reg_4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/poly_reg_8.dir/build.make CMakeFiles/poly_reg_8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_4x4.dir/build.make CMakeFiles/roberts_cross_4x4.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/roberts_cross_8x8.dir/build.make CMakeFiles/roberts_cross_8x8.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/sort_3_packed_fully.dir/build.make CMakeFiles/sort_3_packed_fully.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_1.dir/build.make CMakeFiles/tree_100-100_10_1.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_10_2.dir/build.make CMakeFiles/tree_100-100_10_2.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_1.dir/build.make CMakeFiles/tree_100-100_5_1.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-100_5_2.dir/build.make CMakeFiles/tree_100-100_5_2.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_1.dir/build.make CMakeFiles/tree_100-50_10_1.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_10_2.dir/build.make CMakeFiles/tree_100-50_10_2.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_1.dir/build.make CMakeFiles/tree_100-50_5_1.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_100-50_5_2.dir/build.make CMakeFiles/tree_100-50_5_2.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_1.dir/build.make CMakeFiles/tree_50-50_10_1.dir/util.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_10_2.dir/build.make CMakeFiles/tree_50-50_10_2.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_1.dir/build.make CMakeFiles/tree_50-50_5_1.dir/util.cpp.s
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/tree_50-50_5_2.dir/build.make CMakeFiles/tree_50-50_5_2.dir/util.cpp.s
 .PHONY : util.cpp.s
@@ -913,14 +2031,106 @@ help:
 	@echo "... NightlySubmit"
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
+	@echo "... box_blur_4x4"
+	@echo "... box_blur_8x8"
+	@echo "... dot_product_4x4_fully"
+	@echo "... dot_product_8x8_fully"
+	@echo "... gx_kernel_4x4"
+	@echo "... gx_kernel_8x8"
+	@echo "... gy_kernel_4x4"
+	@echo "... gy_kernel_8x8"
+	@echo "... hamming_distance_4"
+	@echo "... hamming_distance_8"
+	@echo "... l2_distance_4"
+	@echo "... l2_distance_8"
+	@echo "... linear_reg_4"
+	@echo "... linear_reg_8"
+	@echo "... matmul_4x4_fully"
+	@echo "... matmul_8x8_fully"
+	@echo "... max_5_packed_fully"
+	@echo "... poly_reg_4"
+	@echo "... poly_reg_8"
+	@echo "... roberts_cross_4x4"
+	@echo "... roberts_cross_8x8"
+	@echo "... sort_3_packed_fully"
 	@echo "... tree_100-100_10_1"
 	@echo "... tree_100-100_10_2"
 	@echo "... tree_100-100_5_1"
 	@echo "... tree_100-100_5_2"
+	@echo "... tree_100-50_10_1"
+	@echo "... tree_100-50_10_2"
 	@echo "... tree_100-50_5_1"
 	@echo "... tree_100-50_5_2"
+	@echo "... tree_50-50_10_1"
+	@echo "... tree_50-50_10_2"
 	@echo "... tree_50-50_5_1"
 	@echo "... tree_50-50_5_2"
+	@echo "... coyote_out/box_blur_4x4/vector.o"
+	@echo "... coyote_out/box_blur_4x4/vector.i"
+	@echo "... coyote_out/box_blur_4x4/vector.s"
+	@echo "... coyote_out/box_blur_8x8/vector.o"
+	@echo "... coyote_out/box_blur_8x8/vector.i"
+	@echo "... coyote_out/box_blur_8x8/vector.s"
+	@echo "... coyote_out/dot_product_4x4_fully/vector.o"
+	@echo "... coyote_out/dot_product_4x4_fully/vector.i"
+	@echo "... coyote_out/dot_product_4x4_fully/vector.s"
+	@echo "... coyote_out/dot_product_8x8_fully/vector.o"
+	@echo "... coyote_out/dot_product_8x8_fully/vector.i"
+	@echo "... coyote_out/dot_product_8x8_fully/vector.s"
+	@echo "... coyote_out/gx_kernel_4x4/vector.o"
+	@echo "... coyote_out/gx_kernel_4x4/vector.i"
+	@echo "... coyote_out/gx_kernel_4x4/vector.s"
+	@echo "... coyote_out/gx_kernel_8x8/vector.o"
+	@echo "... coyote_out/gx_kernel_8x8/vector.i"
+	@echo "... coyote_out/gx_kernel_8x8/vector.s"
+	@echo "... coyote_out/gy_kernel_4x4/vector.o"
+	@echo "... coyote_out/gy_kernel_4x4/vector.i"
+	@echo "... coyote_out/gy_kernel_4x4/vector.s"
+	@echo "... coyote_out/gy_kernel_8x8/vector.o"
+	@echo "... coyote_out/gy_kernel_8x8/vector.i"
+	@echo "... coyote_out/gy_kernel_8x8/vector.s"
+	@echo "... coyote_out/hamming_distance_4/vector.o"
+	@echo "... coyote_out/hamming_distance_4/vector.i"
+	@echo "... coyote_out/hamming_distance_4/vector.s"
+	@echo "... coyote_out/hamming_distance_8/vector.o"
+	@echo "... coyote_out/hamming_distance_8/vector.i"
+	@echo "... coyote_out/hamming_distance_8/vector.s"
+	@echo "... coyote_out/l2_distance_4/vector.o"
+	@echo "... coyote_out/l2_distance_4/vector.i"
+	@echo "... coyote_out/l2_distance_4/vector.s"
+	@echo "... coyote_out/l2_distance_8/vector.o"
+	@echo "... coyote_out/l2_distance_8/vector.i"
+	@echo "... coyote_out/l2_distance_8/vector.s"
+	@echo "... coyote_out/linear_reg_4/vector.o"
+	@echo "... coyote_out/linear_reg_4/vector.i"
+	@echo "... coyote_out/linear_reg_4/vector.s"
+	@echo "... coyote_out/linear_reg_8/vector.o"
+	@echo "... coyote_out/linear_reg_8/vector.i"
+	@echo "... coyote_out/linear_reg_8/vector.s"
+	@echo "... coyote_out/matmul_4x4_fully/vector.o"
+	@echo "... coyote_out/matmul_4x4_fully/vector.i"
+	@echo "... coyote_out/matmul_4x4_fully/vector.s"
+	@echo "... coyote_out/matmul_8x8_fully/vector.o"
+	@echo "... coyote_out/matmul_8x8_fully/vector.i"
+	@echo "... coyote_out/matmul_8x8_fully/vector.s"
+	@echo "... coyote_out/max_5_packed_fully/vector.o"
+	@echo "... coyote_out/max_5_packed_fully/vector.i"
+	@echo "... coyote_out/max_5_packed_fully/vector.s"
+	@echo "... coyote_out/poly_reg_4/vector.o"
+	@echo "... coyote_out/poly_reg_4/vector.i"
+	@echo "... coyote_out/poly_reg_4/vector.s"
+	@echo "... coyote_out/poly_reg_8/vector.o"
+	@echo "... coyote_out/poly_reg_8/vector.i"
+	@echo "... coyote_out/poly_reg_8/vector.s"
+	@echo "... coyote_out/roberts_cross_4x4/vector.o"
+	@echo "... coyote_out/roberts_cross_4x4/vector.i"
+	@echo "... coyote_out/roberts_cross_4x4/vector.s"
+	@echo "... coyote_out/roberts_cross_8x8/vector.o"
+	@echo "... coyote_out/roberts_cross_8x8/vector.i"
+	@echo "... coyote_out/roberts_cross_8x8/vector.s"
+	@echo "... coyote_out/sort_3_packed_fully/vector.o"
+	@echo "... coyote_out/sort_3_packed_fully/vector.i"
+	@echo "... coyote_out/sort_3_packed_fully/vector.s"
 	@echo "... coyote_out/tree_100-100_10_1/vector.o"
 	@echo "... coyote_out/tree_100-100_10_1/vector.i"
 	@echo "... coyote_out/tree_100-100_10_1/vector.s"
@@ -933,12 +2143,24 @@ help:
 	@echo "... coyote_out/tree_100-100_5_2/vector.o"
 	@echo "... coyote_out/tree_100-100_5_2/vector.i"
 	@echo "... coyote_out/tree_100-100_5_2/vector.s"
+	@echo "... coyote_out/tree_100-50_10_1/vector.o"
+	@echo "... coyote_out/tree_100-50_10_1/vector.i"
+	@echo "... coyote_out/tree_100-50_10_1/vector.s"
+	@echo "... coyote_out/tree_100-50_10_2/vector.o"
+	@echo "... coyote_out/tree_100-50_10_2/vector.i"
+	@echo "... coyote_out/tree_100-50_10_2/vector.s"
 	@echo "... coyote_out/tree_100-50_5_1/vector.o"
 	@echo "... coyote_out/tree_100-50_5_1/vector.i"
 	@echo "... coyote_out/tree_100-50_5_1/vector.s"
 	@echo "... coyote_out/tree_100-50_5_2/vector.o"
 	@echo "... coyote_out/tree_100-50_5_2/vector.i"
 	@echo "... coyote_out/tree_100-50_5_2/vector.s"
+	@echo "... coyote_out/tree_50-50_10_1/vector.o"
+	@echo "... coyote_out/tree_50-50_10_1/vector.i"
+	@echo "... coyote_out/tree_50-50_10_1/vector.s"
+	@echo "... coyote_out/tree_50-50_10_2/vector.o"
+	@echo "... coyote_out/tree_50-50_10_2/vector.i"
+	@echo "... coyote_out/tree_50-50_10_2/vector.s"
 	@echo "... coyote_out/tree_50-50_5_1/vector.o"
 	@echo "... coyote_out/tree_50-50_5_1/vector.i"
 	@echo "... coyote_out/tree_50-50_5_1/vector.s"

@@ -180,6 +180,7 @@ if __name__ == '__main__':
         raise SystemExit()
     program_name = argv[1]
     #scalar_lines = get_lines(f'outputs/{program_name}/scal')
+    #scalar_cpp = compile_scalar(scalar_lines)
     vector_lines = get_lines(f'outputs/{program_name}/vec')
     vector_cpp = compile_vector(vector_lines)
     try:
