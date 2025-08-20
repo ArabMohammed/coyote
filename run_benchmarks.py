@@ -34,8 +34,11 @@ def all_numbers(lst):
 
 ## for comparaison with Coyote, all benchamrks are Fully replicated  
 coyote = coyote_compiler()
+
+## big : 3 , 4 , 5
 ###################################################################
 ###################################################################
+"""
 @coyote.define_circuit(v1=vector(4, replicate=True), v2=vector(4, replicate=True))
 def dot_product_4x4_fully(v1, v2):  
     return recursive_sum([a * b for a, b in zip(v1, v2)])
@@ -43,9 +46,21 @@ def dot_product_4x4_fully(v1, v2):
 @coyote.define_circuit(v1=vector(8, replicate=True), v2=vector(8, replicate=True))
 def dot_product_8x8_fully(v1, v2): 
     return recursive_sum([a * b for a, b in zip(v1, v2)])
+"""
+@coyote.define_circuit(v1=vector(3, replicate=True), v2=vector(3, replicate=True))
+def dot_product_3x3_fully(v1, v2):  
+    return recursive_sum([a * b for a, b in zip(v1, v2)])
 
+@coyote.define_circuit(v1=vector(5, replicate=True), v2=vector(5, replicate=True))
+def dot_product_5x5_fully(v1, v2):  
+    return recursive_sum([a * b for a, b in zip(v1, v2)])
+
+@coyote.define_circuit(v1=vector(25, replicate=True), v2=vector(25, replicate=True))
+def dot_product_25x25_fully(v1, v2): 
+    return recursive_sum([a * b for a, b in zip(v1, v2)])
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
 def l2_distance_4(a, b):
     return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
@@ -53,9 +68,25 @@ def l2_distance_4(a, b):
 @coyote.define_circuit(a=vector(8,replicate=True), b=vector(8,replicate=True))
 def l2_distance_8(a, b):
     return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
+"""
+@coyote.define_circuit(a=vector(3,replicate=True), b=vector(3,replicate=True))
+def l2_distance_3(a, b):
+    return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
 
+@coyote.define_circuit(a=vector(5,replicate=True), b=vector(5,replicate=True))
+def l2_distance_5(a, b):
+    return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
+
+@coyote.define_circuit(a=vector(25,replicate=True), b=vector(25,replicate=True))
+def l2_distance_25(a, b):
+    return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
+
+@coyote.define_circuit(a=vector(32,replicate=True), b=vector(32,replicate=True))
+def l2_distance_32(a, b):
+    return recursive_sum([(x - y) * (x - y) for x, y in zip(a, b)])
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(c0=vector(4,replicate=True), c1=vector(4,replicate=True), c2=vector(4,replicate=True), c3=vector(4,replicate=True), c4=vector(4,replicate=True))
 def poly_reg_4(c0, c1, c2, c3, c4):
     return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(4)]
@@ -63,9 +94,25 @@ def poly_reg_4(c0, c1, c2, c3, c4):
 @coyote.define_circuit(c0=vector(8,replicate=True), c1=vector(8,replicate=True), c2=vector(8,replicate=True), c3=vector(8,replicate=True), c4=vector(8,replicate=True))
 def poly_reg_8(c0, c1, c2, c3, c4):
     return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(8)]
+"""
+@coyote.define_circuit(c0=vector(3,replicate=True), c1=vector(3,replicate=True), c2=vector(3,replicate=True), c3=vector(3,replicate=True), c4=vector(3,replicate=True))
+def poly_reg_3(c0, c1, c2, c3, c4):
+    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(3)]
 
+@coyote.define_circuit(c0=vector(5,replicate=True), c1=vector(5,replicate=True), c2=vector(5,replicate=True), c3=vector(5,replicate=True), c4=vector(5,replicate=True))
+def poly_reg_5(c0, c1, c2, c3, c4):
+    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(5)]
+
+@coyote.define_circuit(c0=vector(25,replicate=True), c1=vector(25,replicate=True), c2=vector(25,replicate=True), c3=vector(25,replicate=True), c4=vector(25,replicate=True))
+def poly_reg_25(c0, c1, c2, c3, c4):
+    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(25)]
+@coyote.define_circuit(c0=vector(32,replicate=True), c1=vector(32,replicate=True), c2=vector(32,replicate=True), c3=vector(32,replicate=True), c4=vector(32,replicate=True))
+def poly_reg_32(c0, c1, c2, c3, c4):
+    return [c1[i] - (c0[i] * c0[i] * c4[i] + c0[i] * c3[i] + c2[i]) for i in range(32)]
 #################################################################################
 #################################################################################
+# small : 3 , 4 , 5 , 8 , 16 , 25 , 32 
+"""
 @coyote.define_circuit(c0=vector(4,replicate=True), c1=vector(4,replicate=True), c2=vector(4,replicate=True), c3=vector(4,replicate=True))
 def linear_reg_4(c0, c1, c2, c3):
     return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(4)]
@@ -73,9 +120,46 @@ def linear_reg_4(c0, c1, c2, c3):
 @coyote.define_circuit(c0=vector(8,replicate=True), c1=vector(8,replicate=True), c2=vector(8,replicate=True), c3=vector(8,replicate=True))
 def linear_reg_8(c0, c1, c2, c3):
     return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(8)]
+"""
+## 
+# Size 3
+@coyote.define_circuit(c0=vector(3, replicate=True), 
+                       c1=vector(3, replicate=True), 
+                       c2=vector(3, replicate=True), 
+                       c3=vector(3, replicate=True))
+def linear_reg_3(c0, c1, c2, c3):
+    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(3)]
+
+
+# Size 5
+@coyote.define_circuit(c0=vector(5, replicate=True), 
+                       c1=vector(5, replicate=True), 
+                       c2=vector(5, replicate=True), 
+                       c3=vector(5, replicate=True))
+def linear_reg_5(c0, c1, c2, c3):
+    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(5)]
+
+
+# Size 25
+@coyote.define_circuit(c0=vector(25, replicate=True), 
+                       c1=vector(25, replicate=True), 
+                       c2=vector(25, replicate=True), 
+                       c3=vector(25, replicate=True))
+def linear_reg_25(c0, c1, c2, c3):
+    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(25)]
+
+
+# Size 32
+@coyote.define_circuit(c0=vector(32, replicate=True), 
+                       c1=vector(32, replicate=True), 
+                       c2=vector(32, replicate=True), 
+                       c3=vector(32, replicate=True))
+def linear_reg_32(c0, c1, c2, c3):
+    return [c1[i] - (c2[i] * c0[i]) - c3[i] for i in range(32)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(a=vector(4,replicate=True), b=vector(4,replicate=True))
 def hamming_distance_4(a, b):
     return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
@@ -83,9 +167,37 @@ def hamming_distance_4(a, b):
 @coyote.define_circuit(a=vector(8,replicate=True), b=vector(8,replicate=True))
 def hamming_distance_8(a, b):
     return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
+"""
+# Size 3
+@coyote.define_circuit(a=vector(3, replicate=True), 
+                       b=vector(3, replicate=True))
+def hamming_distance_3(a, b):
+    return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
+
+
+# Size 5
+@coyote.define_circuit(a=vector(5, replicate=True), 
+                       b=vector(5, replicate=True))
+def hamming_distance_5(a, b):
+    return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
+
+
+# Size 25
+@coyote.define_circuit(a=vector(25, replicate=True), 
+                       b=vector(25, replicate=True))
+def hamming_distance_25(a, b):
+    return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
+
+
+# Size 32
+@coyote.define_circuit(a=vector(32, replicate=True), 
+                       b=vector(32, replicate=True))
+def hamming_distance_32(a, b):
+    return [x + y - Var('2')*(x * y) for x, y in zip(a, b)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(image = matrix(4,4,replicate=True))
 def box_blur_4x4(image):
     height, width = 4,4
@@ -119,9 +231,44 @@ def box_blur_8x8(image):
                     if (ni >= 0 and ni < height and nj >= 0 and nj < width):
                         result[i, j] = result[i, j] + image[ni][nj] 
     return [result[i][j] for i in range(height) for j in range(width)]
+"""
+@coyote.define_circuit(image=matrix(3, 3, replicate=True))
+def box_blur_3x3(image):
+    height, width = 3, 3
+    result = np.empty((height, width), dtype=object)
+    result[:] = Var('0')
+    ####################
+    for i in range(height):
+        for j in range(width):
+            for ki in range(-1, 2): 
+                for kj in range(-1, 2):
+                    ni = i + ki
+                    nj = j + kj
+                    # Ensure the indices are within the image bounds
+                    if (ni >= 0 and ni < height and nj >= 0 and nj < width):
+                        result[i, j] = result[i, j] + image[ni][nj]
+    return [result[i][j] for i in range(height) for j in range(width)]
+
+@coyote.define_circuit(image=matrix(5, 5, replicate=True))
+def box_blur_5x5(image):
+    height, width = 5, 5
+    result = np.empty((height, width), dtype=object)
+    result[:] = Var('0')
+    ####################
+    for i in range(height):
+        for j in range(width):
+            for ki in range(-1, 2): 
+                for kj in range(-1, 2):
+                    ni = i + ki
+                    nj = j + kj
+                    # Ensure the indices are within the image bounds
+                    if (ni >= 0 and ni < height and nj >= 0 and nj < width):
+                        result[i, j] = result[i, j] + image[ni][nj]
+    return [result[i][j] for i in range(height) for j in range(width)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(image = matrix(4,4,replicate=True))
 def gx_kernel_4x4(image):
     height, width = 4,4  
@@ -161,9 +308,50 @@ def gx_kernel_8x8(image):
             result[i-1, j-1] = top_sum + curr_sum + bottom_sum
 
     return [result[i][j] for i in range(height) for j in range(width)]
+"""
+@coyote.define_circuit(image=matrix(3, 3, replicate=True))
+def gx_kernel_3x3(image):
+    height, width = 3, 3  
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            top_row = padded_image[i-1, j-1:j+2]
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+            
+            top_sum = top_row[0]*Var('-1')  +   top_row[2]*Var('1')
+            curr_sum = Var('-2')*curr_row[0] + Var('2') * curr_row[2]
+            bottom_sum = bottom_row[0]*Var('-1') + bottom_row[2]*Var('1')
+
+            result[i-1, j-1] = top_sum + curr_sum + bottom_sum
+
+    return [result[i][j] for i in range(height) for j in range(width)]
+
+@coyote.define_circuit(image=matrix(5, 5, replicate=True))
+def gx_kernel_5x5(image):
+    height, width = 5, 5  
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            top_row = padded_image[i-1, j-1:j+2]
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+            
+            top_sum = top_row[0]*Var('-1')  +   top_row[2]*Var('1')
+            curr_sum = Var('-2')*curr_row[0] + Var('2') * curr_row[2]
+            bottom_sum = bottom_row[0]*Var('-1') + bottom_row[2]*Var('1')
+
+            result[i-1, j-1] = top_sum + curr_sum + bottom_sum
+
+    return [result[i][j] for i in range(height) for j in range(width)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(image = matrix(4,4,replicate=True))
 def gy_kernel_4x4(image):
     height, width = 4,4
@@ -199,9 +387,48 @@ def gy_kernel_8x8(image):
             result[i-1, j-1] = top_sum + bottom_sum
 
     return [result[i][j] for i in range(height) for j in range(width)]
+"""
+@coyote.define_circuit(image=matrix(3, 3, replicate=True))
+def gy_kernel_3x3(image):
+    height, width = 3, 3
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            top_row = padded_image[i-1, j-1:j+2]
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+            
+            top_sum = Var('-1')*top_row[0] + Var('-2')*top_row[1] + Var('-1')*top_row[2]
+            bottom_sum = Var('1')*bottom_row[0] + Var('2')*bottom_row[1] + Var('1')*bottom_row[2]
+
+            result[i-1, j-1] = top_sum + bottom_sum
+
+    return [result[i][j] for i in range(height) for j in range(width)]
+
+@coyote.define_circuit(image=matrix(5, 5, replicate=True))
+def gy_kernel_5x5(image):
+    height, width = 5, 5
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            top_row = padded_image[i-1, j-1:j+2]
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+            
+            top_sum = Var('-1')*top_row[0] + Var('-2')*top_row[1] + Var('-1')*top_row[2]
+            bottom_sum = Var('1')*bottom_row[0] + Var('2')*bottom_row[1] + Var('1')*bottom_row[2]
+
+            result[i-1, j-1] = top_sum + bottom_sum
+
+    return [result[i][j] for i in range(height) for j in range(width)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(image = matrix(4,4,replicate=True))
 def roberts_cross_4x4(image):
     height, width = 4,4
@@ -239,9 +466,60 @@ def roberts_cross_8x8(image):
             # Compute the gradient magnitude and store in the output array (clipped to 255)
             result[i-1][j-1] = Gx*Gx + Gy*Gy
     return [result[i][j] for i in range(height) for j in range(width)]
+"""
+@coyote.define_circuit(image=matrix(3, 3, replicate=True))
+def roberts_cross_3x3(image):
+    height, width = 3, 3
+    ## add padding to the image
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+    gx_kernel = [[Var('1'), Var('0')], [Var('0'), Var('-1')]]
+    gy_kernel = [[Var('0'), Var('1')], [Var('-1'), Var('0')]]
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+
+            # Apply Kernel 1 (Gx)
+            Gx = curr_row[1] + bottom_row[2]
+
+            # Apply Kernel 2 (Gy)
+            Gy = curr_row[2] + bottom_row[1]
+
+            # Compute the gradient magnitude and store in the output array
+            result[i-1][j-1] = Gx*Gx + Gy*Gy
+
+    return [result[i][j] for i in range(height) for j in range(width)]
+
+@coyote.define_circuit(image=matrix(5, 5, replicate=True))
+def roberts_cross_5x5(image):
+    height, width = 5, 5
+    ## add padding to the image
+    result = np.zeros_like(image)
+    padded_image = np.pad(image, pad_width=1, mode='constant', constant_values=Var('0'))
+    gx_kernel = [[Var('1'), Var('0')], [Var('0'), Var('-1')]]
+    gy_kernel = [[Var('0'), Var('1')], [Var('-1'), Var('0')]]
+
+    for i in range(1, height + 1):
+        for j in range(1, width + 1):
+            curr_row = padded_image[i, j-1:j+2]
+            bottom_row = padded_image[i+1, j-1:j+2]
+
+            # Apply Kernel 1 (Gx)
+            Gx = curr_row[1] + bottom_row[2]
+
+            # Apply Kernel 2 (Gy)
+            Gy = curr_row[2] + bottom_row[1]
+
+            # Compute the gradient magnitude and store in the output array
+            result[i-1][j-1] = Gx*Gx + Gy*Gy
+
+    return [result[i][j] for i in range(height) for j in range(width)]
 
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(a=matrix(4, 4, replicate=True), b=matrix(4, 4, replicate=True))
 def matmul_4x4_fully(a, b):
     return [recursive_sum([a[i][k] * b[k][j] for k in range(len(a))]) for i in range(len(a)) for j in range(len(a))]
@@ -249,9 +527,18 @@ def matmul_4x4_fully(a, b):
 @coyote.define_circuit(a=matrix(8, 8, replicate=True), b=matrix(8, 8, replicate=True))
 def matmul_8x8_fully(a, b):
     return [recursive_sum([a[i][k] * b[k][j] for k in range(len(a))]) for i in range(len(a)) for j in range(len(a))]
-
+"""
+# 3x3 matrix multiplication
+@coyote.define_circuit(a=matrix(3, 3, replicate=True), b=matrix(3, 3, replicate=True))
+def matmul_3x3_fully(a, b):
+    return [recursive_sum([a[i][k] * b[k][j] for k in range(len(a))]) for i in range(len(a)) for j in range(len(a))]
+# 5x5 matrix multiplication
+@coyote.define_circuit(a=matrix(5, 5, replicate=True), b=matrix(5, 5, replicate=True))
+def matmul_5x5_fully(a, b):
+    return [recursive_sum([a[i][k] * b[k][j] for k in range(len(a))]) for i in range(len(a)) for j in range(len(a))]
 #################################################################################
 #################################################################################
+"""
 @coyote.define_circuit(cs=vector(3, replicate=True), os=vector(6, replicate=True))
 def sort_3_packed_fully(cs, os):
     return cond(cs[0], 
@@ -343,10 +630,8 @@ def sort_4_packed_fully(cs, os):
             )
         )
     )
-""" 
 ##################################################################################
 ##################################################################################
-"""
 @coyote.define_circuit(cs=vector(3, replicate=True), os=vector(3, replicate=True))
 def max_3_packed_fully(cs, os):
     return cond(cs[0], 
@@ -379,7 +664,7 @@ def max_5_packed_fully(cs, os):
                     cond(cs[4],
                         cond(cs[8], os[2], os[4]),
                         cond(cs[7], os[3], os[4])))))
-
+"""
 #################################################################################
 ########################## Configuration ########################################
 Execute_code = True 
@@ -390,7 +675,7 @@ poly_modulus_degres = 16384
 operations = ["add", "sub", "multiply_plain", "rotate_rows", "multiply"]
 infos = ["benchmark"]
 additional_infos =["Depth", "Multplicative Depth","compile_time (s)", "execution_time (s)"]
-infos.extend(operations)
+infos.extend(operations) 
 infos.extend(additional_infos)
 with open('benchmarks_evaluation.csv', mode='a', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
@@ -415,25 +700,23 @@ for func in coyote.func_signatures:
             "compile_time (s)": [], "execution_time (s)": [], 
             }
     for counter in range(iterations):       
-        #start_time = time.time()
-        #scalar_code = coyote.instantiate(benchmark_name)
-        #vector_code = list(map(str, coyote.vectorize()))
-        #end_time = time.time()
-        #compilation_time = end_time - start_time
-        #try:
-        #    os.mkdir('outputs')
-        #except FileExistsError:
-        #    pass
+        start_time = time.time()
+        scalar_code = coyote.instantiate(benchmark_name)
+        vector_code = list(map(str, coyote.vectorize()))
+        end_time = time.time()
+        compilation_time = end_time - start_time
+        try:
+            os.mkdir('outputs')
+        except FileExistsError:
+            pass
 
-        #try:
-        #    os.mkdir(f'outputs/{benchmark_name}')
-        #except FileExistsError: 
-        #    pass  
-        #open(f'outputs/{benchmark_name}/scal', 'w').write('\n'.join(scalar_code))
-        #open(f'outputs/{benchmark_name}/vec', 'w').write('\n'.join(vector_code))
-        compilation_time = 0
+        try:
+            os.mkdir(f'outputs/{benchmark_name}')
+        except FileExistsError: 
+            pass  
+        open(f'outputs/{benchmark_name}/scal', 'w').write('\n'.join(scalar_code))
+        open(f'outputs/{benchmark_name}/vec', 'w').write('\n'.join(vector_code))
         print(f'Successfully compiled benchmark {benchmark_name}; outputs placed in outputs/{benchmark_name}!')
-        # Start the subprocess and capture stdout and stderr
         print("compile to bfv the benchmark :")
         result = subprocess.Popen(['python3', 'compile_to_bfv.py', benchmark_name],
                                 stdout=subprocess.PIPE,
@@ -474,13 +757,15 @@ for func in coyote.func_signatures:
 ##########################################################################
 ########################### Run polynomials ##############################
 ##########################################################################
-depths = ['5','10']
-regimes = ['50-50','100-50','100-100']
+#depths = ['5','10']
+depths = ['10']
+#regimes = ['50-50','100-50','100-100']
+regimes = ['100-100']
 #number_instances_polynomial_configuration= 2
-number_instances_polynomial_configuration=2 # 2
+number_instances_polynomial_configuration= 2
 for regime in regimes: 
     for depth in depths:
-        for instance in range(1,number_instances_polynomial_configuration+1): 
+        for instance in range(2,number_instances_polynomial_configuration+1): 
             operation_stats = {
                 "add": [], "sub": [], "multiply_plain": [], "rotate_rows": [],
                 "multiply": [], "Depth": [], "Multiplicative Depth": [],
@@ -492,15 +777,14 @@ for regime in regimes:
             else : 
                 benchmarks_str_argument+=","+benchmark_name
             for i in range(iterations):
-                #print(f'Benchmark {benchmark_name}...')
+                print(f'Benchmark {benchmark_name}...')
                 ### start calculating compile time
-                #start_time = time.time()
-                #os.system(f'python3 numberTreeGenerator.py {benchmark_name}')
-                #end_time = time.time()
-                compilation_time = 0
+                start_time = time.time()
+                os.system(f'python3 numberTreeGenerator.py {benchmark_name}')
+                end_time = time.time()
+                compilation_time = end_time - start_time
                 ## end 
                 os.system(f'python3 compile_to_bfv.py {benchmark_name}')
-                
                 num_multiplications_vec, num_additions_vec, num_substitutions_vec, num_rotations_vec, num_plain_multiplications_vec, max_depth_vec, max_multiplicative_depth_vec = evaluate_vector(benchmark_name)
                 ################
                 operation_stats["add"].append(num_additions_vec)

@@ -1,0 +1,11 @@
+__t0 = [hamming_distance_5(a):3, 0, 0, hamming_distance_5(a):4, hamming_distance_5(a):1, 0, hamming_distance_5(a):2, hamming_distance_5(a):0]
+__v0 = load(__t0)
+__t1 = [hamming_distance_5(b):3, 0, 0, hamming_distance_5(b):4, hamming_distance_5(b):1, 0, hamming_distance_5(b):2, hamming_distance_5(b):0]
+__v1 = load(__t1)
+__v2 = __v0 * __v1
+__v3 = __v0 + __v1
+__t2 = [2, 0, 0, 2, 2, 0, 2, 2]
+__v4 = __t2 * __v2
+__v5 = __v3 - __v4
+__v6 = __v0 + __v1
+__v7 = __v6 - __v4
